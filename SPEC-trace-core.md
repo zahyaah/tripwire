@@ -50,7 +50,7 @@ Span kinds, all carrying `span_id`, `parent_span_id`, `run_id`, `step_index`, `s
 | Kind | Additional fields |
 |---|---|
 | `agent_run` | `step_count`, `total_micro_dollars` |
-| `model_call` | `model`, `effort`, `stop_reason`, `usage` (input, output, cache read, cache write tokens), `micro_dollars`, `cassette_key`, `cassette_hit` |
+| `model_call` | `model`, `stop_reason`, `usage` (prompt tokens, completion tokens), `micro_dollars`, `cassette_key`, `cassette_hit` |
 | `tool_call` | `tool_name`, `arguments` (parsed dict), `result_summary`, `result_bytes` |
 | `judge_call` | `rubric_version`, plus every `model_call` field |
 
