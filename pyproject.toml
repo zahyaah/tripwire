@@ -58,6 +58,10 @@ disallow_untyped_defs = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# Repo root on sys.path so tests can `import agents...` — `agents/` is a top-level package
+# alongside `src/`, not part of the installed `tripwire` wheel (SPEC.md Project Structure: the
+# agent under test is not shipped as part of the harness).
+pythonpath = ["."]
 markers = [
     "regression: golden-set regression cases, run in replay mode",
 ]
