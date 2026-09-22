@@ -1,0 +1,3378 @@
+[
+  {
+    "amount_cents": 45645,
+    "customer_id": "cus_00000",
+    "order_id": "ord_00000",
+    "ordered_at": "2025-01-20",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 15765,
+    "customer_id": "cus_00001",
+    "order_id": "ord_00001",
+    "ordered_at": "2025-01-23",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 5312,
+    "customer_id": "cus_00002",
+    "order_id": "ord_00002",
+    "ordered_at": "2025-10-15",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 3113,
+    "customer_id": "cus_00002",
+    "order_id": "ord_00003",
+    "ordered_at": "2025-06-21",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 28592,
+    "customer_id": "cus_00003",
+    "order_id": "ord_00004",
+    "ordered_at": "2025-09-19",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 18693,
+    "customer_id": "cus_00003",
+    "order_id": "ord_00005",
+    "ordered_at": "2025-03-07",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 20243,
+    "customer_id": "cus_00004",
+    "order_id": "ord_00006",
+    "ordered_at": "2025-12-26",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 29307,
+    "customer_id": "cus_00005",
+    "order_id": "ord_00007",
+    "ordered_at": "2025-06-22",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 30727,
+    "customer_id": "cus_00006",
+    "order_id": "ord_00008",
+    "ordered_at": "2025-12-31",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 1372,
+    "customer_id": "cus_00006",
+    "order_id": "ord_00009",
+    "ordered_at": "2025-07-25",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 28991,
+    "customer_id": "cus_00007",
+    "order_id": "ord_00010",
+    "ordered_at": "2025-12-16",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 44279,
+    "customer_id": "cus_00008",
+    "order_id": "ord_00011",
+    "ordered_at": "2025-07-25",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 6455,
+    "customer_id": "cus_00008",
+    "order_id": "ord_00012",
+    "ordered_at": "2025-07-20",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 35364,
+    "customer_id": "cus_00008",
+    "order_id": "ord_00013",
+    "ordered_at": "2025-09-26",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 41841,
+    "customer_id": "cus_00010",
+    "order_id": "ord_00014",
+    "ordered_at": "2024-12-25",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 44289,
+    "customer_id": "cus_00010",
+    "order_id": "ord_00015",
+    "ordered_at": "2025-01-21",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 24458,
+    "customer_id": "cus_00011",
+    "order_id": "ord_00016",
+    "ordered_at": "2025-12-06",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 36958,
+    "customer_id": "cus_00011",
+    "order_id": "ord_00017",
+    "ordered_at": "2025-02-20",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 5769,
+    "customer_id": "cus_00014",
+    "order_id": "ord_00018",
+    "ordered_at": "2025-05-23",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 43906,
+    "customer_id": "cus_00015",
+    "order_id": "ord_00019",
+    "ordered_at": "2025-03-28",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 36843,
+    "customer_id": "cus_00015",
+    "order_id": "ord_00020",
+    "ordered_at": "2024-11-27",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 6342,
+    "customer_id": "cus_00015",
+    "order_id": "ord_00021",
+    "ordered_at": "2024-12-17",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 6178,
+    "customer_id": "cus_00016",
+    "order_id": "ord_00022",
+    "ordered_at": "2025-02-05",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 21811,
+    "customer_id": "cus_00016",
+    "order_id": "ord_00023",
+    "ordered_at": "2025-02-03",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 12875,
+    "customer_id": "cus_00017",
+    "order_id": "ord_00024",
+    "ordered_at": "2025-06-06",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 36261,
+    "customer_id": "cus_00017",
+    "order_id": "ord_00025",
+    "ordered_at": "2025-06-19",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 18226,
+    "customer_id": "cus_00017",
+    "order_id": "ord_00026",
+    "ordered_at": "2025-11-24",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 44299,
+    "customer_id": "cus_00018",
+    "order_id": "ord_00027",
+    "ordered_at": "2025-06-17",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 23047,
+    "customer_id": "cus_00019",
+    "order_id": "ord_00028",
+    "ordered_at": "2025-01-01",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 46336,
+    "customer_id": "cus_00019",
+    "order_id": "ord_00029",
+    "ordered_at": "2025-01-08",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 9265,
+    "customer_id": "cus_00020",
+    "order_id": "ord_00030",
+    "ordered_at": "2025-11-04",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 24609,
+    "customer_id": "cus_00022",
+    "order_id": "ord_00031",
+    "ordered_at": "2025-11-26",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 38727,
+    "customer_id": "cus_00023",
+    "order_id": "ord_00032",
+    "ordered_at": "2025-12-09",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 3391,
+    "customer_id": "cus_00023",
+    "order_id": "ord_00033",
+    "ordered_at": "2025-06-10",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 9698,
+    "customer_id": "cus_00023",
+    "order_id": "ord_00034",
+    "ordered_at": "2025-07-14",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 16986,
+    "customer_id": "cus_00024",
+    "order_id": "ord_00035",
+    "ordered_at": "2025-01-11",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 6427,
+    "customer_id": "cus_00024",
+    "order_id": "ord_00036",
+    "ordered_at": "2025-09-05",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 42485,
+    "customer_id": "cus_00025",
+    "order_id": "ord_00037",
+    "ordered_at": "2025-04-10",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 2433,
+    "customer_id": "cus_00026",
+    "order_id": "ord_00038",
+    "ordered_at": "2025-10-01",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 32731,
+    "customer_id": "cus_00026",
+    "order_id": "ord_00039",
+    "ordered_at": "2025-07-30",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 11782,
+    "customer_id": "cus_00026",
+    "order_id": "ord_00040",
+    "ordered_at": "2025-07-12",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 31354,
+    "customer_id": "cus_00027",
+    "order_id": "ord_00041",
+    "ordered_at": "2025-04-22",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 1824,
+    "customer_id": "cus_00027",
+    "order_id": "ord_00042",
+    "ordered_at": "2025-04-03",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 23024,
+    "customer_id": "cus_00027",
+    "order_id": "ord_00043",
+    "ordered_at": "2025-05-09",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 5808,
+    "customer_id": "cus_00028",
+    "order_id": "ord_00044",
+    "ordered_at": "2025-11-01",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 23427,
+    "customer_id": "cus_00028",
+    "order_id": "ord_00045",
+    "ordered_at": "2025-11-05",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 17819,
+    "customer_id": "cus_00029",
+    "order_id": "ord_00046",
+    "ordered_at": "2025-04-03",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 39848,
+    "customer_id": "cus_00029",
+    "order_id": "ord_00047",
+    "ordered_at": "2025-10-25",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 16980,
+    "customer_id": "cus_00030",
+    "order_id": "ord_00048",
+    "ordered_at": "2025-11-12",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 30267,
+    "customer_id": "cus_00030",
+    "order_id": "ord_00049",
+    "ordered_at": "2024-12-05",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 8864,
+    "customer_id": "cus_00032",
+    "order_id": "ord_00050",
+    "ordered_at": "2025-02-01",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 31106,
+    "customer_id": "cus_00032",
+    "order_id": "ord_00051",
+    "ordered_at": "2024-12-30",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 8685,
+    "customer_id": "cus_00032",
+    "order_id": "ord_00052",
+    "ordered_at": "2025-12-01",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 15715,
+    "customer_id": "cus_00033",
+    "order_id": "ord_00053",
+    "ordered_at": "2025-01-26",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 46164,
+    "customer_id": "cus_00036",
+    "order_id": "ord_00054",
+    "ordered_at": "2025-02-19",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 5859,
+    "customer_id": "cus_00036",
+    "order_id": "ord_00055",
+    "ordered_at": "2025-05-27",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 8445,
+    "customer_id": "cus_00036",
+    "order_id": "ord_00056",
+    "ordered_at": "2025-05-18",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 16085,
+    "customer_id": "cus_00037",
+    "order_id": "ord_00057",
+    "ordered_at": "2025-07-15",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 22480,
+    "customer_id": "cus_00038",
+    "order_id": "ord_00058",
+    "ordered_at": "2024-12-08",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 27990,
+    "customer_id": "cus_00039",
+    "order_id": "ord_00059",
+    "ordered_at": "2025-07-25",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 722,
+    "customer_id": "cus_00039",
+    "order_id": "ord_00060",
+    "ordered_at": "2025-02-22",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 41846,
+    "customer_id": "cus_00040",
+    "order_id": "ord_00061",
+    "ordered_at": "2025-10-21",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 44539,
+    "customer_id": "cus_00040",
+    "order_id": "ord_00062",
+    "ordered_at": "2025-07-13",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 37842,
+    "customer_id": "cus_00040",
+    "order_id": "ord_00063",
+    "ordered_at": "2024-12-27",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 21937,
+    "customer_id": "cus_00041",
+    "order_id": "ord_00064",
+    "ordered_at": "2025-04-20",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 41185,
+    "customer_id": "cus_00041",
+    "order_id": "ord_00065",
+    "ordered_at": "2025-12-08",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 33776,
+    "customer_id": "cus_00043",
+    "order_id": "ord_00066",
+    "ordered_at": "2025-07-23",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 5181,
+    "customer_id": "cus_00044",
+    "order_id": "ord_00067",
+    "ordered_at": "2025-03-07",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 10004,
+    "customer_id": "cus_00044",
+    "order_id": "ord_00068",
+    "ordered_at": "2025-11-06",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 39458,
+    "customer_id": "cus_00045",
+    "order_id": "ord_00069",
+    "ordered_at": "2025-05-19",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 28541,
+    "customer_id": "cus_00045",
+    "order_id": "ord_00070",
+    "ordered_at": "2025-02-04",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 9838,
+    "customer_id": "cus_00046",
+    "order_id": "ord_00071",
+    "ordered_at": "2025-12-31",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 32049,
+    "customer_id": "cus_00046",
+    "order_id": "ord_00072",
+    "ordered_at": "2025-11-13",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 5391,
+    "customer_id": "cus_00046",
+    "order_id": "ord_00073",
+    "ordered_at": "2025-12-08",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 23303,
+    "customer_id": "cus_00047",
+    "order_id": "ord_00074",
+    "ordered_at": "2025-01-15",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 31686,
+    "customer_id": "cus_00047",
+    "order_id": "ord_00075",
+    "ordered_at": "2024-12-17",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 37859,
+    "customer_id": "cus_00047",
+    "order_id": "ord_00076",
+    "ordered_at": "2025-06-28",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 43541,
+    "customer_id": "cus_00048",
+    "order_id": "ord_00077",
+    "ordered_at": "2025-07-21",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 46653,
+    "customer_id": "cus_00048",
+    "order_id": "ord_00078",
+    "ordered_at": "2025-09-05",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 4170,
+    "customer_id": "cus_00048",
+    "order_id": "ord_00079",
+    "ordered_at": "2025-03-04",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 38201,
+    "customer_id": "cus_00049",
+    "order_id": "ord_00080",
+    "ordered_at": "2025-06-17",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 10369,
+    "customer_id": "cus_00049",
+    "order_id": "ord_00081",
+    "ordered_at": "2025-10-19",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 22995,
+    "customer_id": "cus_00049",
+    "order_id": "ord_00082",
+    "ordered_at": "2025-06-18",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 44859,
+    "customer_id": "cus_00050",
+    "order_id": "ord_00083",
+    "ordered_at": "2025-10-18",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 46725,
+    "customer_id": "cus_00050",
+    "order_id": "ord_00084",
+    "ordered_at": "2024-12-16",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 43326,
+    "customer_id": "cus_00050",
+    "order_id": "ord_00085",
+    "ordered_at": "2025-07-01",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 5962,
+    "customer_id": "cus_00051",
+    "order_id": "ord_00086",
+    "ordered_at": "2025-02-17",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 37424,
+    "customer_id": "cus_00051",
+    "order_id": "ord_00087",
+    "ordered_at": "2025-11-05",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 12011,
+    "customer_id": "cus_00051",
+    "order_id": "ord_00088",
+    "ordered_at": "2025-04-24",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 3025,
+    "customer_id": "cus_00052",
+    "order_id": "ord_00089",
+    "ordered_at": "2025-11-29",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 41483,
+    "customer_id": "cus_00053",
+    "order_id": "ord_00090",
+    "ordered_at": "2025-11-30",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 18239,
+    "customer_id": "cus_00053",
+    "order_id": "ord_00091",
+    "ordered_at": "2025-09-28",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 6122,
+    "customer_id": "cus_00053",
+    "order_id": "ord_00092",
+    "ordered_at": "2025-12-27",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 40801,
+    "customer_id": "cus_00054",
+    "order_id": "ord_00093",
+    "ordered_at": "2025-07-28",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 27893,
+    "customer_id": "cus_00055",
+    "order_id": "ord_00094",
+    "ordered_at": "2025-12-04",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 36366,
+    "customer_id": "cus_00058",
+    "order_id": "ord_00095",
+    "ordered_at": "2025-01-10",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 40420,
+    "customer_id": "cus_00058",
+    "order_id": "ord_00096",
+    "ordered_at": "2025-04-16",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 16209,
+    "customer_id": "cus_00058",
+    "order_id": "ord_00097",
+    "ordered_at": "2025-09-25",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 11760,
+    "customer_id": "cus_00059",
+    "order_id": "ord_00098",
+    "ordered_at": "2025-11-07",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 8038,
+    "customer_id": "cus_00059",
+    "order_id": "ord_00099",
+    "ordered_at": "2025-05-28",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 16454,
+    "customer_id": "cus_00059",
+    "order_id": "ord_00100",
+    "ordered_at": "2025-04-12",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 28526,
+    "customer_id": "cus_00060",
+    "order_id": "ord_00101",
+    "ordered_at": "2025-02-02",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 48223,
+    "customer_id": "cus_00060",
+    "order_id": "ord_00102",
+    "ordered_at": "2025-10-12",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 37354,
+    "customer_id": "cus_00060",
+    "order_id": "ord_00103",
+    "ordered_at": "2025-05-04",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 39393,
+    "customer_id": "cus_00061",
+    "order_id": "ord_00104",
+    "ordered_at": "2025-03-27",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 4809,
+    "customer_id": "cus_00062",
+    "order_id": "ord_00105",
+    "ordered_at": "2025-03-07",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 42941,
+    "customer_id": "cus_00062",
+    "order_id": "ord_00106",
+    "ordered_at": "2025-12-15",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 41548,
+    "customer_id": "cus_00063",
+    "order_id": "ord_00107",
+    "ordered_at": "2025-03-15",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 39550,
+    "customer_id": "cus_00063",
+    "order_id": "ord_00108",
+    "ordered_at": "2025-06-14",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 8437,
+    "customer_id": "cus_00063",
+    "order_id": "ord_00109",
+    "ordered_at": "2025-02-13",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 12523,
+    "customer_id": "cus_00064",
+    "order_id": "ord_00110",
+    "ordered_at": "2025-02-07",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 46518,
+    "customer_id": "cus_00064",
+    "order_id": "ord_00111",
+    "ordered_at": "2025-10-26",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 14253,
+    "customer_id": "cus_00064",
+    "order_id": "ord_00112",
+    "ordered_at": "2025-12-11",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 4760,
+    "customer_id": "cus_00065",
+    "order_id": "ord_00113",
+    "ordered_at": "2025-04-07",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 21564,
+    "customer_id": "cus_00066",
+    "order_id": "ord_00114",
+    "ordered_at": "2025-02-10",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 34051,
+    "customer_id": "cus_00066",
+    "order_id": "ord_00115",
+    "ordered_at": "2025-03-10",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 14789,
+    "customer_id": "cus_00067",
+    "order_id": "ord_00116",
+    "ordered_at": "2025-03-31",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 40364,
+    "customer_id": "cus_00067",
+    "order_id": "ord_00117",
+    "ordered_at": "2025-09-24",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 34137,
+    "customer_id": "cus_00068",
+    "order_id": "ord_00118",
+    "ordered_at": "2025-06-03",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 35159,
+    "customer_id": "cus_00068",
+    "order_id": "ord_00119",
+    "ordered_at": "2025-01-16",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 7752,
+    "customer_id": "cus_00068",
+    "order_id": "ord_00120",
+    "ordered_at": "2025-11-28",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 32865,
+    "customer_id": "cus_00069",
+    "order_id": "ord_00121",
+    "ordered_at": "2025-12-09",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 29667,
+    "customer_id": "cus_00069",
+    "order_id": "ord_00122",
+    "ordered_at": "2025-11-01",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 10425,
+    "customer_id": "cus_00070",
+    "order_id": "ord_00123",
+    "ordered_at": "2025-03-20",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 3985,
+    "customer_id": "cus_00071",
+    "order_id": "ord_00124",
+    "ordered_at": "2025-07-27",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 39014,
+    "customer_id": "cus_00071",
+    "order_id": "ord_00125",
+    "ordered_at": "2025-12-06",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 43265,
+    "customer_id": "cus_00072",
+    "order_id": "ord_00126",
+    "ordered_at": "2025-01-03",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 32093,
+    "customer_id": "cus_00072",
+    "order_id": "ord_00127",
+    "ordered_at": "2025-12-10",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 37075,
+    "customer_id": "cus_00072",
+    "order_id": "ord_00128",
+    "ordered_at": "2024-12-02",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 5819,
+    "customer_id": "cus_00073",
+    "order_id": "ord_00129",
+    "ordered_at": "2025-02-19",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 32236,
+    "customer_id": "cus_00073",
+    "order_id": "ord_00130",
+    "ordered_at": "2025-11-16",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 47945,
+    "customer_id": "cus_00076",
+    "order_id": "ord_00131",
+    "ordered_at": "2025-10-22",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 33607,
+    "customer_id": "cus_00076",
+    "order_id": "ord_00132",
+    "ordered_at": "2025-08-06",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 41814,
+    "customer_id": "cus_00077",
+    "order_id": "ord_00133",
+    "ordered_at": "2025-03-04",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 28995,
+    "customer_id": "cus_00079",
+    "order_id": "ord_00134",
+    "ordered_at": "2025-08-09",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 12914,
+    "customer_id": "cus_00079",
+    "order_id": "ord_00135",
+    "ordered_at": "2025-09-17",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 12526,
+    "customer_id": "cus_00079",
+    "order_id": "ord_00136",
+    "ordered_at": "2025-02-22",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 43180,
+    "customer_id": "cus_00082",
+    "order_id": "ord_00137",
+    "ordered_at": "2025-03-17",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 40282,
+    "customer_id": "cus_00082",
+    "order_id": "ord_00138",
+    "ordered_at": "2025-12-16",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 42808,
+    "customer_id": "cus_00082",
+    "order_id": "ord_00139",
+    "ordered_at": "2025-04-16",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 513,
+    "customer_id": "cus_00083",
+    "order_id": "ord_00140",
+    "ordered_at": "2025-01-06",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 44845,
+    "customer_id": "cus_00083",
+    "order_id": "ord_00141",
+    "ordered_at": "2025-08-14",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 37471,
+    "customer_id": "cus_00085",
+    "order_id": "ord_00142",
+    "ordered_at": "2025-11-18",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 4434,
+    "customer_id": "cus_00085",
+    "order_id": "ord_00143",
+    "ordered_at": "2025-03-04",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 10953,
+    "customer_id": "cus_00085",
+    "order_id": "ord_00144",
+    "ordered_at": "2025-12-01",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 15265,
+    "customer_id": "cus_00086",
+    "order_id": "ord_00145",
+    "ordered_at": "2025-03-04",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 22062,
+    "customer_id": "cus_00087",
+    "order_id": "ord_00146",
+    "ordered_at": "2025-10-15",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 13483,
+    "customer_id": "cus_00087",
+    "order_id": "ord_00147",
+    "ordered_at": "2025-02-11",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 17417,
+    "customer_id": "cus_00089",
+    "order_id": "ord_00148",
+    "ordered_at": "2024-12-16",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 26940,
+    "customer_id": "cus_00089",
+    "order_id": "ord_00149",
+    "ordered_at": "2025-12-13",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 18632,
+    "customer_id": "cus_00089",
+    "order_id": "ord_00150",
+    "ordered_at": "2025-01-09",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 41981,
+    "customer_id": "cus_00090",
+    "order_id": "ord_00151",
+    "ordered_at": "2025-08-16",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 29245,
+    "customer_id": "cus_00090",
+    "order_id": "ord_00152",
+    "ordered_at": "2025-08-31",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 4748,
+    "customer_id": "cus_00092",
+    "order_id": "ord_00153",
+    "ordered_at": "2025-05-24",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 49950,
+    "customer_id": "cus_00093",
+    "order_id": "ord_00154",
+    "ordered_at": "2025-07-03",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 20236,
+    "customer_id": "cus_00094",
+    "order_id": "ord_00155",
+    "ordered_at": "2024-12-05",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 31967,
+    "customer_id": "cus_00095",
+    "order_id": "ord_00156",
+    "ordered_at": "2025-02-14",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 6005,
+    "customer_id": "cus_00095",
+    "order_id": "ord_00157",
+    "ordered_at": "2025-03-16",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 49028,
+    "customer_id": "cus_00095",
+    "order_id": "ord_00158",
+    "ordered_at": "2025-07-31",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 32881,
+    "customer_id": "cus_00096",
+    "order_id": "ord_00159",
+    "ordered_at": "2025-11-12",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 46734,
+    "customer_id": "cus_00096",
+    "order_id": "ord_00160",
+    "ordered_at": "2026-01-01",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 21764,
+    "customer_id": "cus_00097",
+    "order_id": "ord_00161",
+    "ordered_at": "2025-11-23",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 4754,
+    "customer_id": "cus_00097",
+    "order_id": "ord_00162",
+    "ordered_at": "2025-08-17",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 37672,
+    "customer_id": "cus_00098",
+    "order_id": "ord_00163",
+    "ordered_at": "2025-09-28",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 23650,
+    "customer_id": "cus_00098",
+    "order_id": "ord_00164",
+    "ordered_at": "2025-04-19",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 32071,
+    "customer_id": "cus_00101",
+    "order_id": "ord_00165",
+    "ordered_at": "2025-07-22",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 46813,
+    "customer_id": "cus_00101",
+    "order_id": "ord_00166",
+    "ordered_at": "2025-02-11",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 31460,
+    "customer_id": "cus_00103",
+    "order_id": "ord_00167",
+    "ordered_at": "2024-12-12",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 15915,
+    "customer_id": "cus_00103",
+    "order_id": "ord_00168",
+    "ordered_at": "2025-07-09",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 44411,
+    "customer_id": "cus_00103",
+    "order_id": "ord_00169",
+    "ordered_at": "2025-05-13",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 16931,
+    "customer_id": "cus_00104",
+    "order_id": "ord_00170",
+    "ordered_at": "2025-03-08",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 31188,
+    "customer_id": "cus_00104",
+    "order_id": "ord_00171",
+    "ordered_at": "2025-01-25",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 12563,
+    "customer_id": "cus_00104",
+    "order_id": "ord_00172",
+    "ordered_at": "2025-08-11",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 48278,
+    "customer_id": "cus_00105",
+    "order_id": "ord_00173",
+    "ordered_at": "2025-01-27",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 42609,
+    "customer_id": "cus_00106",
+    "order_id": "ord_00174",
+    "ordered_at": "2025-10-11",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 30969,
+    "customer_id": "cus_00106",
+    "order_id": "ord_00175",
+    "ordered_at": "2025-08-26",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 4112,
+    "customer_id": "cus_00106",
+    "order_id": "ord_00176",
+    "ordered_at": "2025-07-29",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 36413,
+    "customer_id": "cus_00107",
+    "order_id": "ord_00177",
+    "ordered_at": "2024-12-07",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 40306,
+    "customer_id": "cus_00107",
+    "order_id": "ord_00178",
+    "ordered_at": "2025-09-16",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 30371,
+    "customer_id": "cus_00107",
+    "order_id": "ord_00179",
+    "ordered_at": "2025-11-30",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 44885,
+    "customer_id": "cus_00108",
+    "order_id": "ord_00180",
+    "ordered_at": "2025-01-22",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 44863,
+    "customer_id": "cus_00108",
+    "order_id": "ord_00181",
+    "ordered_at": "2025-07-09",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 16830,
+    "customer_id": "cus_00109",
+    "order_id": "ord_00182",
+    "ordered_at": "2025-06-03",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 2184,
+    "customer_id": "cus_00109",
+    "order_id": "ord_00183",
+    "ordered_at": "2025-03-04",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 13569,
+    "customer_id": "cus_00110",
+    "order_id": "ord_00184",
+    "ordered_at": "2025-10-21",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 36286,
+    "customer_id": "cus_00110",
+    "order_id": "ord_00185",
+    "ordered_at": "2025-09-21",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 29124,
+    "customer_id": "cus_00110",
+    "order_id": "ord_00186",
+    "ordered_at": "2024-12-02",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 17428,
+    "customer_id": "cus_00111",
+    "order_id": "ord_00187",
+    "ordered_at": "2025-01-30",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 43129,
+    "customer_id": "cus_00112",
+    "order_id": "ord_00188",
+    "ordered_at": "2025-08-24",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 18923,
+    "customer_id": "cus_00112",
+    "order_id": "ord_00189",
+    "ordered_at": "2025-01-22",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 23412,
+    "customer_id": "cus_00114",
+    "order_id": "ord_00190",
+    "ordered_at": "2025-06-04",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 37543,
+    "customer_id": "cus_00114",
+    "order_id": "ord_00191",
+    "ordered_at": "2025-03-31",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 6091,
+    "customer_id": "cus_00115",
+    "order_id": "ord_00192",
+    "ordered_at": "2025-03-16",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 46627,
+    "customer_id": "cus_00116",
+    "order_id": "ord_00193",
+    "ordered_at": "2025-02-10",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 42542,
+    "customer_id": "cus_00116",
+    "order_id": "ord_00194",
+    "ordered_at": "2025-05-02",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 17215,
+    "customer_id": "cus_00117",
+    "order_id": "ord_00195",
+    "ordered_at": "2025-07-29",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 6359,
+    "customer_id": "cus_00117",
+    "order_id": "ord_00196",
+    "ordered_at": "2025-09-08",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 2363,
+    "customer_id": "cus_00117",
+    "order_id": "ord_00197",
+    "ordered_at": "2025-02-20",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 30515,
+    "customer_id": "cus_00119",
+    "order_id": "ord_00198",
+    "ordered_at": "2025-07-14",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 29960,
+    "customer_id": "cus_00119",
+    "order_id": "ord_00199",
+    "ordered_at": "2025-09-26",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 24745,
+    "customer_id": "cus_00120",
+    "order_id": "ord_00200",
+    "ordered_at": "2025-02-27",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 982,
+    "customer_id": "cus_00121",
+    "order_id": "ord_00201",
+    "ordered_at": "2025-10-23",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 40408,
+    "customer_id": "cus_00121",
+    "order_id": "ord_00202",
+    "ordered_at": "2025-06-03",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 39786,
+    "customer_id": "cus_00122",
+    "order_id": "ord_00203",
+    "ordered_at": "2025-09-07",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 14723,
+    "customer_id": "cus_00122",
+    "order_id": "ord_00204",
+    "ordered_at": "2025-01-21",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 21398,
+    "customer_id": "cus_00122",
+    "order_id": "ord_00205",
+    "ordered_at": "2024-12-03",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 43491,
+    "customer_id": "cus_00124",
+    "order_id": "ord_00206",
+    "ordered_at": "2025-02-12",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 18806,
+    "customer_id": "cus_00124",
+    "order_id": "ord_00207",
+    "ordered_at": "2025-08-05",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 19991,
+    "customer_id": "cus_00125",
+    "order_id": "ord_00208",
+    "ordered_at": "2024-12-26",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 10153,
+    "customer_id": "cus_00125",
+    "order_id": "ord_00209",
+    "ordered_at": "2025-03-01",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 9882,
+    "customer_id": "cus_00127",
+    "order_id": "ord_00210",
+    "ordered_at": "2025-06-06",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 7004,
+    "customer_id": "cus_00127",
+    "order_id": "ord_00211",
+    "ordered_at": "2025-11-18",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 40817,
+    "customer_id": "cus_00127",
+    "order_id": "ord_00212",
+    "ordered_at": "2025-01-04",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 31682,
+    "customer_id": "cus_00128",
+    "order_id": "ord_00213",
+    "ordered_at": "2025-07-05",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 46765,
+    "customer_id": "cus_00128",
+    "order_id": "ord_00214",
+    "ordered_at": "2025-07-29",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 31294,
+    "customer_id": "cus_00129",
+    "order_id": "ord_00215",
+    "ordered_at": "2025-09-21",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 2048,
+    "customer_id": "cus_00132",
+    "order_id": "ord_00216",
+    "ordered_at": "2025-05-04",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 48402,
+    "customer_id": "cus_00133",
+    "order_id": "ord_00217",
+    "ordered_at": "2025-11-11",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 16026,
+    "customer_id": "cus_00135",
+    "order_id": "ord_00218",
+    "ordered_at": "2025-10-05",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 18390,
+    "customer_id": "cus_00136",
+    "order_id": "ord_00219",
+    "ordered_at": "2025-12-19",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 5531,
+    "customer_id": "cus_00136",
+    "order_id": "ord_00220",
+    "ordered_at": "2025-05-06",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 21897,
+    "customer_id": "cus_00136",
+    "order_id": "ord_00221",
+    "ordered_at": "2025-07-30",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 42068,
+    "customer_id": "cus_00137",
+    "order_id": "ord_00222",
+    "ordered_at": "2025-06-04",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 17038,
+    "customer_id": "cus_00138",
+    "order_id": "ord_00223",
+    "ordered_at": "2025-02-28",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 12904,
+    "customer_id": "cus_00139",
+    "order_id": "ord_00224",
+    "ordered_at": "2025-10-09",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 2403,
+    "customer_id": "cus_00140",
+    "order_id": "ord_00225",
+    "ordered_at": "2025-09-16",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 15054,
+    "customer_id": "cus_00141",
+    "order_id": "ord_00226",
+    "ordered_at": "2025-05-27",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 27386,
+    "customer_id": "cus_00141",
+    "order_id": "ord_00227",
+    "ordered_at": "2025-09-19",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 13111,
+    "customer_id": "cus_00141",
+    "order_id": "ord_00228",
+    "ordered_at": "2025-07-11",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 31828,
+    "customer_id": "cus_00142",
+    "order_id": "ord_00229",
+    "ordered_at": "2025-09-17",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 27240,
+    "customer_id": "cus_00143",
+    "order_id": "ord_00230",
+    "ordered_at": "2025-02-02",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 49712,
+    "customer_id": "cus_00143",
+    "order_id": "ord_00231",
+    "ordered_at": "2025-04-24",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 10234,
+    "customer_id": "cus_00144",
+    "order_id": "ord_00232",
+    "ordered_at": "2025-01-12",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 23454,
+    "customer_id": "cus_00144",
+    "order_id": "ord_00233",
+    "ordered_at": "2025-01-14",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 21100,
+    "customer_id": "cus_00144",
+    "order_id": "ord_00234",
+    "ordered_at": "2025-05-25",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 6549,
+    "customer_id": "cus_00145",
+    "order_id": "ord_00235",
+    "ordered_at": "2025-02-13",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 44071,
+    "customer_id": "cus_00145",
+    "order_id": "ord_00236",
+    "ordered_at": "2024-12-06",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 3615,
+    "customer_id": "cus_00146",
+    "order_id": "ord_00237",
+    "ordered_at": "2025-06-25",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 25744,
+    "customer_id": "cus_00148",
+    "order_id": "ord_00238",
+    "ordered_at": "2024-12-03",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 18241,
+    "customer_id": "cus_00148",
+    "order_id": "ord_00239",
+    "ordered_at": "2024-12-10",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 15495,
+    "customer_id": "cus_00149",
+    "order_id": "ord_00240",
+    "ordered_at": "2025-10-21",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 19966,
+    "customer_id": "cus_00150",
+    "order_id": "ord_00241",
+    "ordered_at": "2025-02-16",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 36243,
+    "customer_id": "cus_00151",
+    "order_id": "ord_00242",
+    "ordered_at": "2025-05-04",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 15065,
+    "customer_id": "cus_00151",
+    "order_id": "ord_00243",
+    "ordered_at": "2025-09-04",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 33667,
+    "customer_id": "cus_00151",
+    "order_id": "ord_00244",
+    "ordered_at": "2025-02-03",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 22945,
+    "customer_id": "cus_00152",
+    "order_id": "ord_00245",
+    "ordered_at": "2025-04-01",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 24503,
+    "customer_id": "cus_00152",
+    "order_id": "ord_00246",
+    "ordered_at": "2025-11-17",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 34334,
+    "customer_id": "cus_00152",
+    "order_id": "ord_00247",
+    "ordered_at": "2025-04-30",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 47176,
+    "customer_id": "cus_00153",
+    "order_id": "ord_00248",
+    "ordered_at": "2025-03-14",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 10245,
+    "customer_id": "cus_00153",
+    "order_id": "ord_00249",
+    "ordered_at": "2025-02-20",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 46377,
+    "customer_id": "cus_00153",
+    "order_id": "ord_00250",
+    "ordered_at": "2025-02-13",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 4735,
+    "customer_id": "cus_00155",
+    "order_id": "ord_00251",
+    "ordered_at": "2025-12-08",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 28193,
+    "customer_id": "cus_00156",
+    "order_id": "ord_00252",
+    "ordered_at": "2025-02-02",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 40820,
+    "customer_id": "cus_00157",
+    "order_id": "ord_00253",
+    "ordered_at": "2025-09-18",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 830,
+    "customer_id": "cus_00157",
+    "order_id": "ord_00254",
+    "ordered_at": "2025-11-26",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 21676,
+    "customer_id": "cus_00157",
+    "order_id": "ord_00255",
+    "ordered_at": "2025-05-13",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 35224,
+    "customer_id": "cus_00159",
+    "order_id": "ord_00256",
+    "ordered_at": "2025-07-07",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 16230,
+    "customer_id": "cus_00159",
+    "order_id": "ord_00257",
+    "ordered_at": "2025-09-16",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 4717,
+    "customer_id": "cus_00160",
+    "order_id": "ord_00258",
+    "ordered_at": "2025-10-24",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 15005,
+    "customer_id": "cus_00160",
+    "order_id": "ord_00259",
+    "ordered_at": "2025-01-15",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 1751,
+    "customer_id": "cus_00160",
+    "order_id": "ord_00260",
+    "ordered_at": "2025-05-20",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 19422,
+    "customer_id": "cus_00162",
+    "order_id": "ord_00261",
+    "ordered_at": "2024-12-12",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 39822,
+    "customer_id": "cus_00166",
+    "order_id": "ord_00262",
+    "ordered_at": "2025-09-02",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 21672,
+    "customer_id": "cus_00166",
+    "order_id": "ord_00263",
+    "ordered_at": "2025-12-03",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 25950,
+    "customer_id": "cus_00167",
+    "order_id": "ord_00264",
+    "ordered_at": "2025-05-21",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 12782,
+    "customer_id": "cus_00167",
+    "order_id": "ord_00265",
+    "ordered_at": "2025-03-14",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 17194,
+    "customer_id": "cus_00168",
+    "order_id": "ord_00266",
+    "ordered_at": "2025-11-17",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 5429,
+    "customer_id": "cus_00168",
+    "order_id": "ord_00267",
+    "ordered_at": "2025-11-08",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 44629,
+    "customer_id": "cus_00168",
+    "order_id": "ord_00268",
+    "ordered_at": "2025-01-21",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 24707,
+    "customer_id": "cus_00170",
+    "order_id": "ord_00269",
+    "ordered_at": "2024-12-08",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 27352,
+    "customer_id": "cus_00170",
+    "order_id": "ord_00270",
+    "ordered_at": "2025-06-16",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 4525,
+    "customer_id": "cus_00172",
+    "order_id": "ord_00271",
+    "ordered_at": "2025-05-20",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 5042,
+    "customer_id": "cus_00172",
+    "order_id": "ord_00272",
+    "ordered_at": "2025-09-22",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 3499,
+    "customer_id": "cus_00173",
+    "order_id": "ord_00273",
+    "ordered_at": "2025-10-01",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 13558,
+    "customer_id": "cus_00173",
+    "order_id": "ord_00274",
+    "ordered_at": "2025-02-14",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 30791,
+    "customer_id": "cus_00173",
+    "order_id": "ord_00275",
+    "ordered_at": "2025-08-27",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 15394,
+    "customer_id": "cus_00175",
+    "order_id": "ord_00276",
+    "ordered_at": "2025-01-03",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 15187,
+    "customer_id": "cus_00175",
+    "order_id": "ord_00277",
+    "ordered_at": "2025-07-23",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 30788,
+    "customer_id": "cus_00176",
+    "order_id": "ord_00278",
+    "ordered_at": "2025-11-11",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 38587,
+    "customer_id": "cus_00176",
+    "order_id": "ord_00279",
+    "ordered_at": "2025-12-30",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 974,
+    "customer_id": "cus_00178",
+    "order_id": "ord_00280",
+    "ordered_at": "2025-06-28",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 11478,
+    "customer_id": "cus_00178",
+    "order_id": "ord_00281",
+    "ordered_at": "2025-07-19",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 28462,
+    "customer_id": "cus_00179",
+    "order_id": "ord_00282",
+    "ordered_at": "2024-12-22",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 4890,
+    "customer_id": "cus_00179",
+    "order_id": "ord_00283",
+    "ordered_at": "2025-10-12",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 23209,
+    "customer_id": "cus_00179",
+    "order_id": "ord_00284",
+    "ordered_at": "2025-06-24",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 26500,
+    "customer_id": "cus_00180",
+    "order_id": "ord_00285",
+    "ordered_at": "2025-05-01",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 17858,
+    "customer_id": "cus_00186",
+    "order_id": "ord_00286",
+    "ordered_at": "2024-12-09",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 17164,
+    "customer_id": "cus_00186",
+    "order_id": "ord_00287",
+    "ordered_at": "2025-06-25",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 19177,
+    "customer_id": "cus_00187",
+    "order_id": "ord_00288",
+    "ordered_at": "2025-11-27",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 36393,
+    "customer_id": "cus_00188",
+    "order_id": "ord_00289",
+    "ordered_at": "2025-08-22",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 13717,
+    "customer_id": "cus_00188",
+    "order_id": "ord_00290",
+    "ordered_at": "2025-12-30",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 28500,
+    "customer_id": "cus_00188",
+    "order_id": "ord_00291",
+    "ordered_at": "2024-12-28",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 19323,
+    "customer_id": "cus_00189",
+    "order_id": "ord_00292",
+    "ordered_at": "2025-10-15",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 45205,
+    "customer_id": "cus_00190",
+    "order_id": "ord_00293",
+    "ordered_at": "2025-01-29",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 4956,
+    "customer_id": "cus_00190",
+    "order_id": "ord_00294",
+    "ordered_at": "2025-05-16",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 24469,
+    "customer_id": "cus_00190",
+    "order_id": "ord_00295",
+    "ordered_at": "2024-12-19",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 11802,
+    "customer_id": "cus_00192",
+    "order_id": "ord_00296",
+    "ordered_at": "2025-01-08",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 29328,
+    "customer_id": "cus_00192",
+    "order_id": "ord_00297",
+    "ordered_at": "2025-11-06",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 44177,
+    "customer_id": "cus_00193",
+    "order_id": "ord_00298",
+    "ordered_at": "2025-11-19",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 35420,
+    "customer_id": "cus_00193",
+    "order_id": "ord_00299",
+    "ordered_at": "2025-04-21",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 35093,
+    "customer_id": "cus_00193",
+    "order_id": "ord_00300",
+    "ordered_at": "2025-01-04",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 16914,
+    "customer_id": "cus_00194",
+    "order_id": "ord_00301",
+    "ordered_at": "2025-05-05",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 28087,
+    "customer_id": "cus_00194",
+    "order_id": "ord_00302",
+    "ordered_at": "2025-11-08",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 3874,
+    "customer_id": "cus_00194",
+    "order_id": "ord_00303",
+    "ordered_at": "2024-11-27",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 25350,
+    "customer_id": "cus_00195",
+    "order_id": "ord_00304",
+    "ordered_at": "2025-07-03",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 12445,
+    "customer_id": "cus_00195",
+    "order_id": "ord_00305",
+    "ordered_at": "2024-12-13",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 47193,
+    "customer_id": "cus_00195",
+    "order_id": "ord_00306",
+    "ordered_at": "2025-12-10",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 13196,
+    "customer_id": "cus_00196",
+    "order_id": "ord_00307",
+    "ordered_at": "2025-05-12",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 40869,
+    "customer_id": "cus_00196",
+    "order_id": "ord_00308",
+    "ordered_at": "2025-08-19",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 10762,
+    "customer_id": "cus_00197",
+    "order_id": "ord_00309",
+    "ordered_at": "2025-08-19",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 1729,
+    "customer_id": "cus_00197",
+    "order_id": "ord_00310",
+    "ordered_at": "2025-04-27",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 5670,
+    "customer_id": "cus_00197",
+    "order_id": "ord_00311",
+    "ordered_at": "2025-02-20",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 39691,
+    "customer_id": "cus_00198",
+    "order_id": "ord_00312",
+    "ordered_at": "2025-01-22",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 4287,
+    "customer_id": "cus_00199",
+    "order_id": "ord_00313",
+    "ordered_at": "2025-03-23",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 31067,
+    "customer_id": "cus_00199",
+    "order_id": "ord_00314",
+    "ordered_at": "2025-01-04",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 42037,
+    "customer_id": "cus_00201",
+    "order_id": "ord_00315",
+    "ordered_at": "2024-12-24",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 43989,
+    "customer_id": "cus_00202",
+    "order_id": "ord_00316",
+    "ordered_at": "2025-04-30",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 10525,
+    "customer_id": "cus_00202",
+    "order_id": "ord_00317",
+    "ordered_at": "2025-10-17",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 47745,
+    "customer_id": "cus_00202",
+    "order_id": "ord_00318",
+    "ordered_at": "2025-09-09",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 19504,
+    "customer_id": "cus_00203",
+    "order_id": "ord_00319",
+    "ordered_at": "2025-07-04",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 29031,
+    "customer_id": "cus_00204",
+    "order_id": "ord_00320",
+    "ordered_at": "2025-09-17",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 16614,
+    "customer_id": "cus_00204",
+    "order_id": "ord_00321",
+    "ordered_at": "2025-12-23",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 45474,
+    "customer_id": "cus_00205",
+    "order_id": "ord_00322",
+    "ordered_at": "2025-12-15",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 12532,
+    "customer_id": "cus_00205",
+    "order_id": "ord_00323",
+    "ordered_at": "2025-08-10",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 12958,
+    "customer_id": "cus_00205",
+    "order_id": "ord_00324",
+    "ordered_at": "2025-08-08",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 26101,
+    "customer_id": "cus_00206",
+    "order_id": "ord_00325",
+    "ordered_at": "2025-05-01",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 2222,
+    "customer_id": "cus_00206",
+    "order_id": "ord_00326",
+    "ordered_at": "2025-09-23",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 8455,
+    "customer_id": "cus_00206",
+    "order_id": "ord_00327",
+    "ordered_at": "2025-10-09",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 35822,
+    "customer_id": "cus_00207",
+    "order_id": "ord_00328",
+    "ordered_at": "2025-02-04",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 18234,
+    "customer_id": "cus_00207",
+    "order_id": "ord_00329",
+    "ordered_at": "2025-01-15",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 26335,
+    "customer_id": "cus_00207",
+    "order_id": "ord_00330",
+    "ordered_at": "2025-01-30",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 38078,
+    "customer_id": "cus_00208",
+    "order_id": "ord_00331",
+    "ordered_at": "2025-12-02",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 9105,
+    "customer_id": "cus_00208",
+    "order_id": "ord_00332",
+    "ordered_at": "2025-11-12",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 24454,
+    "customer_id": "cus_00208",
+    "order_id": "ord_00333",
+    "ordered_at": "2024-12-10",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 31956,
+    "customer_id": "cus_00209",
+    "order_id": "ord_00334",
+    "ordered_at": "2025-06-21",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 8398,
+    "customer_id": "cus_00210",
+    "order_id": "ord_00335",
+    "ordered_at": "2025-01-27",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 49552,
+    "customer_id": "cus_00211",
+    "order_id": "ord_00336",
+    "ordered_at": "2025-09-21",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 12575,
+    "customer_id": "cus_00211",
+    "order_id": "ord_00337",
+    "ordered_at": "2025-08-13",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 27327,
+    "customer_id": "cus_00212",
+    "order_id": "ord_00338",
+    "ordered_at": "2025-08-26",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 37772,
+    "customer_id": "cus_00212",
+    "order_id": "ord_00339",
+    "ordered_at": "2025-06-22",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 17352,
+    "customer_id": "cus_00212",
+    "order_id": "ord_00340",
+    "ordered_at": "2025-06-27",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 34320,
+    "customer_id": "cus_00213",
+    "order_id": "ord_00341",
+    "ordered_at": "2025-05-14",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 26266,
+    "customer_id": "cus_00213",
+    "order_id": "ord_00342",
+    "ordered_at": "2025-10-07",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 12033,
+    "customer_id": "cus_00213",
+    "order_id": "ord_00343",
+    "ordered_at": "2025-10-08",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 11146,
+    "customer_id": "cus_00214",
+    "order_id": "ord_00344",
+    "ordered_at": "2025-07-03",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 45670,
+    "customer_id": "cus_00215",
+    "order_id": "ord_00345",
+    "ordered_at": "2025-08-05",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 23822,
+    "customer_id": "cus_00215",
+    "order_id": "ord_00346",
+    "ordered_at": "2025-02-08",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 14894,
+    "customer_id": "cus_00215",
+    "order_id": "ord_00347",
+    "ordered_at": "2024-12-14",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 41505,
+    "customer_id": "cus_00216",
+    "order_id": "ord_00348",
+    "ordered_at": "2025-08-16",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 20135,
+    "customer_id": "cus_00216",
+    "order_id": "ord_00349",
+    "ordered_at": "2025-03-23",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 18290,
+    "customer_id": "cus_00217",
+    "order_id": "ord_00350",
+    "ordered_at": "2025-06-23",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 2140,
+    "customer_id": "cus_00217",
+    "order_id": "ord_00351",
+    "ordered_at": "2025-01-16",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 42662,
+    "customer_id": "cus_00217",
+    "order_id": "ord_00352",
+    "ordered_at": "2025-10-08",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 25548,
+    "customer_id": "cus_00218",
+    "order_id": "ord_00353",
+    "ordered_at": "2025-10-07",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 30625,
+    "customer_id": "cus_00219",
+    "order_id": "ord_00354",
+    "ordered_at": "2025-08-30",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 35754,
+    "customer_id": "cus_00219",
+    "order_id": "ord_00355",
+    "ordered_at": "2025-04-06",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 48823,
+    "customer_id": "cus_00219",
+    "order_id": "ord_00356",
+    "ordered_at": "2025-10-04",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 11481,
+    "customer_id": "cus_00220",
+    "order_id": "ord_00357",
+    "ordered_at": "2025-09-01",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 26020,
+    "customer_id": "cus_00220",
+    "order_id": "ord_00358",
+    "ordered_at": "2025-04-04",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 41405,
+    "customer_id": "cus_00221",
+    "order_id": "ord_00359",
+    "ordered_at": "2025-09-24",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 30270,
+    "customer_id": "cus_00221",
+    "order_id": "ord_00360",
+    "ordered_at": "2024-12-15",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 36714,
+    "customer_id": "cus_00221",
+    "order_id": "ord_00361",
+    "ordered_at": "2025-03-02",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 3606,
+    "customer_id": "cus_00222",
+    "order_id": "ord_00362",
+    "ordered_at": "2025-05-16",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 33516,
+    "customer_id": "cus_00222",
+    "order_id": "ord_00363",
+    "ordered_at": "2024-12-02",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 26660,
+    "customer_id": "cus_00223",
+    "order_id": "ord_00364",
+    "ordered_at": "2025-07-21",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 23705,
+    "customer_id": "cus_00223",
+    "order_id": "ord_00365",
+    "ordered_at": "2025-10-28",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 7301,
+    "customer_id": "cus_00223",
+    "order_id": "ord_00366",
+    "ordered_at": "2025-01-22",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 19181,
+    "customer_id": "cus_00224",
+    "order_id": "ord_00367",
+    "ordered_at": "2025-09-13",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 39667,
+    "customer_id": "cus_00224",
+    "order_id": "ord_00368",
+    "ordered_at": "2025-02-02",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 10101,
+    "customer_id": "cus_00225",
+    "order_id": "ord_00369",
+    "ordered_at": "2025-08-11",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 37791,
+    "customer_id": "cus_00225",
+    "order_id": "ord_00370",
+    "ordered_at": "2025-09-10",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 36948,
+    "customer_id": "cus_00226",
+    "order_id": "ord_00371",
+    "ordered_at": "2025-10-14",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 26084,
+    "customer_id": "cus_00228",
+    "order_id": "ord_00372",
+    "ordered_at": "2025-04-10",
+    "product": "Starter Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 46767,
+    "customer_id": "cus_00228",
+    "order_id": "ord_00373",
+    "ordered_at": "2024-12-19",
+    "product": "API Credits",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 13578,
+    "customer_id": "cus_00229",
+    "order_id": "ord_00374",
+    "ordered_at": "2025-05-11",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 25298,
+    "customer_id": "cus_00230",
+    "order_id": "ord_00375",
+    "ordered_at": "2025-03-09",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 4598,
+    "customer_id": "cus_00230",
+    "order_id": "ord_00376",
+    "ordered_at": "2025-06-02",
+    "product": "Starter Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 44145,
+    "customer_id": "cus_00230",
+    "order_id": "ord_00377",
+    "ordered_at": "2025-09-30",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 24323,
+    "customer_id": "cus_00232",
+    "order_id": "ord_00378",
+    "ordered_at": "2025-08-13",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 27075,
+    "customer_id": "cus_00233",
+    "order_id": "ord_00379",
+    "ordered_at": "2025-07-20",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 41785,
+    "customer_id": "cus_00233",
+    "order_id": "ord_00380",
+    "ordered_at": "2025-09-21",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 30671,
+    "customer_id": "cus_00233",
+    "order_id": "ord_00381",
+    "ordered_at": "2025-12-05",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 45594,
+    "customer_id": "cus_00234",
+    "order_id": "ord_00382",
+    "ordered_at": "2025-08-02",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 34423,
+    "customer_id": "cus_00235",
+    "order_id": "ord_00383",
+    "ordered_at": "2025-05-30",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 22090,
+    "customer_id": "cus_00238",
+    "order_id": "ord_00384",
+    "ordered_at": "2025-04-14",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 32073,
+    "customer_id": "cus_00238",
+    "order_id": "ord_00385",
+    "ordered_at": "2025-07-15",
+    "product": "Pro Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 11246,
+    "customer_id": "cus_00238",
+    "order_id": "ord_00386",
+    "ordered_at": "2025-08-25",
+    "product": "Priority Support Add-on",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 26777,
+    "customer_id": "cus_00239",
+    "order_id": "ord_00387",
+    "ordered_at": "2025-12-18",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 10770,
+    "customer_id": "cus_00240",
+    "order_id": "ord_00388",
+    "ordered_at": "2025-05-12",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 10205,
+    "customer_id": "cus_00240",
+    "order_id": "ord_00389",
+    "ordered_at": "2024-12-05",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 32020,
+    "customer_id": "cus_00240",
+    "order_id": "ord_00390",
+    "ordered_at": "2025-03-04",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 28267,
+    "customer_id": "cus_00241",
+    "order_id": "ord_00391",
+    "ordered_at": "2024-12-20",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 9210,
+    "customer_id": "cus_00242",
+    "order_id": "ord_00392",
+    "ordered_at": "2025-05-04",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 28387,
+    "customer_id": "cus_00244",
+    "order_id": "ord_00393",
+    "ordered_at": "2025-12-22",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 2331,
+    "customer_id": "cus_00245",
+    "order_id": "ord_00394",
+    "ordered_at": "2025-12-25",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 36971,
+    "customer_id": "cus_00245",
+    "order_id": "ord_00395",
+    "ordered_at": "2025-07-01",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 24994,
+    "customer_id": "cus_00248",
+    "order_id": "ord_00396",
+    "ordered_at": "2024-12-07",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 33091,
+    "customer_id": "cus_00248",
+    "order_id": "ord_00397",
+    "ordered_at": "2025-04-16",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 47225,
+    "customer_id": "cus_00250",
+    "order_id": "ord_00398",
+    "ordered_at": "2025-12-06",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 9030,
+    "customer_id": "cus_00250",
+    "order_id": "ord_00399",
+    "ordered_at": "2025-10-29",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 20539,
+    "customer_id": "cus_00251",
+    "order_id": "ord_00400",
+    "ordered_at": "2025-08-01",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 8463,
+    "customer_id": "cus_00253",
+    "order_id": "ord_00401",
+    "ordered_at": "2024-12-13",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 3450,
+    "customer_id": "cus_00255",
+    "order_id": "ord_00402",
+    "ordered_at": "2025-05-11",
+    "product": "Pro Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 42671,
+    "customer_id": "cus_00255",
+    "order_id": "ord_00403",
+    "ordered_at": "2025-01-21",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 49852,
+    "customer_id": "cus_00255",
+    "order_id": "ord_00404",
+    "ordered_at": "2025-09-08",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 31036,
+    "customer_id": "cus_00256",
+    "order_id": "ord_00405",
+    "ordered_at": "2025-05-21",
+    "product": "Team Seats",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 1231,
+    "customer_id": "cus_00256",
+    "order_id": "ord_00406",
+    "ordered_at": "2025-10-15",
+    "product": "Starter Plan",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 48744,
+    "customer_id": "cus_00256",
+    "order_id": "ord_00407",
+    "ordered_at": "2025-06-19",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 37402,
+    "customer_id": "cus_00258",
+    "order_id": "ord_00408",
+    "ordered_at": "2025-10-07",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 12143,
+    "customer_id": "cus_00259",
+    "order_id": "ord_00409",
+    "ordered_at": "2024-12-19",
+    "product": "API Credits",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 33592,
+    "customer_id": "cus_00260",
+    "order_id": "ord_00410",
+    "ordered_at": "2025-11-28",
+    "product": "Priority Support Add-on",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 22146,
+    "customer_id": "cus_00260",
+    "order_id": "ord_00411",
+    "ordered_at": "2025-05-22",
+    "product": "API Credits",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 32779,
+    "customer_id": "cus_00260",
+    "order_id": "ord_00412",
+    "ordered_at": "2025-11-23",
+    "product": "Team Seats",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 31334,
+    "customer_id": "cus_00261",
+    "order_id": "ord_00413",
+    "ordered_at": "2025-10-02",
+    "product": "Priority Support Add-on",
+    "status": "refunded"
+  },
+  {
+    "amount_cents": 14461,
+    "customer_id": "cus_00261",
+    "order_id": "ord_00414",
+    "ordered_at": "2024-12-29",
+    "product": "Pro Plan",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 33953,
+    "customer_id": "cus_00261",
+    "order_id": "ord_00415",
+    "ordered_at": "2025-05-15",
+    "product": "API Credits",
+    "status": "fulfilled"
+  },
+  {
+    "amount_cents": 44782,
+    "customer_id": "cus_00263",
+    "order_id": "ord_00416",
+    "ordered_at": "2025-05-03",
+    "product": "Starter Plan",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 11682,
+    "customer_id": "cus_00263",
+    "order_id": "ord_00417",
+    "ordered_at": "2025-10-04",
+    "product": "Priority Support Add-on",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 2596,
+    "customer_id": "cus_00263",
+    "order_id": "ord_00418",
+    "ordered_at": "2025-09-11",
+    "product": "Team Seats",
+    "status": "cancelled"
+  },
+  {
+    "amount_cents": 42446,
+    "customer_id": "cus_00265",
+    "order_id": "ord_00419",
+    "ordered_at": "2025-05-12",
+    "product": "Pro Plan",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 30846,
+    "customer_id": "cus_00265",
+    "order_id": "ord_00420",
+    "ordered_at": "2025-07-06",
+    "product": "Team Seats",
+    "status": "pending"
+  },
+  {
+    "amount_cents": 44357,
+    "customer_id": "cus_00265",
+    "order_id": "ord_00421",
+    "ordered_at": "2025-10-08",
+    "product": "API Credits",
+    "status": "refunded"
+  }
+]

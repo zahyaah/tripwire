@@ -1,0 +1,1864 @@
+[
+  {
+    "customer_id": "cus_00000",
+    "email": "diego.kowalski0@example.net",
+    "name": "Diego Kowalski",
+    "plan": "enterprise",
+    "tenure_days": 1300
+  },
+  {
+    "customer_id": "cus_00001",
+    "email": "diego.kim1@example.net",
+    "name": "Diego Kim",
+    "plan": "starter",
+    "tenure_days": 1344
+  },
+  {
+    "customer_id": "cus_00002",
+    "email": "diego.nguyen2@example.net",
+    "name": "Diego Nguyen",
+    "plan": "enterprise",
+    "tenure_days": 133
+  },
+  {
+    "customer_id": "cus_00003",
+    "email": "diego.yamamoto3@example.net",
+    "name": "Diego Yamamoto",
+    "plan": "pro",
+    "tenure_days": 1359
+  },
+  {
+    "customer_id": "cus_00004",
+    "email": "alex.rossi4@example.org",
+    "name": "Alex Rossi",
+    "plan": "free",
+    "tenure_days": 943
+  },
+  {
+    "customer_id": "cus_00005",
+    "email": "avery.kowalski5@example.net",
+    "name": "Avery Kowalski",
+    "plan": "enterprise",
+    "tenure_days": 1235
+  },
+  {
+    "customer_id": "cus_00006",
+    "email": "priya.silva6@example.org",
+    "name": "Priya Silva",
+    "plan": "free",
+    "tenure_days": 1307
+  },
+  {
+    "customer_id": "cus_00007",
+    "email": "jordan.patel7@example.net",
+    "name": "Jordan Patel",
+    "plan": "free",
+    "tenure_days": 1383
+  },
+  {
+    "customer_id": "cus_00008",
+    "email": "alex.silva8@example.com",
+    "name": "Alex Silva",
+    "plan": "free",
+    "tenure_days": 583
+  },
+  {
+    "customer_id": "cus_00009",
+    "email": "jamie.novak9@example.org",
+    "name": "Jamie Novak",
+    "plan": "pro",
+    "tenure_days": 25
+  },
+  {
+    "customer_id": "cus_00010",
+    "email": "fatima.cohen10@example.org",
+    "name": "Fatima Cohen",
+    "plan": "starter",
+    "tenure_days": 1125
+  },
+  {
+    "customer_id": "cus_00011",
+    "email": "jordan.kim11@example.com",
+    "name": "Jordan Kim",
+    "plan": "starter",
+    "tenure_days": 1083
+  },
+  {
+    "customer_id": "cus_00012",
+    "email": "taylor.chen12@example.org",
+    "name": "Taylor Chen",
+    "plan": "enterprise",
+    "tenure_days": 1441
+  },
+  {
+    "customer_id": "cus_00013",
+    "email": "kenji.rivera13@example.org",
+    "name": "Kenji Rivera",
+    "plan": "enterprise",
+    "tenure_days": 1110
+  },
+  {
+    "customer_id": "cus_00014",
+    "email": "diego.johansson14@example.net",
+    "name": "Diego Johansson",
+    "plan": "free",
+    "tenure_days": 1451
+  },
+  {
+    "customer_id": "cus_00015",
+    "email": "morgan.chen15@example.com",
+    "name": "Morgan Chen",
+    "plan": "pro",
+    "tenure_days": 160
+  },
+  {
+    "customer_id": "cus_00016",
+    "email": "jamie.novak16@example.org",
+    "name": "Jamie Novak",
+    "plan": "pro",
+    "tenure_days": 109
+  },
+  {
+    "customer_id": "cus_00017",
+    "email": "morgan.cohen17@example.net",
+    "name": "Morgan Cohen",
+    "plan": "free",
+    "tenure_days": 880
+  },
+  {
+    "customer_id": "cus_00018",
+    "email": "wei.okafor18@example.com",
+    "name": "Wei Okafor",
+    "plan": "enterprise",
+    "tenure_days": 711
+  },
+  {
+    "customer_id": "cus_00019",
+    "email": "noor.patel19@example.com",
+    "name": "Noor Patel",
+    "plan": "pro",
+    "tenure_days": 1345
+  },
+  {
+    "customer_id": "cus_00020",
+    "email": "priya.silva20@example.com",
+    "name": "Priya Silva",
+    "plan": "starter",
+    "tenure_days": 991
+  },
+  {
+    "customer_id": "cus_00021",
+    "email": "noor.cohen21@example.org",
+    "name": "Noor Cohen",
+    "plan": "pro",
+    "tenure_days": 327
+  },
+  {
+    "customer_id": "cus_00022",
+    "email": "avery.mensah22@example.net",
+    "name": "Avery Mensah",
+    "plan": "starter",
+    "tenure_days": 1279
+  },
+  {
+    "customer_id": "cus_00023",
+    "email": "sofia.kowalski23@example.org",
+    "name": "Sofia Kowalski",
+    "plan": "enterprise",
+    "tenure_days": 1273
+  },
+  {
+    "customer_id": "cus_00024",
+    "email": "fatima.chen24@example.com",
+    "name": "Fatima Chen",
+    "plan": "starter",
+    "tenure_days": 1313
+  },
+  {
+    "customer_id": "cus_00025",
+    "email": "sofia.kim25@example.org",
+    "name": "Sofia Kim",
+    "plan": "pro",
+    "tenure_days": 824
+  },
+  {
+    "customer_id": "cus_00026",
+    "email": "diego.haddad26@example.net",
+    "name": "Diego Haddad",
+    "plan": "enterprise",
+    "tenure_days": 1188
+  },
+  {
+    "customer_id": "cus_00027",
+    "email": "noor.yamamoto27@example.com",
+    "name": "Noor Yamamoto",
+    "plan": "pro",
+    "tenure_days": 484
+  },
+  {
+    "customer_id": "cus_00028",
+    "email": "noor.patel28@example.net",
+    "name": "Noor Patel",
+    "plan": "free",
+    "tenure_days": 701
+  },
+  {
+    "customer_id": "cus_00029",
+    "email": "casey.johansson29@example.net",
+    "name": "Casey Johansson",
+    "plan": "enterprise",
+    "tenure_days": 285
+  },
+  {
+    "customer_id": "cus_00030",
+    "email": "jordan.yamamoto30@example.com",
+    "name": "Jordan Yamamoto",
+    "plan": "enterprise",
+    "tenure_days": 232
+  },
+  {
+    "customer_id": "cus_00031",
+    "email": "avery.kim31@example.com",
+    "name": "Avery Kim",
+    "plan": "enterprise",
+    "tenure_days": 1468
+  },
+  {
+    "customer_id": "cus_00032",
+    "email": "jamie.rossi32@example.org",
+    "name": "Jamie Rossi",
+    "plan": "pro",
+    "tenure_days": 566
+  },
+  {
+    "customer_id": "cus_00033",
+    "email": "riley.okafor33@example.org",
+    "name": "Riley Okafor",
+    "plan": "free",
+    "tenure_days": 1312
+  },
+  {
+    "customer_id": "cus_00034",
+    "email": "amara.kim34@example.com",
+    "name": "Amara Kim",
+    "plan": "starter",
+    "tenure_days": 303
+  },
+  {
+    "customer_id": "cus_00035",
+    "email": "kenji.patel35@example.org",
+    "name": "Kenji Patel",
+    "plan": "enterprise",
+    "tenure_days": 937
+  },
+  {
+    "customer_id": "cus_00036",
+    "email": "alex.kowalski36@example.com",
+    "name": "Alex Kowalski",
+    "plan": "starter",
+    "tenure_days": 485
+  },
+  {
+    "customer_id": "cus_00037",
+    "email": "avery.chen37@example.org",
+    "name": "Avery Chen",
+    "plan": "enterprise",
+    "tenure_days": 944
+  },
+  {
+    "customer_id": "cus_00038",
+    "email": "noor.kim38@example.net",
+    "name": "Noor Kim",
+    "plan": "free",
+    "tenure_days": 1415
+  },
+  {
+    "customer_id": "cus_00039",
+    "email": "sofia.rossi39@example.org",
+    "name": "Sofia Rossi",
+    "plan": "free",
+    "tenure_days": 347
+  },
+  {
+    "customer_id": "cus_00040",
+    "email": "casey.rivera40@example.net",
+    "name": "Casey Rivera",
+    "plan": "starter",
+    "tenure_days": 321
+  },
+  {
+    "customer_id": "cus_00041",
+    "email": "jamie.nguyen41@example.com",
+    "name": "Jamie Nguyen",
+    "plan": "starter",
+    "tenure_days": 1126
+  },
+  {
+    "customer_id": "cus_00042",
+    "email": "noor.haddad42@example.com",
+    "name": "Noor Haddad",
+    "plan": "enterprise",
+    "tenure_days": 465
+  },
+  {
+    "customer_id": "cus_00043",
+    "email": "sofia.mensah43@example.org",
+    "name": "Sofia Mensah",
+    "plan": "enterprise",
+    "tenure_days": 968
+  },
+  {
+    "customer_id": "cus_00044",
+    "email": "jamie.patel44@example.com",
+    "name": "Jamie Patel",
+    "plan": "free",
+    "tenure_days": 1330
+  },
+  {
+    "customer_id": "cus_00045",
+    "email": "morgan.rossi45@example.net",
+    "name": "Morgan Rossi",
+    "plan": "enterprise",
+    "tenure_days": 56
+  },
+  {
+    "customer_id": "cus_00046",
+    "email": "alex.haddad46@example.com",
+    "name": "Alex Haddad",
+    "plan": "free",
+    "tenure_days": 1335
+  },
+  {
+    "customer_id": "cus_00047",
+    "email": "noor.johansson47@example.org",
+    "name": "Noor Johansson",
+    "plan": "pro",
+    "tenure_days": 319
+  },
+  {
+    "customer_id": "cus_00048",
+    "email": "alex.cohen48@example.net",
+    "name": "Alex Cohen",
+    "plan": "enterprise",
+    "tenure_days": 760
+  },
+  {
+    "customer_id": "cus_00049",
+    "email": "jordan.mensah49@example.com",
+    "name": "Jordan Mensah",
+    "plan": "free",
+    "tenure_days": 182
+  },
+  {
+    "customer_id": "cus_00050",
+    "email": "jordan.rossi50@example.net",
+    "name": "Jordan Rossi",
+    "plan": "enterprise",
+    "tenure_days": 813
+  },
+  {
+    "customer_id": "cus_00051",
+    "email": "amara.kowalski51@example.com",
+    "name": "Amara Kowalski",
+    "plan": "enterprise",
+    "tenure_days": 1381
+  },
+  {
+    "customer_id": "cus_00052",
+    "email": "taylor.silva52@example.com",
+    "name": "Taylor Silva",
+    "plan": "enterprise",
+    "tenure_days": 387
+  },
+  {
+    "customer_id": "cus_00053",
+    "email": "casey.kowalski53@example.net",
+    "name": "Casey Kowalski",
+    "plan": "starter",
+    "tenure_days": 1234
+  },
+  {
+    "customer_id": "cus_00054",
+    "email": "casey.haddad54@example.org",
+    "name": "Casey Haddad",
+    "plan": "starter",
+    "tenure_days": 894
+  },
+  {
+    "customer_id": "cus_00055",
+    "email": "alex.cohen55@example.org",
+    "name": "Alex Cohen",
+    "plan": "pro",
+    "tenure_days": 213
+  },
+  {
+    "customer_id": "cus_00056",
+    "email": "fatima.kim56@example.com",
+    "name": "Fatima Kim",
+    "plan": "enterprise",
+    "tenure_days": 751
+  },
+  {
+    "customer_id": "cus_00057",
+    "email": "fatima.rivera57@example.net",
+    "name": "Fatima Rivera",
+    "plan": "pro",
+    "tenure_days": 1430
+  },
+  {
+    "customer_id": "cus_00058",
+    "email": "jamie.nguyen58@example.org",
+    "name": "Jamie Nguyen",
+    "plan": "free",
+    "tenure_days": 1427
+  },
+  {
+    "customer_id": "cus_00059",
+    "email": "jordan.yamamoto59@example.org",
+    "name": "Jordan Yamamoto",
+    "plan": "enterprise",
+    "tenure_days": 78
+  },
+  {
+    "customer_id": "cus_00060",
+    "email": "noor.rivera60@example.org",
+    "name": "Noor Rivera",
+    "plan": "free",
+    "tenure_days": 1389
+  },
+  {
+    "customer_id": "cus_00061",
+    "email": "sofia.novak61@example.com",
+    "name": "Sofia Novak",
+    "plan": "pro",
+    "tenure_days": 1222
+  },
+  {
+    "customer_id": "cus_00062",
+    "email": "kenji.silva62@example.com",
+    "name": "Kenji Silva",
+    "plan": "enterprise",
+    "tenure_days": 1198
+  },
+  {
+    "customer_id": "cus_00063",
+    "email": "diego.rossi63@example.com",
+    "name": "Diego Rossi",
+    "plan": "starter",
+    "tenure_days": 299
+  },
+  {
+    "customer_id": "cus_00064",
+    "email": "riley.haddad64@example.org",
+    "name": "Riley Haddad",
+    "plan": "enterprise",
+    "tenure_days": 335
+  },
+  {
+    "customer_id": "cus_00065",
+    "email": "morgan.silva65@example.org",
+    "name": "Morgan Silva",
+    "plan": "pro",
+    "tenure_days": 791
+  },
+  {
+    "customer_id": "cus_00066",
+    "email": "amara.mensah66@example.com",
+    "name": "Amara Mensah",
+    "plan": "pro",
+    "tenure_days": 1266
+  },
+  {
+    "customer_id": "cus_00067",
+    "email": "jamie.kowalski67@example.org",
+    "name": "Jamie Kowalski",
+    "plan": "enterprise",
+    "tenure_days": 550
+  },
+  {
+    "customer_id": "cus_00068",
+    "email": "casey.johansson68@example.net",
+    "name": "Casey Johansson",
+    "plan": "pro",
+    "tenure_days": 309
+  },
+  {
+    "customer_id": "cus_00069",
+    "email": "riley.silva69@example.com",
+    "name": "Riley Silva",
+    "plan": "starter",
+    "tenure_days": 311
+  },
+  {
+    "customer_id": "cus_00070",
+    "email": "jordan.rivera70@example.com",
+    "name": "Jordan Rivera",
+    "plan": "starter",
+    "tenure_days": 720
+  },
+  {
+    "customer_id": "cus_00071",
+    "email": "riley.kim71@example.com",
+    "name": "Riley Kim",
+    "plan": "free",
+    "tenure_days": 1496
+  },
+  {
+    "customer_id": "cus_00072",
+    "email": "sofia.yamamoto72@example.org",
+    "name": "Sofia Yamamoto",
+    "plan": "enterprise",
+    "tenure_days": 185
+  },
+  {
+    "customer_id": "cus_00073",
+    "email": "jamie.kowalski73@example.org",
+    "name": "Jamie Kowalski",
+    "plan": "pro",
+    "tenure_days": 1460
+  },
+  {
+    "customer_id": "cus_00074",
+    "email": "jamie.chen74@example.org",
+    "name": "Jamie Chen",
+    "plan": "starter",
+    "tenure_days": 205
+  },
+  {
+    "customer_id": "cus_00075",
+    "email": "wei.mensah75@example.net",
+    "name": "Wei Mensah",
+    "plan": "pro",
+    "tenure_days": 595
+  },
+  {
+    "customer_id": "cus_00076",
+    "email": "jordan.johansson76@example.net",
+    "name": "Jordan Johansson",
+    "plan": "pro",
+    "tenure_days": 696
+  },
+  {
+    "customer_id": "cus_00077",
+    "email": "casey.johansson77@example.org",
+    "name": "Casey Johansson",
+    "plan": "pro",
+    "tenure_days": 70
+  },
+  {
+    "customer_id": "cus_00078",
+    "email": "fatima.chen78@example.com",
+    "name": "Fatima Chen",
+    "plan": "enterprise",
+    "tenure_days": 1017
+  },
+  {
+    "customer_id": "cus_00079",
+    "email": "amara.mensah79@example.com",
+    "name": "Amara Mensah",
+    "plan": "enterprise",
+    "tenure_days": 1059
+  },
+  {
+    "customer_id": "cus_00080",
+    "email": "alex.novak80@example.com",
+    "name": "Alex Novak",
+    "plan": "starter",
+    "tenure_days": 1422
+  },
+  {
+    "customer_id": "cus_00081",
+    "email": "noor.kim81@example.com",
+    "name": "Noor Kim",
+    "plan": "enterprise",
+    "tenure_days": 1384
+  },
+  {
+    "customer_id": "cus_00082",
+    "email": "sofia.novak82@example.org",
+    "name": "Sofia Novak",
+    "plan": "starter",
+    "tenure_days": 801
+  },
+  {
+    "customer_id": "cus_00083",
+    "email": "noor.yamamoto83@example.com",
+    "name": "Noor Yamamoto",
+    "plan": "free",
+    "tenure_days": 535
+  },
+  {
+    "customer_id": "cus_00084",
+    "email": "fatima.okafor84@example.net",
+    "name": "Fatima Okafor",
+    "plan": "pro",
+    "tenure_days": 1458
+  },
+  {
+    "customer_id": "cus_00085",
+    "email": "priya.nguyen85@example.com",
+    "name": "Priya Nguyen",
+    "plan": "starter",
+    "tenure_days": 267
+  },
+  {
+    "customer_id": "cus_00086",
+    "email": "diego.cohen86@example.com",
+    "name": "Diego Cohen",
+    "plan": "free",
+    "tenure_days": 1341
+  },
+  {
+    "customer_id": "cus_00087",
+    "email": "morgan.yamamoto87@example.org",
+    "name": "Morgan Yamamoto",
+    "plan": "pro",
+    "tenure_days": 1369
+  },
+  {
+    "customer_id": "cus_00088",
+    "email": "sofia.rivera88@example.net",
+    "name": "Sofia Rivera",
+    "plan": "free",
+    "tenure_days": 788
+  },
+  {
+    "customer_id": "cus_00089",
+    "email": "noor.novak89@example.com",
+    "name": "Noor Novak",
+    "plan": "free",
+    "tenure_days": 127
+  },
+  {
+    "customer_id": "cus_00090",
+    "email": "avery.okafor90@example.com",
+    "name": "Avery Okafor",
+    "plan": "free",
+    "tenure_days": 1450
+  },
+  {
+    "customer_id": "cus_00091",
+    "email": "alex.chen91@example.org",
+    "name": "Alex Chen",
+    "plan": "free",
+    "tenure_days": 1196
+  },
+  {
+    "customer_id": "cus_00092",
+    "email": "alex.mensah92@example.com",
+    "name": "Alex Mensah",
+    "plan": "pro",
+    "tenure_days": 506
+  },
+  {
+    "customer_id": "cus_00093",
+    "email": "wei.kim93@example.net",
+    "name": "Wei Kim",
+    "plan": "pro",
+    "tenure_days": 1251
+  },
+  {
+    "customer_id": "cus_00094",
+    "email": "noor.mensah94@example.org",
+    "name": "Noor Mensah",
+    "plan": "starter",
+    "tenure_days": 64
+  },
+  {
+    "customer_id": "cus_00095",
+    "email": "noor.nguyen95@example.net",
+    "name": "Noor Nguyen",
+    "plan": "enterprise",
+    "tenure_days": 817
+  },
+  {
+    "customer_id": "cus_00096",
+    "email": "avery.novak96@example.org",
+    "name": "Avery Novak",
+    "plan": "free",
+    "tenure_days": 478
+  },
+  {
+    "customer_id": "cus_00097",
+    "email": "alex.kowalski97@example.net",
+    "name": "Alex Kowalski",
+    "plan": "pro",
+    "tenure_days": 1217
+  },
+  {
+    "customer_id": "cus_00098",
+    "email": "fatima.johansson98@example.net",
+    "name": "Fatima Johansson",
+    "plan": "starter",
+    "tenure_days": 142
+  },
+  {
+    "customer_id": "cus_00099",
+    "email": "alex.johansson99@example.net",
+    "name": "Alex Johansson",
+    "plan": "enterprise",
+    "tenure_days": 56
+  },
+  {
+    "customer_id": "cus_00100",
+    "email": "wei.haddad100@example.org",
+    "name": "Wei Haddad",
+    "plan": "enterprise",
+    "tenure_days": 805
+  },
+  {
+    "customer_id": "cus_00101",
+    "email": "riley.rossi101@example.com",
+    "name": "Riley Rossi",
+    "plan": "free",
+    "tenure_days": 475
+  },
+  {
+    "customer_id": "cus_00102",
+    "email": "priya.novak102@example.net",
+    "name": "Priya Novak",
+    "plan": "enterprise",
+    "tenure_days": 377
+  },
+  {
+    "customer_id": "cus_00103",
+    "email": "alex.mensah103@example.org",
+    "name": "Alex Mensah",
+    "plan": "enterprise",
+    "tenure_days": 827
+  },
+  {
+    "customer_id": "cus_00104",
+    "email": "jordan.haddad104@example.org",
+    "name": "Jordan Haddad",
+    "plan": "enterprise",
+    "tenure_days": 1303
+  },
+  {
+    "customer_id": "cus_00105",
+    "email": "taylor.duarte105@example.org",
+    "name": "Taylor Duarte",
+    "plan": "pro",
+    "tenure_days": 609
+  },
+  {
+    "customer_id": "cus_00106",
+    "email": "taylor.duarte106@example.org",
+    "name": "Taylor Duarte",
+    "plan": "pro",
+    "tenure_days": 811
+  },
+  {
+    "customer_id": "cus_00107",
+    "email": "kenji.cohen107@example.net",
+    "name": "Kenji Cohen",
+    "plan": "free",
+    "tenure_days": 297
+  },
+  {
+    "customer_id": "cus_00108",
+    "email": "fatima.nguyen108@example.org",
+    "name": "Fatima Nguyen",
+    "plan": "enterprise",
+    "tenure_days": 703
+  },
+  {
+    "customer_id": "cus_00109",
+    "email": "riley.haddad109@example.com",
+    "name": "Riley Haddad",
+    "plan": "pro",
+    "tenure_days": 543
+  },
+  {
+    "customer_id": "cus_00110",
+    "email": "taylor.novak110@example.com",
+    "name": "Taylor Novak",
+    "plan": "pro",
+    "tenure_days": 220
+  },
+  {
+    "customer_id": "cus_00111",
+    "email": "amara.kim111@example.com",
+    "name": "Amara Kim",
+    "plan": "free",
+    "tenure_days": 1146
+  },
+  {
+    "customer_id": "cus_00112",
+    "email": "riley.silva112@example.org",
+    "name": "Riley Silva",
+    "plan": "starter",
+    "tenure_days": 394
+  },
+  {
+    "customer_id": "cus_00113",
+    "email": "sofia.cohen113@example.org",
+    "name": "Sofia Cohen",
+    "plan": "free",
+    "tenure_days": 71
+  },
+  {
+    "customer_id": "cus_00114",
+    "email": "alex.okafor114@example.org",
+    "name": "Alex Okafor",
+    "plan": "starter",
+    "tenure_days": 1165
+  },
+  {
+    "customer_id": "cus_00115",
+    "email": "alex.rossi115@example.org",
+    "name": "Alex Rossi",
+    "plan": "enterprise",
+    "tenure_days": 1068
+  },
+  {
+    "customer_id": "cus_00116",
+    "email": "jordan.silva116@example.com",
+    "name": "Jordan Silva",
+    "plan": "pro",
+    "tenure_days": 1025
+  },
+  {
+    "customer_id": "cus_00117",
+    "email": "morgan.mensah117@example.org",
+    "name": "Morgan Mensah",
+    "plan": "pro",
+    "tenure_days": 640
+  },
+  {
+    "customer_id": "cus_00118",
+    "email": "kenji.johansson118@example.com",
+    "name": "Kenji Johansson",
+    "plan": "enterprise",
+    "tenure_days": 585
+  },
+  {
+    "customer_id": "cus_00119",
+    "email": "riley.chen119@example.com",
+    "name": "Riley Chen",
+    "plan": "starter",
+    "tenure_days": 1444
+  },
+  {
+    "customer_id": "cus_00120",
+    "email": "priya.johansson120@example.com",
+    "name": "Priya Johansson",
+    "plan": "starter",
+    "tenure_days": 465
+  },
+  {
+    "customer_id": "cus_00121",
+    "email": "morgan.kowalski121@example.com",
+    "name": "Morgan Kowalski",
+    "plan": "starter",
+    "tenure_days": 742
+  },
+  {
+    "customer_id": "cus_00122",
+    "email": "priya.patel122@example.com",
+    "name": "Priya Patel",
+    "plan": "pro",
+    "tenure_days": 1069
+  },
+  {
+    "customer_id": "cus_00123",
+    "email": "sofia.johansson123@example.net",
+    "name": "Sofia Johansson",
+    "plan": "free",
+    "tenure_days": 880
+  },
+  {
+    "customer_id": "cus_00124",
+    "email": "jamie.johansson124@example.net",
+    "name": "Jamie Johansson",
+    "plan": "pro",
+    "tenure_days": 1408
+  },
+  {
+    "customer_id": "cus_00125",
+    "email": "priya.yamamoto125@example.com",
+    "name": "Priya Yamamoto",
+    "plan": "pro",
+    "tenure_days": 373
+  },
+  {
+    "customer_id": "cus_00126",
+    "email": "fatima.mensah126@example.net",
+    "name": "Fatima Mensah",
+    "plan": "enterprise",
+    "tenure_days": 264
+  },
+  {
+    "customer_id": "cus_00127",
+    "email": "sofia.johansson127@example.net",
+    "name": "Sofia Johansson",
+    "plan": "starter",
+    "tenure_days": 1052
+  },
+  {
+    "customer_id": "cus_00128",
+    "email": "wei.rossi128@example.com",
+    "name": "Wei Rossi",
+    "plan": "pro",
+    "tenure_days": 993
+  },
+  {
+    "customer_id": "cus_00129",
+    "email": "casey.johansson129@example.org",
+    "name": "Casey Johansson",
+    "plan": "starter",
+    "tenure_days": 634
+  },
+  {
+    "customer_id": "cus_00130",
+    "email": "wei.kowalski130@example.net",
+    "name": "Wei Kowalski",
+    "plan": "enterprise",
+    "tenure_days": 1145
+  },
+  {
+    "customer_id": "cus_00131",
+    "email": "taylor.mensah131@example.com",
+    "name": "Taylor Mensah",
+    "plan": "pro",
+    "tenure_days": 660
+  },
+  {
+    "customer_id": "cus_00132",
+    "email": "alex.rossi132@example.net",
+    "name": "Alex Rossi",
+    "plan": "starter",
+    "tenure_days": 1311
+  },
+  {
+    "customer_id": "cus_00133",
+    "email": "fatima.duarte133@example.org",
+    "name": "Fatima Duarte",
+    "plan": "enterprise",
+    "tenure_days": 473
+  },
+  {
+    "customer_id": "cus_00134",
+    "email": "morgan.haddad134@example.net",
+    "name": "Morgan Haddad",
+    "plan": "pro",
+    "tenure_days": 418
+  },
+  {
+    "customer_id": "cus_00135",
+    "email": "morgan.kim135@example.org",
+    "name": "Morgan Kim",
+    "plan": "enterprise",
+    "tenure_days": 1357
+  },
+  {
+    "customer_id": "cus_00136",
+    "email": "noor.chen136@example.net",
+    "name": "Noor Chen",
+    "plan": "pro",
+    "tenure_days": 1384
+  },
+  {
+    "customer_id": "cus_00137",
+    "email": "fatima.rivera137@example.com",
+    "name": "Fatima Rivera",
+    "plan": "pro",
+    "tenure_days": 246
+  },
+  {
+    "customer_id": "cus_00138",
+    "email": "fatima.chen138@example.org",
+    "name": "Fatima Chen",
+    "plan": "starter",
+    "tenure_days": 185
+  },
+  {
+    "customer_id": "cus_00139",
+    "email": "jamie.duarte139@example.com",
+    "name": "Jamie Duarte",
+    "plan": "pro",
+    "tenure_days": 841
+  },
+  {
+    "customer_id": "cus_00140",
+    "email": "taylor.haddad140@example.com",
+    "name": "Taylor Haddad",
+    "plan": "starter",
+    "tenure_days": 42
+  },
+  {
+    "customer_id": "cus_00141",
+    "email": "diego.kowalski141@example.org",
+    "name": "Diego Kowalski",
+    "plan": "enterprise",
+    "tenure_days": 684
+  },
+  {
+    "customer_id": "cus_00142",
+    "email": "riley.kim142@example.com",
+    "name": "Riley Kim",
+    "plan": "pro",
+    "tenure_days": 812
+  },
+  {
+    "customer_id": "cus_00143",
+    "email": "jordan.novak143@example.net",
+    "name": "Jordan Novak",
+    "plan": "enterprise",
+    "tenure_days": 857
+  },
+  {
+    "customer_id": "cus_00144",
+    "email": "fatima.kim144@example.org",
+    "name": "Fatima Kim",
+    "plan": "starter",
+    "tenure_days": 261
+  },
+  {
+    "customer_id": "cus_00145",
+    "email": "amara.kim145@example.org",
+    "name": "Amara Kim",
+    "plan": "enterprise",
+    "tenure_days": 1062
+  },
+  {
+    "customer_id": "cus_00146",
+    "email": "alex.novak146@example.net",
+    "name": "Alex Novak",
+    "plan": "enterprise",
+    "tenure_days": 1464
+  },
+  {
+    "customer_id": "cus_00147",
+    "email": "noor.rossi147@example.net",
+    "name": "Noor Rossi",
+    "plan": "free",
+    "tenure_days": 1017
+  },
+  {
+    "customer_id": "cus_00148",
+    "email": "priya.nguyen148@example.net",
+    "name": "Priya Nguyen",
+    "plan": "pro",
+    "tenure_days": 1043
+  },
+  {
+    "customer_id": "cus_00149",
+    "email": "diego.chen149@example.com",
+    "name": "Diego Chen",
+    "plan": "enterprise",
+    "tenure_days": 854
+  },
+  {
+    "customer_id": "cus_00150",
+    "email": "riley.nguyen150@example.com",
+    "name": "Riley Nguyen",
+    "plan": "free",
+    "tenure_days": 1276
+  },
+  {
+    "customer_id": "cus_00151",
+    "email": "jamie.duarte151@example.net",
+    "name": "Jamie Duarte",
+    "plan": "enterprise",
+    "tenure_days": 664
+  },
+  {
+    "customer_id": "cus_00152",
+    "email": "avery.mensah152@example.net",
+    "name": "Avery Mensah",
+    "plan": "free",
+    "tenure_days": 655
+  },
+  {
+    "customer_id": "cus_00153",
+    "email": "amara.haddad153@example.org",
+    "name": "Amara Haddad",
+    "plan": "free",
+    "tenure_days": 3
+  },
+  {
+    "customer_id": "cus_00154",
+    "email": "morgan.nguyen154@example.net",
+    "name": "Morgan Nguyen",
+    "plan": "starter",
+    "tenure_days": 1198
+  },
+  {
+    "customer_id": "cus_00155",
+    "email": "priya.rossi155@example.org",
+    "name": "Priya Rossi",
+    "plan": "pro",
+    "tenure_days": 1047
+  },
+  {
+    "customer_id": "cus_00156",
+    "email": "noor.okafor156@example.org",
+    "name": "Noor Okafor",
+    "plan": "starter",
+    "tenure_days": 535
+  },
+  {
+    "customer_id": "cus_00157",
+    "email": "alex.haddad157@example.net",
+    "name": "Alex Haddad",
+    "plan": "pro",
+    "tenure_days": 40
+  },
+  {
+    "customer_id": "cus_00158",
+    "email": "casey.duarte158@example.net",
+    "name": "Casey Duarte",
+    "plan": "starter",
+    "tenure_days": 719
+  },
+  {
+    "customer_id": "cus_00159",
+    "email": "sofia.mensah159@example.com",
+    "name": "Sofia Mensah",
+    "plan": "pro",
+    "tenure_days": 402
+  },
+  {
+    "customer_id": "cus_00160",
+    "email": "casey.kowalski160@example.com",
+    "name": "Casey Kowalski",
+    "plan": "pro",
+    "tenure_days": 1106
+  },
+  {
+    "customer_id": "cus_00161",
+    "email": "riley.nguyen161@example.net",
+    "name": "Riley Nguyen",
+    "plan": "free",
+    "tenure_days": 267
+  },
+  {
+    "customer_id": "cus_00162",
+    "email": "taylor.mensah162@example.com",
+    "name": "Taylor Mensah",
+    "plan": "starter",
+    "tenure_days": 500
+  },
+  {
+    "customer_id": "cus_00163",
+    "email": "sofia.silva163@example.org",
+    "name": "Sofia Silva",
+    "plan": "enterprise",
+    "tenure_days": 230
+  },
+  {
+    "customer_id": "cus_00164",
+    "email": "avery.haddad164@example.com",
+    "name": "Avery Haddad",
+    "plan": "pro",
+    "tenure_days": 745
+  },
+  {
+    "customer_id": "cus_00165",
+    "email": "wei.haddad165@example.org",
+    "name": "Wei Haddad",
+    "plan": "enterprise",
+    "tenure_days": 664
+  },
+  {
+    "customer_id": "cus_00166",
+    "email": "casey.chen166@example.com",
+    "name": "Casey Chen",
+    "plan": "enterprise",
+    "tenure_days": 1460
+  },
+  {
+    "customer_id": "cus_00167",
+    "email": "kenji.patel167@example.org",
+    "name": "Kenji Patel",
+    "plan": "free",
+    "tenure_days": 1047
+  },
+  {
+    "customer_id": "cus_00168",
+    "email": "riley.rossi168@example.org",
+    "name": "Riley Rossi",
+    "plan": "starter",
+    "tenure_days": 1280
+  },
+  {
+    "customer_id": "cus_00169",
+    "email": "kenji.novak169@example.net",
+    "name": "Kenji Novak",
+    "plan": "pro",
+    "tenure_days": 19
+  },
+  {
+    "customer_id": "cus_00170",
+    "email": "alex.silva170@example.net",
+    "name": "Alex Silva",
+    "plan": "starter",
+    "tenure_days": 700
+  },
+  {
+    "customer_id": "cus_00171",
+    "email": "alex.duarte171@example.com",
+    "name": "Alex Duarte",
+    "plan": "starter",
+    "tenure_days": 512
+  },
+  {
+    "customer_id": "cus_00172",
+    "email": "casey.okafor172@example.net",
+    "name": "Casey Okafor",
+    "plan": "starter",
+    "tenure_days": 895
+  },
+  {
+    "customer_id": "cus_00173",
+    "email": "priya.cohen173@example.net",
+    "name": "Priya Cohen",
+    "plan": "pro",
+    "tenure_days": 58
+  },
+  {
+    "customer_id": "cus_00174",
+    "email": "casey.okafor174@example.com",
+    "name": "Casey Okafor",
+    "plan": "free",
+    "tenure_days": 508
+  },
+  {
+    "customer_id": "cus_00175",
+    "email": "noor.chen175@example.com",
+    "name": "Noor Chen",
+    "plan": "starter",
+    "tenure_days": 1454
+  },
+  {
+    "customer_id": "cus_00176",
+    "email": "priya.kowalski176@example.org",
+    "name": "Priya Kowalski",
+    "plan": "starter",
+    "tenure_days": 562
+  },
+  {
+    "customer_id": "cus_00177",
+    "email": "amara.silva177@example.org",
+    "name": "Amara Silva",
+    "plan": "free",
+    "tenure_days": 552
+  },
+  {
+    "customer_id": "cus_00178",
+    "email": "fatima.duarte178@example.org",
+    "name": "Fatima Duarte",
+    "plan": "enterprise",
+    "tenure_days": 59
+  },
+  {
+    "customer_id": "cus_00179",
+    "email": "noor.novak179@example.net",
+    "name": "Noor Novak",
+    "plan": "free",
+    "tenure_days": 528
+  },
+  {
+    "customer_id": "cus_00180",
+    "email": "wei.patel180@example.com",
+    "name": "Wei Patel",
+    "plan": "pro",
+    "tenure_days": 1486
+  },
+  {
+    "customer_id": "cus_00181",
+    "email": "kenji.johansson181@example.org",
+    "name": "Kenji Johansson",
+    "plan": "pro",
+    "tenure_days": 1292
+  },
+  {
+    "customer_id": "cus_00182",
+    "email": "jordan.yamamoto182@example.com",
+    "name": "Jordan Yamamoto",
+    "plan": "starter",
+    "tenure_days": 413
+  },
+  {
+    "customer_id": "cus_00183",
+    "email": "jordan.nguyen183@example.com",
+    "name": "Jordan Nguyen",
+    "plan": "pro",
+    "tenure_days": 531
+  },
+  {
+    "customer_id": "cus_00184",
+    "email": "priya.mensah184@example.com",
+    "name": "Priya Mensah",
+    "plan": "starter",
+    "tenure_days": 907
+  },
+  {
+    "customer_id": "cus_00185",
+    "email": "amara.okafor185@example.com",
+    "name": "Amara Okafor",
+    "plan": "starter",
+    "tenure_days": 211
+  },
+  {
+    "customer_id": "cus_00186",
+    "email": "riley.cohen186@example.net",
+    "name": "Riley Cohen",
+    "plan": "free",
+    "tenure_days": 1090
+  },
+  {
+    "customer_id": "cus_00187",
+    "email": "noor.patel187@example.net",
+    "name": "Noor Patel",
+    "plan": "free",
+    "tenure_days": 868
+  },
+  {
+    "customer_id": "cus_00188",
+    "email": "jordan.yamamoto188@example.org",
+    "name": "Jordan Yamamoto",
+    "plan": "free",
+    "tenure_days": 794
+  },
+  {
+    "customer_id": "cus_00189",
+    "email": "avery.cohen189@example.net",
+    "name": "Avery Cohen",
+    "plan": "pro",
+    "tenure_days": 1097
+  },
+  {
+    "customer_id": "cus_00190",
+    "email": "priya.mensah190@example.com",
+    "name": "Priya Mensah",
+    "plan": "enterprise",
+    "tenure_days": 80
+  },
+  {
+    "customer_id": "cus_00191",
+    "email": "taylor.okafor191@example.net",
+    "name": "Taylor Okafor",
+    "plan": "enterprise",
+    "tenure_days": 1264
+  },
+  {
+    "customer_id": "cus_00192",
+    "email": "avery.chen192@example.com",
+    "name": "Avery Chen",
+    "plan": "free",
+    "tenure_days": 1202
+  },
+  {
+    "customer_id": "cus_00193",
+    "email": "jordan.kowalski193@example.org",
+    "name": "Jordan Kowalski",
+    "plan": "starter",
+    "tenure_days": 768
+  },
+  {
+    "customer_id": "cus_00194",
+    "email": "fatima.rossi194@example.org",
+    "name": "Fatima Rossi",
+    "plan": "free",
+    "tenure_days": 1216
+  },
+  {
+    "customer_id": "cus_00195",
+    "email": "avery.novak195@example.net",
+    "name": "Avery Novak",
+    "plan": "enterprise",
+    "tenure_days": 1239
+  },
+  {
+    "customer_id": "cus_00196",
+    "email": "wei.yamamoto196@example.com",
+    "name": "Wei Yamamoto",
+    "plan": "starter",
+    "tenure_days": 1388
+  },
+  {
+    "customer_id": "cus_00197",
+    "email": "fatima.okafor197@example.net",
+    "name": "Fatima Okafor",
+    "plan": "pro",
+    "tenure_days": 435
+  },
+  {
+    "customer_id": "cus_00198",
+    "email": "wei.silva198@example.net",
+    "name": "Wei Silva",
+    "plan": "starter",
+    "tenure_days": 1314
+  },
+  {
+    "customer_id": "cus_00199",
+    "email": "fatima.novak199@example.net",
+    "name": "Fatima Novak",
+    "plan": "free",
+    "tenure_days": 1036
+  },
+  {
+    "customer_id": "cus_00200",
+    "email": "avery.silva200@example.org",
+    "name": "Avery Silva",
+    "plan": "pro",
+    "tenure_days": 370
+  },
+  {
+    "customer_id": "cus_00201",
+    "email": "noor.johansson201@example.com",
+    "name": "Noor Johansson",
+    "plan": "pro",
+    "tenure_days": 453
+  },
+  {
+    "customer_id": "cus_00202",
+    "email": "morgan.cohen202@example.com",
+    "name": "Morgan Cohen",
+    "plan": "enterprise",
+    "tenure_days": 136
+  },
+  {
+    "customer_id": "cus_00203",
+    "email": "sofia.silva203@example.org",
+    "name": "Sofia Silva",
+    "plan": "enterprise",
+    "tenure_days": 1298
+  },
+  {
+    "customer_id": "cus_00204",
+    "email": "taylor.novak204@example.com",
+    "name": "Taylor Novak",
+    "plan": "free",
+    "tenure_days": 47
+  },
+  {
+    "customer_id": "cus_00205",
+    "email": "kenji.johansson205@example.org",
+    "name": "Kenji Johansson",
+    "plan": "enterprise",
+    "tenure_days": 260
+  },
+  {
+    "customer_id": "cus_00206",
+    "email": "priya.haddad206@example.com",
+    "name": "Priya Haddad",
+    "plan": "pro",
+    "tenure_days": 260
+  },
+  {
+    "customer_id": "cus_00207",
+    "email": "fatima.kim207@example.org",
+    "name": "Fatima Kim",
+    "plan": "pro",
+    "tenure_days": 1010
+  },
+  {
+    "customer_id": "cus_00208",
+    "email": "diego.rossi208@example.net",
+    "name": "Diego Rossi",
+    "plan": "free",
+    "tenure_days": 1218
+  },
+  {
+    "customer_id": "cus_00209",
+    "email": "priya.rossi209@example.org",
+    "name": "Priya Rossi",
+    "plan": "pro",
+    "tenure_days": 998
+  },
+  {
+    "customer_id": "cus_00210",
+    "email": "morgan.silva210@example.net",
+    "name": "Morgan Silva",
+    "plan": "starter",
+    "tenure_days": 284
+  },
+  {
+    "customer_id": "cus_00211",
+    "email": "casey.haddad211@example.com",
+    "name": "Casey Haddad",
+    "plan": "starter",
+    "tenure_days": 641
+  },
+  {
+    "customer_id": "cus_00212",
+    "email": "fatima.cohen212@example.org",
+    "name": "Fatima Cohen",
+    "plan": "pro",
+    "tenure_days": 350
+  },
+  {
+    "customer_id": "cus_00213",
+    "email": "jamie.kim213@example.com",
+    "name": "Jamie Kim",
+    "plan": "pro",
+    "tenure_days": 1442
+  },
+  {
+    "customer_id": "cus_00214",
+    "email": "diego.johansson214@example.net",
+    "name": "Diego Johansson",
+    "plan": "free",
+    "tenure_days": 722
+  },
+  {
+    "customer_id": "cus_00215",
+    "email": "avery.patel215@example.org",
+    "name": "Avery Patel",
+    "plan": "starter",
+    "tenure_days": 515
+  },
+  {
+    "customer_id": "cus_00216",
+    "email": "wei.okafor216@example.com",
+    "name": "Wei Okafor",
+    "plan": "pro",
+    "tenure_days": 599
+  },
+  {
+    "customer_id": "cus_00217",
+    "email": "jamie.patel217@example.org",
+    "name": "Jamie Patel",
+    "plan": "free",
+    "tenure_days": 628
+  },
+  {
+    "customer_id": "cus_00218",
+    "email": "jordan.silva218@example.org",
+    "name": "Jordan Silva",
+    "plan": "enterprise",
+    "tenure_days": 218
+  },
+  {
+    "customer_id": "cus_00219",
+    "email": "noor.chen219@example.org",
+    "name": "Noor Chen",
+    "plan": "enterprise",
+    "tenure_days": 269
+  },
+  {
+    "customer_id": "cus_00220",
+    "email": "kenji.chen220@example.org",
+    "name": "Kenji Chen",
+    "plan": "starter",
+    "tenure_days": 1393
+  },
+  {
+    "customer_id": "cus_00221",
+    "email": "jordan.haddad221@example.net",
+    "name": "Jordan Haddad",
+    "plan": "starter",
+    "tenure_days": 440
+  },
+  {
+    "customer_id": "cus_00222",
+    "email": "alex.novak222@example.net",
+    "name": "Alex Novak",
+    "plan": "starter",
+    "tenure_days": 1117
+  },
+  {
+    "customer_id": "cus_00223",
+    "email": "taylor.cohen223@example.net",
+    "name": "Taylor Cohen",
+    "plan": "pro",
+    "tenure_days": 224
+  },
+  {
+    "customer_id": "cus_00224",
+    "email": "amara.kowalski224@example.net",
+    "name": "Amara Kowalski",
+    "plan": "starter",
+    "tenure_days": 1086
+  },
+  {
+    "customer_id": "cus_00225",
+    "email": "morgan.rossi225@example.net",
+    "name": "Morgan Rossi",
+    "plan": "pro",
+    "tenure_days": 44
+  },
+  {
+    "customer_id": "cus_00226",
+    "email": "priya.patel226@example.org",
+    "name": "Priya Patel",
+    "plan": "pro",
+    "tenure_days": 849
+  },
+  {
+    "customer_id": "cus_00227",
+    "email": "casey.nguyen227@example.com",
+    "name": "Casey Nguyen",
+    "plan": "free",
+    "tenure_days": 874
+  },
+  {
+    "customer_id": "cus_00228",
+    "email": "fatima.patel228@example.net",
+    "name": "Fatima Patel",
+    "plan": "starter",
+    "tenure_days": 932
+  },
+  {
+    "customer_id": "cus_00229",
+    "email": "riley.novak229@example.org",
+    "name": "Riley Novak",
+    "plan": "enterprise",
+    "tenure_days": 676
+  },
+  {
+    "customer_id": "cus_00230",
+    "email": "taylor.yamamoto230@example.com",
+    "name": "Taylor Yamamoto",
+    "plan": "free",
+    "tenure_days": 85
+  },
+  {
+    "customer_id": "cus_00231",
+    "email": "amara.rivera231@example.com",
+    "name": "Amara Rivera",
+    "plan": "free",
+    "tenure_days": 526
+  },
+  {
+    "customer_id": "cus_00232",
+    "email": "morgan.silva232@example.com",
+    "name": "Morgan Silva",
+    "plan": "free",
+    "tenure_days": 1016
+  },
+  {
+    "customer_id": "cus_00233",
+    "email": "wei.mensah233@example.org",
+    "name": "Wei Mensah",
+    "plan": "starter",
+    "tenure_days": 296
+  },
+  {
+    "customer_id": "cus_00234",
+    "email": "taylor.okafor234@example.com",
+    "name": "Taylor Okafor",
+    "plan": "free",
+    "tenure_days": 492
+  },
+  {
+    "customer_id": "cus_00235",
+    "email": "taylor.nguyen235@example.org",
+    "name": "Taylor Nguyen",
+    "plan": "enterprise",
+    "tenure_days": 183
+  },
+  {
+    "customer_id": "cus_00236",
+    "email": "avery.haddad236@example.com",
+    "name": "Avery Haddad",
+    "plan": "enterprise",
+    "tenure_days": 128
+  },
+  {
+    "customer_id": "cus_00237",
+    "email": "noor.yamamoto237@example.com",
+    "name": "Noor Yamamoto",
+    "plan": "starter",
+    "tenure_days": 293
+  },
+  {
+    "customer_id": "cus_00238",
+    "email": "fatima.rivera238@example.org",
+    "name": "Fatima Rivera",
+    "plan": "starter",
+    "tenure_days": 1307
+  },
+  {
+    "customer_id": "cus_00239",
+    "email": "diego.silva239@example.net",
+    "name": "Diego Silva",
+    "plan": "enterprise",
+    "tenure_days": 328
+  },
+  {
+    "customer_id": "cus_00240",
+    "email": "sofia.cohen240@example.net",
+    "name": "Sofia Cohen",
+    "plan": "free",
+    "tenure_days": 54
+  },
+  {
+    "customer_id": "cus_00241",
+    "email": "priya.kim241@example.org",
+    "name": "Priya Kim",
+    "plan": "free",
+    "tenure_days": 260
+  },
+  {
+    "customer_id": "cus_00242",
+    "email": "amara.cohen242@example.org",
+    "name": "Amara Cohen",
+    "plan": "pro",
+    "tenure_days": 656
+  },
+  {
+    "customer_id": "cus_00243",
+    "email": "morgan.nguyen243@example.com",
+    "name": "Morgan Nguyen",
+    "plan": "free",
+    "tenure_days": 784
+  },
+  {
+    "customer_id": "cus_00244",
+    "email": "jamie.nguyen244@example.org",
+    "name": "Jamie Nguyen",
+    "plan": "free",
+    "tenure_days": 118
+  },
+  {
+    "customer_id": "cus_00245",
+    "email": "wei.silva245@example.org",
+    "name": "Wei Silva",
+    "plan": "enterprise",
+    "tenure_days": 575
+  },
+  {
+    "customer_id": "cus_00246",
+    "email": "jamie.nguyen246@example.com",
+    "name": "Jamie Nguyen",
+    "plan": "starter",
+    "tenure_days": 263
+  },
+  {
+    "customer_id": "cus_00247",
+    "email": "diego.patel247@example.com",
+    "name": "Diego Patel",
+    "plan": "enterprise",
+    "tenure_days": 37
+  },
+  {
+    "customer_id": "cus_00248",
+    "email": "amara.rivera248@example.net",
+    "name": "Amara Rivera",
+    "plan": "pro",
+    "tenure_days": 1330
+  },
+  {
+    "customer_id": "cus_00249",
+    "email": "fatima.johansson249@example.org",
+    "name": "Fatima Johansson",
+    "plan": "starter",
+    "tenure_days": 346
+  },
+  {
+    "customer_id": "cus_00250",
+    "email": "noor.chen250@example.com",
+    "name": "Noor Chen",
+    "plan": "enterprise",
+    "tenure_days": 320
+  },
+  {
+    "customer_id": "cus_00251",
+    "email": "priya.kim251@example.com",
+    "name": "Priya Kim",
+    "plan": "starter",
+    "tenure_days": 230
+  },
+  {
+    "customer_id": "cus_00252",
+    "email": "wei.patel252@example.net",
+    "name": "Wei Patel",
+    "plan": "starter",
+    "tenure_days": 535
+  },
+  {
+    "customer_id": "cus_00253",
+    "email": "avery.rossi253@example.org",
+    "name": "Avery Rossi",
+    "plan": "enterprise",
+    "tenure_days": 1441
+  },
+  {
+    "customer_id": "cus_00254",
+    "email": "kenji.rivera254@example.org",
+    "name": "Kenji Rivera",
+    "plan": "starter",
+    "tenure_days": 597
+  },
+  {
+    "customer_id": "cus_00255",
+    "email": "jamie.mensah255@example.org",
+    "name": "Jamie Mensah",
+    "plan": "free",
+    "tenure_days": 550
+  },
+  {
+    "customer_id": "cus_00256",
+    "email": "fatima.rivera256@example.org",
+    "name": "Fatima Rivera",
+    "plan": "free",
+    "tenure_days": 80
+  },
+  {
+    "customer_id": "cus_00257",
+    "email": "riley.rossi257@example.net",
+    "name": "Riley Rossi",
+    "plan": "pro",
+    "tenure_days": 920
+  },
+  {
+    "customer_id": "cus_00258",
+    "email": "amara.mensah258@example.org",
+    "name": "Amara Mensah",
+    "plan": "pro",
+    "tenure_days": 1477
+  },
+  {
+    "customer_id": "cus_00259",
+    "email": "priya.kim259@example.com",
+    "name": "Priya Kim",
+    "plan": "starter",
+    "tenure_days": 1484
+  },
+  {
+    "customer_id": "cus_00260",
+    "email": "morgan.patel260@example.com",
+    "name": "Morgan Patel",
+    "plan": "free",
+    "tenure_days": 733
+  },
+  {
+    "customer_id": "cus_00261",
+    "email": "alex.mensah261@example.org",
+    "name": "Alex Mensah",
+    "plan": "enterprise",
+    "tenure_days": 1283
+  },
+  {
+    "customer_id": "cus_00262",
+    "email": "diego.novak262@example.org",
+    "name": "Diego Novak",
+    "plan": "pro",
+    "tenure_days": 495
+  },
+  {
+    "customer_id": "cus_00263",
+    "email": "jordan.cohen263@example.net",
+    "name": "Jordan Cohen",
+    "plan": "pro",
+    "tenure_days": 99
+  },
+  {
+    "customer_id": "cus_00264",
+    "email": "riley.mensah264@example.org",
+    "name": "Riley Mensah",
+    "plan": "enterprise",
+    "tenure_days": 796
+  },
+  {
+    "customer_id": "cus_00265",
+    "email": "morgan.kim265@example.org",
+    "name": "Morgan Kim",
+    "plan": "free",
+    "tenure_days": 1102
+  }
+]

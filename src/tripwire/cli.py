@@ -6,6 +6,7 @@ in each stub's error message. See tasks/todo.md for the full task list.
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import NoReturn
 
 import typer
@@ -15,6 +16,21 @@ app = typer.Typer(
     help="Evaluation and observability harness for multi-step agents.",
     no_args_is_help=True,
 )
+
+
+def _repo_root() -> Path:
+    """Walk up from this file until a `pyproject.toml` is found.
+
+    CassetteStore and the corpus writer default to cwd-relative paths by design (see
+    SPEC-trace-core.md § Cassettes and the Task 4 doubt-cycle note) — it's this entry point's
+    job to anchor them at the repo root, so `tripwire gen-corpus` behaves the same run from any
+    subdirectory instead of silently writing `data/corpus/` wherever the shell happened to be.
+    """
+    here = Path(__file__).resolve()
+    for candidate in (here, *here.parents):
+        if (candidate / "pyproject.toml").exists():
+            return candidate
+    raise RuntimeError("could not find repo root (no pyproject.toml in any parent directory)")
 
 
 def _not_implemented(command: str, task: str) -> NoReturn:
@@ -78,9 +94,22 @@ def gate(
 def gen_corpus(
     seed: int = typer.Option(1337, "--seed"),
     threads: int = typer.Option(400, "--threads"),
+    out_dir: Path | None = typer.Option(
+        None, "--out-dir", help="Defaults to <repo root>/data/corpus."
+    ),
 ) -> None:
     """Generate the deterministic synthetic inbox corpus."""
-    _not_implemented("gen-corpus", "Task 5")
+    from tripwire.data import generate_corpus, write_corpus
+
+    resolved_out_dir = out_dir if out_dir is not None else _repo_root() / "data" / "corpus"
+    corpus = generate_corpus(seed=seed, thread_count=threads)
+    write_corpus(corpus, resolved_out_dir)
+    typer.echo(
+        f"wrote {corpus.manifest.thread_count} threads, "
+        f"{corpus.manifest.customer_count} customers, "
+        f"{corpus.manifest.order_count} orders to {resolved_out_dir} "
+        f"(content_hash={corpus.manifest.content_hash[:12]}...)"
+    )
 
 
 if __name__ == "__main__":

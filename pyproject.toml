@@ -40,6 +40,12 @@ target-version = "py312"
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
 
+[tool.ruff.lint.flake8-bugbear]
+# typer.Option(...)/typer.Argument(...) as an argument default is the documented Typer idiom
+# (the call is inspected by Typer at decoration time, not re-evaluated per call), not the
+# mutable-default footgun B008 exists to catch.
+extend-immutable-calls = ["typer.Option", "typer.Argument"]
+
 [tool.mypy]
 python_version = "3.12"
 strict = true
