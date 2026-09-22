@@ -106,17 +106,19 @@ gateway.create(request: ModelRequest) -> openai.types.chat.ChatCompletion
 - Errors are caught most-specific-first by `openai` SDK exception class (`NotFoundError`,
   `RateLimitError`, `APIStatusError`, `APIConnectionError`); retryable and non-retryable failures
   are distinguished in the span.
-- Whether tool calls arrive as native `tool_calls` blocks or must be requested via a
-  prompted-JSON fallback is confirmed against the model card before this task starts (`SPEC.md`
-  Open Question 6); either way the gateway's return shape to callers is the same, so the fallback
-  is isolated inside the gateway, not leaked to `agent`.
+- Native `tool_calls` blocks are used (confirmed: build.nvidia.com's model page for
+  `nemotron-3.5-lightning-30b-a3b` states tool/function calling is "Supported" — SPEC.md Open
+  Question 6 resolved, source-verified 2026-09-22). No prompted-JSON fallback path exists.
 
 ### Cassettes
 
 - Key: a stable SHA-256 over the canonicalized semantically relevant request — model, system
-  prompt, messages, tool definitions, `tool_choice`, `response_format`. Dict key order and
-  insignificant whitespace do not change the key. Request ids, timestamps, and retry counts are
-  excluded.
+  prompt, messages, tool definitions, `tool_choice`, `response_format`, `max_tokens`. `max_tokens`
+  is included (Task 4 doubt cycle correction from the original plan): it can truncate the
+  completion and flip `finish_reason` to `"length"`, so two requests differing only in
+  `max_tokens` are a different question, not the same one twice. Dict key order and insignificant
+  whitespace do not change the key. Request ids, timestamps, retry counts, and `stream` (a
+  transport choice) are excluded.
 - Stored at `fixtures/cassettes/<key>.json`: the recorded response content, `usage`, `stop_reason`,
   and the measured `latency_ms` from the recording.
 - Replay restores recorded usage and recorded latency, so cost and latency metrics remain real

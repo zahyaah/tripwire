@@ -284,12 +284,24 @@ Rules:
    dimensions whose holdout kappa is below 0.6, block on dimensions at or above 0.6.
 4. Whether v1 ships a second agent (even a trivial one) to prove the harness is not
    single-agent-shaped. Current assumption: no, but no module may import from `agents/`.
-5. Exact Nemotron 3.5 Lightning catalog model id and endpoint path — confirm against
-   build.nvidia.com before Task 4 (gateway). Blocks nothing in Task 1-3.
-6. Whether Nemotron 3.5 Lightning supports native tool/function calling in its API response
-   (`tool_calls` blocks) — unconfirmed. Blocks Task 6/7 (agent tools, agent loop). If unsupported,
-   fallback is prompted JSON tool-call emission parsed and validated against the tool schema,
-   which changes the loop's parsing path and needs its own review before Task 7 starts.
-7. Whether the NVIDIA API catalog endpoint for this model is metered or free/preview — decides
-   whether the price table (Task 3) carries real rates or a documented zero-price placeholder.
-   Confirm before Task 3.
+5. Exact Nemotron 3.5 Lightning catalog model id string for API calls — still unconfirmed. The
+   catalog slug is `nemotron-3.5-lightning-30b-a3b` (source: build.nvidia.com's featured-models
+   listing, fetched 2026-09-22); NVIDIA's own sample code on the model's own page showed
+   `model=""` (populated by page JS, not visible to a static fetch). Confirm with a live
+   `client.models.list()` call or by copying the exact string from the page's rendered code
+   sample before Task 6/7 wire up the real agent. `PRICE_TABLE`'s key (Task 3) must match
+   whatever string is confirmed. Endpoint path is resolved: `base_url =
+   https://integrate.api.nvidia.com/v1` (confirmed, same source).
+6. ~~Whether Nemotron 3.5 Lightning supports native tool/function calling~~ — **resolved (Task 4,
+   source-verified)**: build.nvidia.com's model page states tool/function calling is "Supported."
+   Native `tool_calls` blocks are used; no prompted-JSON fallback needed. Source:
+   https://build.nvidia.com/nvidia/nemotron-3.5-lightning-30b-a3b (fetched 2026-09-22).
+7. ~~Whether the NVIDIA API catalog endpoint for this model is metered or free/preview~~ —
+   **resolved (Task 4, source-verified)**: build.nvidia.com's model page for
+   `nemotron-3.5-lightning-30b-a3b` states usage is a "trial service" under the NVIDIA API Trial
+   Terms of Service. `billable=False` in `PRICE_TABLE` (Task 3) is confirmed correct, not just an
+   assumption. Source: https://build.nvidia.com/nvidia/nemotron-3.5-lightning-30b-a3b (fetched
+   2026-09-22).
+8. NVIDIA's sample code uses `max_tokens`, not OpenAI-proper's newer `max_completion_tokens`
+   (which is deprecated upstream but unconfirmed as even supported on NIM). The gateway (Task 4)
+   uses `max_tokens` on that source basis.
