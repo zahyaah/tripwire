@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# uv
+# uv.lock IS committed (SPEC.md: uv.lock is committed)
+
+# TripWire run output
+runs/
+
+# Env
+.env
+.env.local
+
+# OS / editor
+.DS_Store
+.vscode/
+!.vscode/settings.json
