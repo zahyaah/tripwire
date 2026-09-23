@@ -19,7 +19,7 @@ _REPO_ROOT = Path(__file__).resolve().parents[2]
 runner = CliRunner()
 
 PLANNED_COMMANDS = ["run", "report", "label", "calibrate", "gate", "gen-corpus"]
-STILL_STUB_COMMANDS = ["report", "gate"]
+STILL_STUB_COMMANDS = ["gate"]
 
 
 def test_help_lists_every_planned_subcommand() -> None:
@@ -84,6 +84,12 @@ def test_label_missing_run_fails_clearly(tmp_path: Path) -> None:
     )
     assert result.exit_code == 2
     assert "run_does_not_exist" in result.output
+
+
+def test_report_on_a_run_id_with_no_trace_fails_clearly() -> None:
+    result = runner.invoke(app, ["report", "--run", "run_does_not_exist"])
+    assert result.exit_code == 2
+    assert "no trace" in result.output
 
 
 def test_calibrate_with_no_labels_fails_clearly(tmp_path: Path) -> None:

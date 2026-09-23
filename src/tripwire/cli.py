@@ -100,9 +100,21 @@ def run(
     if repo_root_str not in sys.path:
         sys.path.insert(0, repo_root_str)
 
-    from tripwire.assertions import run_case
+    from datetime import UTC, datetime
+
+    from tripwire.assertions import CaseResult, run_case
     from tripwire.core.golden import GoldenCaseError, load_golden_set
+    from tripwire.core.ids import new_suite_run_id
+    from tripwire.core.store import TraceCorruptError, TraceReader, default_trace_path
+    from tripwire.cost.rollup import (
+        DuplicateSpanError,
+        IncompleteRunError,
+        RunRollup,
+        SpanRunMismatchError,
+        rollup,
+    )
     from tripwire.data import load_corpus
+    from tripwire.report import build_summary, write_summary
 
     resolved_mode = mode or os.environ.get("TRIPWIRE_LLM_MODE", "replay")
     if resolved_mode not in ("live", "record", "replay"):
@@ -150,6 +162,10 @@ def run(
     table.add_column("cost (µ$)", justify="right")
     table.add_column("run_id")
 
+    suite_run_id = new_suite_run_id()
+    started_at = datetime.now(UTC)
+    runs_dir = repo_root / "runs"
+
     # Note: run_case never actually raises CassetteMissError/CorruptCassetteError out to this
     # caller — the loop (agents/inbox_triage/loop.py) already catches every exception from
     # gateway.create(), including both of those, and records it as loop_outcome="error" with
@@ -157,6 +173,10 @@ def run(
     any_blocks_gate = False
     intent_totals: dict[str, int] = {}
     intent_passed: dict[str, int] = {}
+    results: list[CaseResult] = []
+    case_intents: dict[str, str] = {}
+    rollups: dict[str, RunRollup] = {}
+    prompt_hash = ""
     for case in cases:
         result = run_case(
             case,
@@ -164,9 +184,26 @@ def run(
             mode=resolved_mode,  # type: ignore[arg-type]
             model=model,
             cassettes_dir=repo_root / "fixtures" / "cassettes",
-            runs_dir=repo_root / "runs",
+            runs_dir=runs_dir,
             client=client,
+            suite_run_id=suite_run_id,
         )
+        results.append(result)
+        case_intents[case.case_id] = case.intent
+        try:
+            run_record, spans = TraceReader.load(default_trace_path(result.run_id, runs_dir))
+            rollups[result.run_id] = rollup(result.run_id, spans)
+            if not prompt_hash:
+                prompt_hash = run_record.prompt_hash
+        except (
+            IncompleteRunError,
+            SpanRunMismatchError,
+            DuplicateSpanError,
+            TraceCorruptError,
+        ):
+            pass  # a broken trace still gets a case row in the summary; it just contributes no
+            # rollup/latency figures rather than an estimate (SPEC.md: never fabricate a metric)
+
         intent_totals[case.intent] = intent_totals.get(case.intent, 0) + 1
         if result.passed:
             intent_passed[case.intent] = intent_passed.get(case.intent, 0) + 1
@@ -219,6 +256,19 @@ def run(
     )
     console.print(accuracy_table)
 
+    summary = build_summary(
+        suite_run_id=suite_run_id,
+        model=model,
+        llm_mode=resolved_mode,  # type: ignore[arg-type]
+        prompt_hash=prompt_hash,
+        started_at=started_at,
+        case_intents=case_intents,
+        case_results=results,
+        rollups=rollups,
+    )
+    json_path, md_path = write_summary(summary, runs_dir / suite_run_id)
+    console.print(f"wrote {json_path} and {md_path}")
+
     if any_blocks_gate:
         raise typer.Exit(code=1)
 
@@ -228,8 +278,86 @@ def report(
     run_id: str = typer.Option("latest", "--run", help="Run id to report on, or 'latest'."),
     open_: bool = typer.Option(False, "--open", help="Open the HTML trace after generating it."),
 ) -> None:
-    """Generate the HTML trace and run summary for a completed run."""
-    _not_implemented("report", "Task 15-16")
+    """Regenerate a run's HTML trace (and, for a suite, its summary.md) from what's already on
+    disk — no agent or judge call, purely a re-render of recorded artifacts."""
+    import sys
+    import webbrowser
+
+    repo_root_str = str(_repo_root())
+    if repo_root_str not in sys.path:
+        sys.path.insert(0, repo_root_str)
+
+    from tripwire.assertions.results import StepAssertionResult
+    from tripwire.assertions.runner import CaseResult
+    from tripwire.core.store import TraceReader, default_trace_path
+    from tripwire.judge.scores import JudgeScoreStore
+    from tripwire.report import render_markdown, render_trace_html
+    from tripwire.report.summary import RunSummary
+
+    repo_root = _repo_root()
+    runs_dir = repo_root / "runs"
+
+    resolved_id = run_id
+    if run_id == "latest":
+        candidates = (
+            sorted(
+                (p for p in runs_dir.iterdir() if p.is_dir()),
+                key=lambda p: p.stat().st_mtime,
+                reverse=True,
+            )
+            if runs_dir.exists()
+            else []
+        )
+        if not candidates:
+            typer.secho(f"no runs found under {runs_dir}", fg=typer.colors.RED, err=True)
+            raise typer.Exit(code=2)
+        resolved_id = candidates[0].name
+
+    run_dir = runs_dir / resolved_id
+    summary_path = run_dir / "summary.json"
+
+    if summary_path.exists():
+        # A suite directory (`suite_...`, written by `tripwire run`): regenerate summary.md from
+        # the persisted JSON, then open the trace of the case a reviewer most needs to see —
+        # the first failing one, or the first case if the whole suite passed.
+        summary = RunSummary.model_validate_json(summary_path.read_text(encoding="utf-8"))
+        md_path = run_dir / "summary.md"
+        md_path.write_text(render_markdown(summary), encoding="utf-8")
+        typer.echo(f"regenerated {md_path}")
+        if not summary.cases:
+            typer.secho(
+                "suite has no cases to show a trace for", fg=typer.colors.YELLOW, err=True
+            )
+            raise typer.Exit(code=0)
+        target = next((c for c in summary.cases if not c.passed), summary.cases[0])
+        target_run_id = target.run_id
+    else:
+        target_run_id = resolved_id
+
+    target_trace = default_trace_path(target_run_id, runs_dir)
+    if not target_trace.exists():
+        typer.secho(f"no trace at {target_trace}", fg=typer.colors.RED, err=True)
+        raise typer.Exit(code=2)
+
+    run_record, spans = TraceReader.load(target_trace)
+
+    results_path = target_trace.with_name("results.json")
+    assertions: list[StepAssertionResult] = []
+    if results_path.exists():
+        case_result = CaseResult.model_validate_json(results_path.read_text(encoding="utf-8"))
+        assertions = list(case_result.assertion_results)
+
+    judge_score = JudgeScoreStore(
+        repo_root / "data" / "labels" / "judge_scores.jsonl"
+    ).latest_for_run(target_run_id)
+
+    html = render_trace_html(run_record, spans, assertions=assertions, judge_score=judge_score)
+    html_path = target_trace.with_name("trace.html")
+    html_path.write_text(html, encoding="utf-8")
+    typer.echo(f"wrote {html_path}")
+
+    if open_:
+        webbrowser.open(html_path.as_uri())
 
 
 @app.command()

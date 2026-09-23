@@ -17,7 +17,7 @@ from tripwire.cost.rollup import (
     DuplicateSpanError,
     IncompleteRunError,
     SpanRunMismatchError,
-    _p95_nearest_rank,
+    p95_nearest_rank,
     rollup,
 )
 
@@ -80,17 +80,17 @@ def test_p95_nearest_rank_on_known_10_element_list() -> None:
     # nearest-rank, n=10: rank = ceil(0.95*10) = 10 -> the 10th (largest) value. Documented in
     # rollup.py: for n <= 20 this method reports the single slowest value as p95.
     values = [10, 20, 30, 40, 50, 60, 70, 80, 90, 1000]
-    assert _p95_nearest_rank(values) == 1000
+    assert p95_nearest_rank(values) == 1000
 
 
 def test_p95_nearest_rank_on_larger_list_is_not_always_the_max() -> None:
     # n=100: rank = ceil(95) = 95 -> the 95th smallest of 100 ascending values.
     values = list(range(1, 101))  # 1..100
-    assert _p95_nearest_rank(values) == 95
+    assert p95_nearest_rank(values) == 95
 
 
 def test_p95_nearest_rank_empty_is_zero() -> None:
-    assert _p95_nearest_rank([]) == 0
+    assert p95_nearest_rank([]) == 0
 
 
 def test_rollup_separates_agent_and_judge_cost() -> None:

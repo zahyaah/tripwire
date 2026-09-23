@@ -133,6 +133,7 @@ def run_case(
     runs_dir: Path = Path("runs"),
     client: OpenAI | None = None,
     price_table: Mapping[str, PriceEntry] | None = None,
+    suite_run_id: str | None = None,
 ) -> CaseResult:
     """Execute `case` end to end and evaluate it. A fresh `run_id` every call (never the case
     id itself) — the case id is permanent and one case is run many times over its life; each
@@ -162,6 +163,7 @@ def run_case(
                 max_micro_dollars=case.budgets.max_micro_dollars,
             ),
             case_id=case.case_id,
+            suite_run_id=suite_run_id,
         )
 
     _run_record, spans = TraceReader.load(trace_path)

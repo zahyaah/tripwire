@@ -69,7 +69,7 @@ class RunRollup(BaseModel):
     step_costs: tuple[StepCost, ...]
 
 
-def _p95_nearest_rank(values: list[int]) -> int:
+def p95_nearest_rank(values: list[int]) -> int:
     """95th percentile by the nearest-rank method: sort ascending, take the ceil(0.95n)-th value.
 
     Deterministic and dependency-free (no numpy/scipy — see SPEC.md § Tech Stack). For n <= 20
@@ -77,6 +77,11 @@ def _p95_nearest_rank(values: list[int]) -> int:
     20-element run reports its single slowest step as p95 — expected behavior for the method, not
     a bug, and exactly what makes one abnormally slow step visible on a small run instead of
     getting averaged away.
+
+    Public (not `_`-prefixed): `report.summary` reuses this exact method to compute a suite-wide
+    p95 across every case's step latencies pooled together, rather than averaging each case's own
+    p95 — a second implementation of "95th percentile" would risk quietly disagreeing with this
+    one on the tie-breaking rule.
     """
     if not values:
         return 0
@@ -169,6 +174,6 @@ def rollup(run_id: str, spans: list[Span]) -> RunRollup:
         agent_micro_dollars=agent_micro_dollars,
         judge_micro_dollars=judge_micro_dollars,
         total_latency_ms=root_latency_ms,
-        p95_step_latency_ms=_p95_nearest_rank([s.latency_ms for s in step_costs]),
+        p95_step_latency_ms=p95_nearest_rank([s.latency_ms for s in step_costs]),
         step_costs=step_costs,
     )

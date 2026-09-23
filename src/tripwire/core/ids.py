@@ -27,3 +27,11 @@ def new_run_id(now: datetime | None = None) -> str:
 def new_span_id() -> str:
     """An opaque span id. Not sortable by design — only step_index carries ordering meaning."""
     return f"sp_{_random_suffix(16)}"
+
+
+def new_suite_run_id(now: datetime | None = None) -> str:
+    """A sortable suite run id, prefixed `suite_` rather than `run_` so `runs/<id>/` immediately
+    tells you whether that directory holds one case's trace or a whole suite's summary
+    (tasks/todo.md Task 16), without opening anything to check."""
+    timestamp = (now or datetime.now(UTC)).strftime("%Y%m%dT%H%M%S%f")
+    return f"suite_{timestamp}-{_random_suffix(6)}"
