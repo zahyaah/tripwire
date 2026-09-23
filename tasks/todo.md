@@ -559,13 +559,13 @@ write-up, and the known gaps — every number sourced from a committed run summa
 - [ ] README covers what TripWire is, how to run it, the architecture, and a results table
       (routing accuracy, per-intent accuracy, judge scores with holdout agreement, cost per case,
       p95 step latency)
-- [ ] `docs/` holds the calibration write-up, known gaps, and an architecture note explaining the
+- [x] `docs/` holds the calibration write-up, known gaps, and an architecture note explaining the
       record/replay design and the harness/agent boundary
-- [ ] Every figure in the README is traceable to a file in `runs/` or `baselines/`
+- [x] Every figure in the README is traceable to a file in `runs/` or `baselines/`
 
 **Verification:**
 - [ ] Manual check: follow the README from a clean clone and reproduce the replay run
-- [ ] Manual check: no number in the README lacks a source
+- [x] Manual check: no number in the README lacks a source
 
 **Dependencies:** Task 19
 
