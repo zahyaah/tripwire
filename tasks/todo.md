@@ -534,11 +534,11 @@ pull request, uploading traces and posting the summary.
 **Acceptance criteria:**
 - [ ] A committed prompt variant (behind `--prompt-variant`) that mis-routes a known intent, with
       cassettes recorded for it
-- [ ] A test asserts that the gate fails on that variant and names the affected cases
+- [x] A test asserts that the gate fails on that variant and names the affected cases
 - [ ] `docs/demo.md` shows the failing gate output and the trace screenshot path
 
 **Verification:**
-- [ ] `uv run pytest -q -k broken_prompt` green (it asserts failure of the gate, not of the suite)
+- [x] `uv run pytest -q -k broken_prompt` green (it asserts failure of the gate, not of the suite)
 - [ ] Manual check: a scratch PR using the variant shows a red CI run with the diagnostic
 
 **Dependencies:** Task 18
