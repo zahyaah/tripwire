@@ -16,6 +16,7 @@ FORBIDDEN_MODULES = ("tripwire.assertions", "tripwire.judge")
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 _AGENTS_DIR = _REPO_ROOT / "agents"
+_ASSERTIONS_DIR = _REPO_ROOT / "src" / "tripwire" / "assertions"
 
 
 def _imported_module_names(source: str) -> set[str]:
@@ -56,6 +57,19 @@ def test_no_file_under_agents_imports_assertions_or_judge() -> None:
         if hits:
             violations[str(path.relative_to(_REPO_ROOT))] = hits
     assert not violations, f"agents/ imports scoring modules: {violations}"
+
+
+def test_no_file_under_assertions_imports_agents() -> None:
+    # The reverse direction: CAPABILITY-MAP.md is explicit that `assertions` evaluates recorded
+    # spans, never a live agent object — it must not import `agents` at all, symmetric to the
+    # check above.
+    violations: dict[str, list[str]] = {}
+    for path in _ASSERTIONS_DIR.rglob("*.py"):
+        imported = _imported_module_names(path.read_text(encoding="utf-8"))
+        hits = [name for name in imported if name == "agents" or name.startswith("agents.")]
+        if hits:
+            violations[str(path.relative_to(_REPO_ROOT))] = hits
+    assert not violations, f"assertions/ imports agents/: {violations}"
 
 
 def test_the_boundary_check_itself_actually_catches_a_violation() -> None:
