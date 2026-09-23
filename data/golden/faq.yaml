@@ -1,0 +1,23 @@
+# Golden cases for intent: faq. See SPEC-synthetic-data.md § Golden set for the schema.
+- case_id: faq-billing-email-01
+  intent: faq
+  adversarial: false
+  input:
+    thread_id: thr_00001
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: thr_00001 }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: thr_00001 }
+        body: { matcher: regex, value: "(?i)billing email" }
+  order: subsequence
+  forbidden_tools: [escalate, archive]
+  expected_outcome:
+    label: faq
+    action: replied
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 30000
+  required: true

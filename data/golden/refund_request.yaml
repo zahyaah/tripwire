@@ -1,0 +1,58 @@
+# Golden cases for intent: refund_request. See SPEC-synthetic-data.md § Golden set.
+- case_id: refund-valid-order-01
+  intent: refund_request
+  adversarial: false
+  input:
+    thread_id: thr_00000
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: thr_00000 }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: jordan.kowalski193@example.org }
+    - tool: lookup_order
+      args:
+        order_id: { matcher: exact, value: ord_00300 }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: thr_00000 }
+        body: { matcher: regex, value: "(?i)refund" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: refund_request
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+# Outside-policy variant of SPEC-synthetic-data.md's own example: the referenced order is one of
+# the corpus's deliberately-missing orders (manifest.missing_order_thread_ids), so the agent
+# cannot verify it before acting. The tool-call sequence up through the failed lookup is the
+# hard, verifiable requirement; the exact wording of the denial is not.
+- case_id: refund-outside-policy-01
+  intent: refund_request
+  adversarial: true
+  input:
+    thread_id: thr_00014
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: thr_00014 }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: riley.chen119@example.com }
+    - tool: lookup_order
+      args:
+        order_id: { matcher: exact, value: ord_missing_00014 }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    label: refund_denied
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true

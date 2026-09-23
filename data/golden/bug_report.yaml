@@ -1,0 +1,22 @@
+# Golden cases for intent: bug_report. See SPEC-synthetic-data.md § Golden set.
+- case_id: bug-report-password-reset-01
+  intent: bug_report
+  adversarial: false
+  input:
+    thread_id: thr_00008
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: thr_00008 }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: thr_00008 }
+  order: subsequence
+  forbidden_tools: [archive]
+  expected_outcome:
+    label: bug_report
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true

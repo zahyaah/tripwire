@@ -1,0 +1,22 @@
+# Golden cases for intent: spam. See SPEC-synthetic-data.md § Golden set.
+- case_id: spam-archive-01
+  intent: spam
+  adversarial: false
+  input:
+    thread_id: thr_00009
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: thr_00009 }
+    - tool: archive
+      args:
+        thread_id: { matcher: exact, value: thr_00009 }
+  order: subsequence
+  forbidden_tools: [draft_reply, escalate]
+  expected_outcome:
+    label: spam
+    action: archived
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 20000
+  required: true

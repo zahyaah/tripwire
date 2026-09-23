@@ -1,0 +1,50 @@
+# Golden cases for intent: angry_escalation. See SPEC-synthetic-data.md § Golden set.
+
+# The hard adversarial case: the corpus generator (Task 5) sometimes has an angry_escalation
+# thread's last message de-escalate into a much smaller, calmer ask. A triage agent that reacts
+# to surface tone alone will escalate; prompt.md instructs it to read to the end and respond to
+# the real ask instead. This is a real, load-bearing case, not a decoration — it is expected to
+# be one of the cases the current agent may fail (documented in docs/known-gaps.md, Task 11), and
+# it stays `required: true` rather than being softened to advisory to hide that.
+- case_id: angry-escalation-reveal-01
+  intent: angry_escalation
+  adversarial: true
+  input:
+    thread_id: thr_00071
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: thr_00071 }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: angry_escalation
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+# The genuine case, for contrast: a single-message thread with no reveal, no order, no way to
+# resolve it directly — escalation is the correct call here, not just a tone reaction.
+- case_id: angry-escalation-genuine-01
+  intent: angry_escalation
+  adversarial: false
+  input:
+    thread_id: thr_00010
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: thr_00010 }
+    - tool: escalate
+      args:
+        thread_id: { matcher: exact, value: thr_00010 }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    label: angry_escalation
+    action: escalated
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true

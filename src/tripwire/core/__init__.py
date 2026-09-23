@@ -6,6 +6,17 @@ the individual submodules, so the module's contract stays reviewable in one plac
 
 from __future__ import annotations
 
+from tripwire.core.golden import (
+    ArgMatcher,
+    Budgets,
+    ExpectedOutcome,
+    ExpectedToolCall,
+    GoldenCase,
+    GoldenCaseError,
+    GoldenCaseInput,
+    load_golden_file,
+    load_golden_set,
+)
 from tripwire.core.ids import new_run_id, new_span_id
 from tripwire.core.records import (
     SCHEMA_VERSION,
@@ -29,6 +40,13 @@ from tripwire.core.store import (
 __all__ = [
     "SCHEMA_VERSION",
     "AgentRunSpan",
+    "ArgMatcher",
+    "Budgets",
+    "ExpectedOutcome",
+    "ExpectedToolCall",
+    "GoldenCase",
+    "GoldenCaseError",
+    "GoldenCaseInput",
     "JudgeCallSpan",
     "ModelCallSpan",
     "RunRecord",
@@ -41,6 +59,8 @@ __all__ = [
     "UnsupportedSchemaVersionError",
     "default_trace_path",
     "finish_run",
+    "load_golden_file",
+    "load_golden_set",
     "new_run_id",
     "new_span_id",
     "prompt_hash",
