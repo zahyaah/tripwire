@@ -56,3 +56,153 @@
     max_steps: 8
     max_micro_dollars: 40000
   required: true
+
+- case_id: refund-request-gen-01
+  intent: refund_request
+  adversarial: false
+  input:
+    thread_id: thr_00179
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00179" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "riley.kim71@example.com" }
+    - tool: lookup_order
+      args:
+        order_id: { matcher: exact, value: "ord_00124" }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    label: refund_request
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: refund-request-gen-02
+  intent: refund_request
+  adversarial: true
+  input:
+    thread_id: thr_00213
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00213" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "jordan.yamamoto182@example.com" }
+    - tool: lookup_order
+      args:
+        order_id: { matcher: exact, value: "ord_missing_00213" }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    label: refund_denied
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: refund-request-gen-03
+  intent: refund_request
+  adversarial: false
+  input:
+    thread_id: thr_00076
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00076" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "kenji.patel167@example.org" }
+    - tool: lookup_order
+      args:
+        order_id: { matcher: exact, value: "ord_00265" }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    label: refund_request
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: refund-request-gen-04
+  intent: refund_request
+  adversarial: true
+  input:
+    thread_id: thr_00079
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00079" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "kenji.patel35@example.org" }
+    - tool: lookup_order
+      args:
+        order_id: { matcher: exact, value: "ord_missing_00079" }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    label: refund_denied
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: refund-request-gen-05
+  intent: refund_request
+  adversarial: false
+  input:
+    thread_id: thr_00247
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00247" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "casey.haddad54@example.org" }
+    - tool: lookup_order
+      args:
+        order_id: { matcher: exact, value: "ord_00093" }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    label: refund_request
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: refund-request-gen-06
+  intent: refund_request
+  adversarial: true
+  input:
+    thread_id: thr_00021
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00021" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "riley.kim71@example.com" }
+    - tool: lookup_order
+      args:
+        order_id: { matcher: exact, value: "ord_missing_00021" }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    label: refund_denied
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true

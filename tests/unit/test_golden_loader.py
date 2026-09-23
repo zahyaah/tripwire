@@ -8,6 +8,7 @@ from pathlib import Path
 import pytest
 
 from tripwire.core.golden import GoldenCaseError, load_golden_file, load_golden_set
+from tripwire.data.models import INTENTS
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 _GOLDEN_DIR = _REPO_ROOT / "data" / "golden"
@@ -15,7 +16,20 @@ _GOLDEN_DIR = _REPO_ROOT / "data" / "golden"
 
 def test_all_committed_cases_load() -> None:
     cases = load_golden_set(_GOLDEN_DIR)
-    assert len(cases) == 8
+    assert len(cases) == 60
+
+
+def test_committed_set_has_the_target_adversarial_count() -> None:
+    # SPEC.md § Open Questions: 15 of 60 adversarial is the target composition
+    # (SPEC-synthetic-data.md § Golden set).
+    cases = load_golden_set(_GOLDEN_DIR)
+    assert sum(1 for c in cases if c.adversarial) == 15
+
+
+def test_committed_set_covers_every_intent_in_the_taxonomy() -> None:
+    cases = load_golden_set(_GOLDEN_DIR)
+    intents = {c.intent for c in cases}
+    assert intents == set(INTENTS)
 
 
 def test_committed_case_ids_are_unique() -> None:

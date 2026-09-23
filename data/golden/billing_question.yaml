@@ -1,0 +1,201 @@
+# Golden cases for intent: billing_question.
+
+- case_id: billing-question-gen-01
+  intent: billing_question
+  adversarial: false
+  input:
+    thread_id: thr_00255
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00255" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "sofia.mensah159@example.com" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00255" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: billing_question
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: billing-question-gen-02
+  intent: billing_question
+  adversarial: false
+  input:
+    thread_id: thr_00253
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00253" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "fatima.kim56@example.com" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00253" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: billing_question
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: billing-question-gen-03
+  intent: billing_question
+  adversarial: false
+  input:
+    thread_id: thr_00083
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00083" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "diego.rossi208@example.net" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00083" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: billing_question
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: billing-question-gen-04
+  intent: billing_question
+  adversarial: false
+  input:
+    thread_id: thr_00140
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00140" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "casey.johansson68@example.net" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00140" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: billing_question
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: billing-question-gen-05
+  intent: billing_question
+  adversarial: false
+  input:
+    thread_id: thr_00298
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00298" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "amara.silva177@example.org" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00298" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: billing_question
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: billing-question-gen-06
+  intent: billing_question
+  adversarial: false
+  input:
+    thread_id: thr_00225
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00225" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "fatima.johansson98@example.net" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00225" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: billing_question
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: billing-question-gen-07
+  intent: billing_question
+  adversarial: false
+  input:
+    thread_id: thr_00198
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00198" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "kenji.chen220@example.org" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00198" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: billing_question
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: billing-question-gen-08
+  intent: billing_question
+  adversarial: false
+  input:
+    thread_id: thr_00334
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00334" }
+    - tool: lookup_customer
+      args:
+        email: { matcher: exact, value: "avery.kim31@example.com" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00334" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: billing_question
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true

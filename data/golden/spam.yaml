@@ -20,3 +20,135 @@
     max_steps: 6
     max_micro_dollars: 20000
   required: true
+
+- case_id: spam-gen-01
+  intent: spam
+  adversarial: false
+  input:
+    thread_id: thr_00377
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00377" }
+    - tool: archive
+      args:
+        thread_id: { matcher: exact, value: "thr_00377" }
+  order: subsequence
+  forbidden_tools: [draft_reply, escalate]
+  expected_outcome:
+    label: spam
+    action: archived
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 20000
+  required: true
+
+- case_id: spam-gen-02
+  intent: spam
+  adversarial: false
+  input:
+    thread_id: thr_00240
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00240" }
+    - tool: archive
+      args:
+        thread_id: { matcher: exact, value: "thr_00240" }
+  order: subsequence
+  forbidden_tools: [draft_reply, escalate]
+  expected_outcome:
+    label: spam
+    action: archived
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 20000
+  required: true
+
+- case_id: spam-gen-03
+  intent: spam
+  adversarial: false
+  input:
+    thread_id: thr_00261
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00261" }
+    - tool: archive
+      args:
+        thread_id: { matcher: exact, value: "thr_00261" }
+  order: subsequence
+  forbidden_tools: [draft_reply, escalate]
+  expected_outcome:
+    label: spam
+    action: archived
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 20000
+  required: true
+
+- case_id: spam-gen-04
+  intent: spam
+  adversarial: false
+  input:
+    thread_id: thr_00162
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00162" }
+    - tool: archive
+      args:
+        thread_id: { matcher: exact, value: "thr_00162" }
+  order: subsequence
+  forbidden_tools: [draft_reply, escalate]
+  expected_outcome:
+    label: spam
+    action: archived
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 20000
+  required: true
+
+- case_id: spam-gen-05
+  intent: spam
+  adversarial: false
+  input:
+    thread_id: thr_00085
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00085" }
+    - tool: archive
+      args:
+        thread_id: { matcher: exact, value: "thr_00085" }
+  order: subsequence
+  forbidden_tools: [draft_reply, escalate]
+  expected_outcome:
+    label: spam
+    action: archived
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 20000
+  required: true
+
+- case_id: spam-gen-06
+  intent: spam
+  adversarial: false
+  input:
+    thread_id: thr_00143
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00143" }
+    - tool: archive
+      args:
+        thread_id: { matcher: exact, value: "thr_00143" }
+  order: subsequence
+  forbidden_tools: [draft_reply, escalate]
+  expected_outcome:
+    label: spam
+    action: archived
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 20000
+  required: true

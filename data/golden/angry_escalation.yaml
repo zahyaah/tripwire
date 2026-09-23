@@ -48,3 +48,102 @@
     max_steps: 8
     max_micro_dollars: 40000
   required: true
+
+- case_id: angry-escalation-gen-01
+  intent: angry_escalation
+  adversarial: false
+  input:
+    thread_id: thr_00152
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00152" }
+    - tool: escalate
+      args:
+        thread_id: { matcher: exact, value: "thr_00152" }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    action: escalated
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: angry-escalation-gen-02
+  intent: angry_escalation
+  adversarial: true
+  input:
+    thread_id: thr_00147
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00147" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: angry-escalation-gen-03
+  intent: angry_escalation
+  adversarial: false
+  input:
+    thread_id: thr_00372
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00372" }
+    - tool: escalate
+      args:
+        thread_id: { matcher: exact, value: "thr_00372" }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    action: escalated
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: angry-escalation-gen-04
+  intent: angry_escalation
+  adversarial: true
+  input:
+    thread_id: thr_00189
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00189" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: angry-escalation-gen-05
+  intent: angry_escalation
+  adversarial: false
+  input:
+    thread_id: thr_00357
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00357" }
+    - tool: escalate
+      args:
+        thread_id: { matcher: exact, value: "thr_00357" }
+  order: subsequence
+  forbidden_tools: []
+  expected_outcome:
+    action: escalated
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true

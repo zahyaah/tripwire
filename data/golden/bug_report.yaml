@@ -20,3 +20,157 @@
     max_steps: 8
     max_micro_dollars: 40000
   required: true
+
+- case_id: bug-report-gen-01
+  intent: bug_report
+  adversarial: false
+  input:
+    thread_id: thr_00056
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00056" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00056" }
+  order: subsequence
+  forbidden_tools: [archive]
+  expected_outcome:
+    label: bug_report
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: bug-report-gen-02
+  intent: bug_report
+  adversarial: false
+  input:
+    thread_id: thr_00194
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00194" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00194" }
+  order: subsequence
+  forbidden_tools: [archive]
+  expected_outcome:
+    label: bug_report
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: bug-report-gen-03
+  intent: bug_report
+  adversarial: false
+  input:
+    thread_id: thr_00077
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00077" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00077" }
+  order: subsequence
+  forbidden_tools: [archive]
+  expected_outcome:
+    label: bug_report
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: bug-report-gen-04
+  intent: bug_report
+  adversarial: false
+  input:
+    thread_id: thr_00288
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00288" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00288" }
+  order: subsequence
+  forbidden_tools: [archive]
+  expected_outcome:
+    label: bug_report
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: bug-report-gen-05
+  intent: bug_report
+  adversarial: false
+  input:
+    thread_id: thr_00301
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00301" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00301" }
+  order: subsequence
+  forbidden_tools: [archive]
+  expected_outcome:
+    label: bug_report
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: bug-report-gen-06
+  intent: bug_report
+  adversarial: false
+  input:
+    thread_id: thr_00120
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00120" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00120" }
+  order: subsequence
+  forbidden_tools: [archive]
+  expected_outcome:
+    label: bug_report
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: bug-report-gen-07
+  intent: bug_report
+  adversarial: false
+  input:
+    thread_id: thr_00218
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00218" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00218" }
+  order: subsequence
+  forbidden_tools: [archive]
+  expected_outcome:
+    label: bug_report
+    action: replied
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true

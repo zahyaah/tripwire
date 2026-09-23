@@ -21,3 +21,135 @@
     max_steps: 6
     max_micro_dollars: 30000
   required: true
+
+- case_id: faq-gen-01
+  intent: faq
+  adversarial: false
+  input:
+    thread_id: thr_00199
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00199" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00199" }
+  order: subsequence
+  forbidden_tools: [escalate, archive]
+  expected_outcome:
+    label: faq
+    action: replied
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 30000
+  required: true
+
+- case_id: faq-gen-02
+  intent: faq
+  adversarial: false
+  input:
+    thread_id: thr_00139
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00139" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00139" }
+  order: subsequence
+  forbidden_tools: [escalate, archive]
+  expected_outcome:
+    label: faq
+    action: replied
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 30000
+  required: true
+
+- case_id: faq-gen-03
+  intent: faq
+  adversarial: false
+  input:
+    thread_id: thr_00100
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00100" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00100" }
+  order: subsequence
+  forbidden_tools: [escalate, archive]
+  expected_outcome:
+    label: faq
+    action: replied
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 30000
+  required: true
+
+- case_id: faq-gen-04
+  intent: faq
+  adversarial: false
+  input:
+    thread_id: thr_00055
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00055" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00055" }
+  order: subsequence
+  forbidden_tools: [escalate, archive]
+  expected_outcome:
+    label: faq
+    action: replied
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 30000
+  required: true
+
+- case_id: faq-gen-05
+  intent: faq
+  adversarial: false
+  input:
+    thread_id: thr_00215
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00215" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00215" }
+  order: subsequence
+  forbidden_tools: [escalate, archive]
+  expected_outcome:
+    label: faq
+    action: replied
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 30000
+  required: true
+
+- case_id: faq-gen-06
+  intent: faq
+  adversarial: false
+  input:
+    thread_id: thr_00187
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00187" }
+    - tool: draft_reply
+      args:
+        thread_id: { matcher: exact, value: "thr_00187" }
+  order: subsequence
+  forbidden_tools: [escalate, archive]
+  expected_outcome:
+    label: faq
+    action: replied
+  budgets:
+    max_steps: 6
+    max_micro_dollars: 30000
+  required: true

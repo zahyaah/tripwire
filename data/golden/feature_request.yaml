@@ -1,0 +1,155 @@
+# Golden cases for intent: feature_request.
+
+- case_id: feature-request-gen-01
+  intent: feature_request
+  adversarial: false
+  input:
+    thread_id: thr_00310
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00310" }
+    - tool: add_label
+      args:
+        thread_id: { matcher: exact, value: "thr_00310" }
+        label: { matcher: exact, value: "feature_request" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: feature_request
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: feature-request-gen-02
+  intent: feature_request
+  adversarial: false
+  input:
+    thread_id: thr_00284
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00284" }
+    - tool: add_label
+      args:
+        thread_id: { matcher: exact, value: "thr_00284" }
+        label: { matcher: exact, value: "feature_request" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: feature_request
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: feature-request-gen-03
+  intent: feature_request
+  adversarial: false
+  input:
+    thread_id: thr_00302
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00302" }
+    - tool: add_label
+      args:
+        thread_id: { matcher: exact, value: "thr_00302" }
+        label: { matcher: exact, value: "feature_request" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: feature_request
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: feature-request-gen-04
+  intent: feature_request
+  adversarial: false
+  input:
+    thread_id: thr_00041
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00041" }
+    - tool: add_label
+      args:
+        thread_id: { matcher: exact, value: "thr_00041" }
+        label: { matcher: exact, value: "feature_request" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: feature_request
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: feature-request-gen-05
+  intent: feature_request
+  adversarial: false
+  input:
+    thread_id: thr_00125
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00125" }
+    - tool: add_label
+      args:
+        thread_id: { matcher: exact, value: "thr_00125" }
+        label: { matcher: exact, value: "feature_request" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: feature_request
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: feature-request-gen-06
+  intent: feature_request
+  adversarial: false
+  input:
+    thread_id: thr_00026
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00026" }
+    - tool: add_label
+      args:
+        thread_id: { matcher: exact, value: "thr_00026" }
+        label: { matcher: exact, value: "feature_request" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: feature_request
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
+
+- case_id: feature-request-gen-07
+  intent: feature_request
+  adversarial: false
+  input:
+    thread_id: thr_00059
+  expected_tool_calls:
+    - tool: get_thread
+      args:
+        thread_id: { matcher: exact, value: "thr_00059" }
+    - tool: add_label
+      args:
+        thread_id: { matcher: exact, value: "thr_00059" }
+        label: { matcher: exact, value: "feature_request" }
+  order: subsequence
+  forbidden_tools: [escalate]
+  expected_outcome:
+    label: feature_request
+  budgets:
+    max_steps: 8
+    max_micro_dollars: 40000
+  required: true
