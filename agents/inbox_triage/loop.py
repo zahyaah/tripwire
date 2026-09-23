@@ -40,14 +40,33 @@ from tripwire.cost.prices import price_call
 from tripwire.llm.gateway import ModelGateway, ModelRequest, usage_from_completion
 
 _PROMPT_PATH = Path(__file__).with_name("prompt.md")
+_PROMPT_VARIANTS_DIR = Path(__file__).with_name("prompt_variants")
 _RESULT_TRUNCATE_BYTES = 16_384
 HARNESS_VERSION = "0.1.0"
 
 
-def load_system_prompt() -> str:
-    """The system prompt, read fresh from `prompt.md` every call — never cached at import time,
-    so a prompt edit is picked up (and its hash changes) without restarting anything."""
-    return _PROMPT_PATH.read_text(encoding="utf-8")
+class UnknownPromptVariantError(Exception):
+    """`--prompt-variant <name>` was given but `prompt_variants/<name>.md` doesn't exist."""
+
+
+def load_system_prompt(variant: str | None = None) -> str:
+    """The system prompt, read fresh from disk every call — never cached at import time, so an
+    edit is picked up (and its hash changes) without restarting anything.
+
+    `variant`, when given, loads `prompt_variants/<variant>.md` instead of the default
+    `prompt.md` — a deliberately different prompt committed on purpose (tasks/todo.md Task 19:
+    "prove a prompt change that breaks routing fails the build"), never the production prompt
+    edited in place.
+    """
+    if variant is None:
+        return _PROMPT_PATH.read_text(encoding="utf-8")
+    variant_path = _PROMPT_VARIANTS_DIR / f"{variant}.md"
+    if not variant_path.exists():
+        raise UnknownPromptVariantError(
+            f"no prompt variant {variant!r} at {variant_path} "
+            f"(available: {sorted(p.stem for p in _PROMPT_VARIANTS_DIR.glob('*.md'))})"
+        )
+    return variant_path.read_text(encoding="utf-8")
 
 
 class LoopConfig(BaseModel):
@@ -85,10 +104,11 @@ def run_agent(
     config: LoopConfig,
     suite_run_id: str | None = None,
     case_id: str | None = None,
+    prompt_variant: str | None = None,
 ) -> LoopResult:
     """Triage one thread end to end. Emits exactly one `agent_run` span, one `model_call` span
     per model call (via the gateway), and one `tool_call` span per tool call."""
-    system_prompt = load_system_prompt()
+    system_prompt = load_system_prompt(prompt_variant)
     run = start_run(
         run_id=run_id,
         agent_name="inbox_triage",

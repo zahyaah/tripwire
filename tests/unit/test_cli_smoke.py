@@ -123,6 +123,16 @@ def test_calibrate_with_no_labels_fails_clearly(tmp_path: Path) -> None:
     assert "nothing to calibrate" in result.output
 
 
+def test_run_rejects_an_unknown_prompt_variant_cleanly_not_a_crash() -> None:
+    # Regression: the loop's own UnknownPromptVariantError propagated all the way out of the
+    # CLI as a raw Rich traceback the first time this was tried by hand -- run's early
+    # validation must convert it into a normal, clean CLI error instead.
+    result = runner.invoke(app, ["run", "--prompt-variant", "does-not-exist"])
+    assert result.exit_code == 2
+    assert "does-not-exist" in result.output
+    assert "Traceback" not in result.output
+
+
 def test_run_rejects_an_invalid_mode() -> None:
     result = runner.invoke(app, ["run", "--mode", "not-a-real-mode"])
     assert result.exit_code == 2

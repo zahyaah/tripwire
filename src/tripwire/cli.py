@@ -84,6 +84,11 @@ def run(
         help="One of: live, record, replay. Defaults to $TRIPWIRE_LLM_MODE, else 'replay'.",
     ),
     model: str = typer.Option(DEFAULT_MODEL, "--model"),
+    prompt_variant: str | None = typer.Option(
+        None,
+        "--prompt-variant",
+        help="Load agents/inbox_triage/prompt_variants/<name>.md instead of the default prompt.",
+    ),
 ) -> None:
     """Execute the golden set against the agent under test."""
     import sys
@@ -102,6 +107,7 @@ def run(
 
     from datetime import UTC, datetime
 
+    from agents.inbox_triage.loop import UnknownPromptVariantError, load_system_prompt
     from tripwire.assertions import CaseResult, run_case
     from tripwire.core.golden import GoldenCaseError, load_golden_set
     from tripwire.core.ids import new_suite_run_id
@@ -115,6 +121,13 @@ def run(
     )
     from tripwire.data import load_corpus
     from tripwire.report import build_summary, write_summary
+
+    if prompt_variant is not None:
+        try:
+            load_system_prompt(prompt_variant)
+        except UnknownPromptVariantError as exc:
+            typer.secho(str(exc), fg=typer.colors.RED, err=True)
+            raise typer.Exit(code=2) from exc
 
     resolved_mode = mode or os.environ.get("TRIPWIRE_LLM_MODE", "replay")
     if resolved_mode not in ("live", "record", "replay"):
@@ -187,6 +200,7 @@ def run(
             runs_dir=runs_dir,
             client=client,
             suite_run_id=suite_run_id,
+            prompt_variant=prompt_variant,
         )
         results.append(result)
         case_intents[case.case_id] = case.intent
