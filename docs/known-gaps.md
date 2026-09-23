@@ -58,6 +58,15 @@ not described above, that failure gets its own entry here with the actual assert
 Golden cases are never deleted or weakened to make the suite pass (SPEC.md § Boundaries): a
 "never" case failing means the case did its job.
 
+## CI (`.github/workflows/eval.yml`) is currently red, honestly
+
+`uv run pytest -q` runs the 60-case regression suite (`tests/regression/test_golden_set.py`)
+alongside the unit tests, exactly as `tasks/todo.md`'s "Definition of done" states it. Every
+regression case currently misses its cassette in replay mode, so this is expected to fail until
+cassettes are recorded (same quota blocker as above). CI is wired correctly; the red build is the
+accurate signal for the project's actual state, not a workflow bug — it turns green on its own
+once cassettes land, with no change needed to `eval.yml`.
+
 ## `baselines/main.json` is a 0-case placeholder
 
 Same blocker: `tripwire gate` (Task 17) needs a committed baseline to compare against, but there

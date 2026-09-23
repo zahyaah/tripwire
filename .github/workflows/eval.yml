@@ -1,0 +1,120 @@
+name: eval
+
+# tasks/todo.md Task 18. Runs on every PR and on main: lint, types, unit tests, the replay
+# regression suite, the agent against the golden set, and the regression gate. Replay mode only
+# — no API key is available to this workflow, and a step below asserts that explicitly rather
+# than letting a missing key fail silently deep inside a later step.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+env:
+  TRIPWIRE_LLM_MODE: replay
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assert no API key is present (replay mode must never need one)
+        run: |
+          if [ -n "$GEMINI_API_KEY" ]; then
+            echo "GEMINI_API_KEY is set, but this workflow runs in replay mode and must never need it."
+            exit 1
+          fi
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Type check
+        run: uv run mypy src
+
+      - name: Tests (unit + the replay regression suite)
+        # Plain `pytest -q`, no `-m` filter -- this exercises the 60-case golden-set regression
+        # suite (tests/regression/test_golden_set.py) alongside the unit tests, exactly as
+        # tasks/todo.md's "Definition of done for every task" states it. It currently fails here
+        # honestly: no cassettes are committed for the golden set yet (docs/known-gaps.md), so
+        # every regression case misses its cassette in replay mode. That's accurate, not a bug in
+        # this workflow -- it stays red until real cassettes land.
+        run: uv run pytest -q
+
+      - name: Run the golden set against the agent
+        # Every case's assertion/loop failure is captured in summary.json for the gate step
+        # below to evaluate — this step's own exit code isn't the build's pass/fail authority,
+        # `tripwire gate` is, so a failing case here must not stop the workflow early.
+        run: uv run tripwire run --mode replay
+        continue-on-error: true
+
+      - name: Regenerate the HTML trace for the run the gate will report on
+        run: uv run tripwire report --run latest
+        continue-on-error: true
+
+      - name: Locate this run's summary
+        id: summary
+        run: |
+          summary_dir=$(ls -td runs/suite_*/ 2>/dev/null | head -1)
+          if [ -z "$summary_dir" ]; then
+            echo "no suite summary directory found under runs/" >&2
+            exit 1
+          fi
+          echo "path=${summary_dir}summary.md" >> "$GITHUB_OUTPUT"
+
+      - name: Gate
+        run: uv run tripwire gate --run latest --baseline baselines/main.json
+
+      - name: Upload run artifacts (trace JSONL, HTML, summary)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tripwire-runs
+          path: runs/
+          if-no-files-found: warn
+
+      - name: Post or update the summary PR comment
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = '${{ steps.summary.outputs.path }}';
+            const marker = '<!-- tripwire-summary -->';
+            let body = `${marker}\n_summary.md not found — the run may have failed before writing one._`;
+            if (path && fs.existsSync(path)) {
+              body = `${marker}\n${fs.readFileSync(path, 'utf8')}`;
+            }
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find((c) => c.body && c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
