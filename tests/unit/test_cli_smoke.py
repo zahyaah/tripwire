@@ -1,7 +1,8 @@
 """Task 1 acceptance: CLI exists, lists every planned subcommand, and every stub fails loudly.
 
-`gen-corpus` (Task 5) and `run` (Task 10) graduated from stub to real implementation — they
-stay in PLANNED_COMMANDS (the help-listing check) but move out of STILL_STUB_COMMANDS.
+`gen-corpus` (Task 5), `run` (Task 10), `label` (Task 13), and `calibrate` (Task 14) graduated
+from stub to real implementation — they stay in PLANNED_COMMANDS (the help-listing check) but
+move out of STILL_STUB_COMMANDS.
 """
 
 from __future__ import annotations
@@ -18,7 +19,7 @@ _REPO_ROOT = Path(__file__).resolve().parents[2]
 runner = CliRunner()
 
 PLANNED_COMMANDS = ["run", "report", "label", "calibrate", "gate", "gen-corpus"]
-STILL_STUB_COMMANDS = ["report", "label", "calibrate", "gate"]
+STILL_STUB_COMMANDS = ["report", "gate"]
 
 
 def test_help_lists_every_planned_subcommand() -> None:
@@ -30,9 +31,7 @@ def test_help_lists_every_planned_subcommand() -> None:
 
 def test_every_remaining_stub_exits_nonzero() -> None:
     for command in STILL_STUB_COMMANDS:
-        # `label` requires --run; give it a placeholder so the stub message is what's tested.
-        args = [command] if command != "label" else [command, "--run", "placeholder"]
-        result = runner.invoke(app, args)
+        result = runner.invoke(app, [command])
         assert result.exit_code == 1, f"`tripwire {command}` did not exit non-zero"
         assert "not implemented" in result.output
 
@@ -77,6 +76,20 @@ def test_run_actually_works_as_the_real_installed_console_script(tmp_path: Path)
     assert "ModuleNotFoundError" not in result.stderr, result.stderr
     assert result.returncode == 1  # no cassette recorded for this made-up case -> expected fail
     assert "subprocess-smoke-01" in result.stdout
+
+
+def test_label_missing_run_fails_clearly(tmp_path: Path) -> None:
+    result = runner.invoke(
+        app, ["label", "--run", "run_does_not_exist", "--labeler", "tester@example.com"]
+    )
+    assert result.exit_code == 2
+    assert "run_does_not_exist" in result.output
+
+
+def test_calibrate_with_no_labels_fails_clearly(tmp_path: Path) -> None:
+    result = runner.invoke(app, ["calibrate", "--labels", str(tmp_path / "does_not_exist.jsonl")])
+    assert result.exit_code == 1
+    assert "nothing to calibrate" in result.output
 
 
 def test_run_rejects_an_invalid_mode() -> None:
