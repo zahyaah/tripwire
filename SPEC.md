@@ -8,12 +8,11 @@ live in `SPEC-<module-id>.md`, indexed by `CAPABILITY-MAP.md`.
 These were chosen deliberately. Correct any that are wrong before implementation starts.
 
 1. Python 3.12 harness and agent, managed with `uv`. No `pip` or `requirements.txt`.
-2. The agent under test calls NVIDIA Nemotron 3.5 Lightning via the NVIDIA API catalog
-   (build.nvidia.com), an OpenAI-compatible endpoint, using the `openai` Python SDK pointed at
-   `base_url="https://integrate.api.nvidia.com/v1"`. Model calls run live locally and are
-   replayed from recorded fixtures in CI, so CI needs no API key and costs nothing per build.
-   Open: whether the NVIDIA catalog endpoint is free-tier/preview or metered — this decides
-   whether the price table has real rates or is a placeholder (see Open Questions).
+2. The agent under test calls Gemini (`gemini-3.8-flash`) via its OpenAI-compatible endpoint
+   (`base_url="https://generativelanguage.googleapis.com/v1beta/openai/"`), using the `openai`
+   Python SDK. Model calls run live locally and are replayed from recorded fixtures in CI, so CI
+   needs no API key and costs nothing per build. Free tier, rate-limited to 20 requests/day/model
+   — see ADR-0001 for the full provider history (this is the second swap) and its consequences.
 3. Email data is fully synthetic and generated from a seeded generator. No real inbox, no
    scraped corpus, no PII.
 4. Human labels are produced by hand by the repository author, roughly 120 labeled runs. The
@@ -81,9 +80,9 @@ orchestration; training or fine-tuning; evaluating agents written in other langu
 |---|---|
 | Language | Python 3.12 |
 | Package and env manager | `uv` (`pyproject.toml` + `uv.lock`, committed) |
-| Model access | `openai` Python SDK against NVIDIA API catalog (`base_url=https://integrate.api.nvidia.com/v1`) |
-| Agent model | `nvidia/nemotron-3.5-lightning` (exact catalog model id to confirm) |
-| Judge model | `nvidia/nemotron-3.5-lightning`; a second, larger catalog model kept as a cost/quality comparison once tool-calling support is confirmed (see Open Questions) |
+| Model access | `openai` Python SDK against Gemini's OpenAI-compat endpoint (`base_url=https://generativelanguage.googleapis.com/v1beta/openai/`) — see ADR-0001 |
+| Agent model | `gemini-3.8-flash` |
+| Judge model | `gemini-3.8-flash` — same model as the agent for now; a distinct judge model is future work, not required for v1 |
 | Schemas and validation | `pydantic` v2 |
 | CLI | `typer` |
 | Golden set format | YAML (`pyyaml`) |
@@ -284,24 +283,20 @@ Rules:
    dimensions whose holdout kappa is below 0.6, block on dimensions at or above 0.6.
 4. Whether v1 ships a second agent (even a trivial one) to prove the harness is not
    single-agent-shaped. Current assumption: no, but no module may import from `agents/`.
-5. Exact Nemotron 3.5 Lightning catalog model id string for API calls — still unconfirmed. The
-   catalog slug is `nemotron-3.5-lightning-30b-a3b` (source: build.nvidia.com's featured-models
-   listing, fetched 2026-09-22); NVIDIA's own sample code on the model's own page showed
-   `model=""` (populated by page JS, not visible to a static fetch). Confirm with a live
-   `client.models.list()` call or by copying the exact string from the page's rendered code
-   sample before Task 6/7 wire up the real agent. `PRICE_TABLE`'s key (Task 3) must match
-   whatever string is confirmed. Endpoint path is resolved: `base_url =
-   https://integrate.api.nvidia.com/v1` (confirmed, same source).
-6. ~~Whether Nemotron 3.5 Lightning supports native tool/function calling~~ — **resolved (Task 4,
-   source-verified)**: build.nvidia.com's model page states tool/function calling is "Supported."
-   Native `tool_calls` blocks are used; no prompted-JSON fallback needed. Source:
-   https://build.nvidia.com/nvidia/nemotron-3.5-lightning-30b-a3b (fetched 2026-09-22).
+5. ~~Exact Nemotron 3.5 Lightning catalog model id~~ — **moot**: the provider swapped to Gemini
+   before this was ever needed (ADR-0001). Gemini's model id is confirmed live via
+   `client.models.list()` against the real API: `gemini-3.8-flash`. `PRICE_TABLE`'s key (Task 3)
+   matches it.
+6. ~~Whether Nemotron 3.5 Lightning supports native tool/function calling~~ — **moot** (ADR-0001,
+   provider swap). Gemini's native `tool_calls` support is confirmed live: a real call with a
+   `strict: true` function tool returned `finish_reason="tool_calls"` with a correctly-shaped
+   `tool_calls[0].function`.
 7. ~~Whether the NVIDIA API catalog endpoint for this model is metered or free/preview~~ —
-   **resolved (Task 4, source-verified)**: build.nvidia.com's model page for
-   `nemotron-3.5-lightning-30b-a3b` states usage is a "trial service" under the NVIDIA API Trial
-   Terms of Service. `billable=False` in `PRICE_TABLE` (Task 3) is confirmed correct, not just an
-   assumption. Source: https://build.nvidia.com/nvidia/nemotron-3.5-lightning-30b-a3b (fetched
-   2026-09-22).
-8. NVIDIA's sample code uses `max_tokens`, not OpenAI-proper's newer `max_completion_tokens`
-   (which is deprecated upstream but unconfirmed as even supported on NIM). The gateway (Task 4)
-   uses `max_tokens` on that source basis.
+   **moot** (ADR-0001, provider swap). Gemini's free tier is confirmed rate-limited to 20
+   requests/day/model, not metered; `billable=False` in `PRICE_TABLE` (Task 3) reflects this.
+8. `max_tokens` (not OpenAI-proper's newer `max_completion_tokens`) is confirmed live to work
+   against Gemini's OpenAI-compat endpoint; the gateway (Task 4) uses it on that basis.
+9. Gemini 3's `usage.total_tokens` exceeds `prompt_tokens + completion_tokens` by 40-90% live,
+   with no `*_tokens_details` populated to explain it — hidden "thinking" tokens billed but not
+   itemized through the compat layer. `TokenUsage.reasoning_tokens` (`core/records.py`) recovers
+   this gap; see `usage_from_completion` in `llm/gateway.py`.
