@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TripWire trace — {{ run.run_id }}</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #666666; --border: #dddddd;
+    --pass: #1a7f37; --fail: #cf222e; --card: #f6f8fa; --code: #f0f2f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9aa4af; --border: #30363d;
+             --pass: #3fb950; --fail: #f85149; --card: #161b22; --code: #1c2128; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px; background: var(--bg); color: var(--fg);
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  h2 { font-size: 16px; margin: 24px 0 8px; }
+  .muted { color: var(--muted); }
+  .banner {
+    padding: 8px 12px; border-radius: 6px; margin: 12px 0; font-weight: 600;
+  }
+  .banner.partial { background: color-mix(in srgb, orange 20%, transparent); border: 1px solid orange; }
+  .header-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 8px; margin: 12px 0; padding: 12px; background: var(--card);
+    border: 1px solid var(--border); border-radius: 6px;
+  }
+  .header-grid div { min-width: 0; }
+  .header-grid dt { font-size: 11px; text-transform: uppercase; color: var(--muted); }
+  .header-grid dd { margin: 2px 0 0; font-family: ui-monospace, monospace; word-break: break-all; }
+  .step {
+    border: 1px solid var(--border); border-radius: 6px; margin: 10px 0; background: var(--card);
+    overflow: hidden;
+  }
+  .step-head {
+    display: flex; align-items: center; gap: 10px; padding: 10px 12px; cursor: pointer;
+    user-select: none;
+  }
+  .step-head:hover { background: color-mix(in srgb, var(--fg) 5%, transparent); }
+  .step-index { font-weight: 700; font-family: ui-monospace, monospace; }
+  .badge {
+    display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; font-weight: 600;
+  }
+  .badge.pass { background: color-mix(in srgb, var(--pass) 18%, transparent); color: var(--pass); }
+  .badge.fail { background: color-mix(in srgb, var(--fail) 18%, transparent); color: var(--fail); }
+  .badge.error { background: color-mix(in srgb, var(--fail) 18%, transparent); color: var(--fail); }
+  .spacer { flex: 1; }
+  .metric { font-family: ui-monospace, monospace; font-size: 12px; color: var(--muted); }
+  .step-body { padding: 0 12px 12px; display: none; }
+  .step-body.open { display: block; }
+  .call {
+    border-top: 1px solid var(--border); padding: 8px 0;
+  }
+  .call:first-child { border-top: none; }
+  .call-title { font-weight: 600; font-family: ui-monospace, monospace; font-size: 13px; }
+  pre {
+    background: var(--code); border-radius: 4px; padding: 8px; overflow-x: auto;
+    font-size: 12px; margin: 4px 0;
+  }
+  .assertion { font-size: 12px; padding: 4px 0; }
+  .assertion.fail { color: var(--fail); }
+  .assertion.pass { color: var(--pass); }
+  table { border-collapse: collapse; width: 100%; }
+  td, th { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--border); font-size: 12px; }
+  .toggle-icon { font-family: ui-monospace, monospace; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<h1>Trace: {{ run.run_id }}</h1>
+<p class="muted">{{ run.agent_name }} &middot; case {{ run.case_id or "n/a" }}</p>
+
+{% if is_partial %}
+<div class="banner partial">Partial trace — this run's closing span was never written (crashed, or still in progress). Totals below are derived from the spans that are present.</div>
+{% endif %}
+
+{% if has_assertions %}
+<div class="banner {{ 'partial' if not overall_passed else '' }}" style="{{ 'background:color-mix(in srgb, var(--pass) 18%, transparent); border:1px solid var(--pass); color:var(--pass);' if overall_passed else 'background:color-mix(in srgb, var(--fail) 18%, transparent); border:1px solid var(--fail); color:var(--fail);' }}">
+  {{ "All assertions passed" if overall_passed else "One or more required assertions failed" }}
+</div>
+{% endif %}
+
+<dl class="header-grid">
+  <div><dt>model</dt><dd>{{ run.model }}</dd></div>
+  <div><dt>llm_mode</dt><dd>{{ run.llm_mode }}</dd></div>
+  <div><dt>outcome</dt><dd>{{ run.outcome or "unknown" }}</dd></div>
+  <div><dt>started_at</dt><dd>{{ run.started_at.isoformat() }}</dd></div>
+  <div><dt>finished_at</dt><dd>{{ run.finished_at.isoformat() if run.finished_at else "—" }}</dd></div>
+  <div><dt>steps</dt><dd>{{ step_count }}</dd></div>
+  <div><dt>total cost</dt><dd>{{ total_micro_dollars }} &micro;$</dd></div>
+  <div><dt>total latency</dt><dd>{{ total_latency_ms }} ms</dd></div>
+  <div><dt>prompt_hash</dt><dd>{{ run.prompt_hash[:12] }}&hellip;</dd></div>
+</dl>
+
+{% if run.error %}
+<div class="banner" style="background:color-mix(in srgb, var(--fail) 18%, transparent); border:1px solid var(--fail); color:var(--fail);">{{ run.error }}</div>
+{% endif %}
+
+{% if case_wide_assertions %}
+<h2>Case-wide assertions</h2>
+{% for a in case_wide_assertions %}
+<div class="assertion {{ 'pass' if a.passed else 'fail' }}">
+  <span class="badge {{ 'pass' if a.passed else 'fail' }}">{{ "PASS" if a.passed else "FAIL" }}</span>
+  {{ a.assertion_id }}{{ " (advisory)" if not a.required else "" }}
+  {% if not a.passed %} — expected {{ a.expected }}, got {{ a.actual }}{% endif %}
+</div>
+{% endfor %}
+{% endif %}
+
+<h2>Steps</h2>
+{% if not steps %}
+<p class="muted">No steps recorded.</p>
+{% endif %}
+{% for step in steps %}
+<div class="step">
+  <div class="step-head" onclick="this.parentElement.querySelector('.step-body').classList.toggle('open'); this.querySelector('.toggle-icon').textContent = this.parentElement.querySelector('.step-body').classList.contains('open') ? '▾' : '▸';">
+    <span class="toggle-icon">▸</span>
+    <span class="step-index">step {{ step.step_index }}</span>
+    {% if step.model_call %}<span class="metric">{{ step.model_call.model }}</span>{% endif %}
+    {% if step.tool_calls %}<span class="metric">{{ step.tool_calls | length }} tool call(s)</span>{% endif %}
+    {% if step.has_error %}<span class="badge error">ERROR</span>{% endif %}
+    {% if step.assertions %}
+      <span class="badge {{ 'pass' if step.all_assertions_passed else 'fail' }}">
+        {{ "PASS" if step.all_assertions_passed else "FAIL" }}
+      </span>
+    {% endif %}
+    <span class="spacer"></span>
+    <span class="metric">{{ step.micro_dollars }} &micro;$</span>
+    <span class="metric">{{ step.latency_ms }} ms</span>
+  </div>
+  <div class="step-body">
+    {% if step.model_call %}
+    <div class="call">
+      <div class="call-title">model_call &middot; {{ step.model_call.model }}
+        {% if step.model_call.is_error %}<span class="badge error">ERROR</span>{% endif %}
+      </div>
+      <table>
+        <tr><td class="muted">stop_reason</td><td>{{ step.model_call.stop_reason or "—" }}</td></tr>
+        <tr><td class="muted">prompt / completion / reasoning tokens</td>
+            <td>{{ step.model_call.usage.prompt_tokens }} / {{ step.model_call.usage.completion_tokens }} / {{ step.model_call.usage.reasoning_tokens }}</td></tr>
+        <tr><td class="muted">cost</td><td>{{ step.model_call.micro_dollars }} &micro;$</td></tr>
+        <tr><td class="muted">latency</td><td>{{ step.model_call.latency_ms }} ms</td></tr>
+        <tr><td class="muted">cassette</td><td>{{ "hit" if step.model_call.cassette_hit else "miss/live" }}</td></tr>
+      </table>
+    </div>
+    {% endif %}
+    {% for tool in step.tool_calls %}
+    <div class="call">
+      <div class="call-title">tool_call &middot; {{ tool.tool_name }}
+        {% if tool.is_error %}<span class="badge error">ERROR</span>{% endif %}
+      </div>
+      <pre>{{ tool.arguments | tojson(indent=2) }}</pre>
+      <div class="muted">result ({{ tool.result_bytes }} bytes, {{ tool.latency_ms }} ms):</div>
+      <pre>{{ tool.result_summary }}</pre>
+    </div>
+    {% endfor %}
+    {% if step.assertions %}
+    <div class="call">
+      <div class="call-title">assertions</div>
+      {% for a in step.assertions %}
+      <div class="assertion {{ 'pass' if a.passed else 'fail' }}">
+        <span class="badge {{ 'pass' if a.passed else 'fail' }}">{{ "PASS" if a.passed else "FAIL" }}</span>
+        {{ a.assertion_id }}{{ " (advisory)" if not a.required else "" }}
+        {% if not a.passed %} — expected {{ a.expected }}, got {{ a.actual }}{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+
+{% if judge_views %}
+<h2>Judge</h2>
+{% for jv in judge_views %}
+<div class="step">
+  <div class="step-head" onclick="this.parentElement.querySelector('.step-body').classList.toggle('open'); this.querySelector('.toggle-icon').textContent = this.parentElement.querySelector('.step-body').classList.contains('open') ? '▾' : '▸';">
+    <span class="toggle-icon">▸</span>
+    <span class="step-index">judge_call &middot; rubric {{ jv.span.rubric_version }}</span>
+    {% if jv.span.is_error %}<span class="badge error">ERROR</span>{% endif %}
+    <span class="spacer"></span>
+    <span class="metric">{{ jv.span.micro_dollars }} &micro;$</span>
+    <span class="metric">{{ jv.span.latency_ms }} ms</span>
+  </div>
+  <div class="step-body">
+    {% if jv.score %}
+    <table>
+      <tr><th>dimension</th><th>score</th><th>holdout kappa</th><th>confidence</th><th>rationale</th></tr>
+      {% for dim, val, rat in [
+        ("reply_helpfulness", jv.score.score.reply_helpfulness, jv.score.score.reply_helpfulness_rationale),
+        ("tone_match", jv.score.score.tone_match, jv.score.score.tone_match_rationale),
+        ("escalation_appropriate", jv.score.score.escalation_appropriate, jv.score.score.escalation_appropriate_rationale),
+        ("contains_unsupported_claim", jv.score.score.contains_unsupported_claim, jv.score.score.contains_unsupported_claim_rationale),
+      ] %}
+      <tr>
+        <td>{{ dim }}</td>
+        <td>{{ val }}</td>
+        {% set matching = jv.dimension_reports | selectattr("dimension", "equalto", dim) | selectattr("split", "equalto", "holdout") | list %}
+        <td>{{ "%.2f"|format(matching[0].kappa) if matching else "not calibrated" }}</td>
+        <td>{{ matching[0].confidence if matching else "—" }}</td>
+        <td class="muted">{{ rat }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p class="muted">No persisted judge score for this run (this trace's judge_call span was recorded before scores were captured, or `tripwire calibrate` hasn't scored it yet).</p>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+</body>
+</html>
