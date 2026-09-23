@@ -57,3 +57,13 @@ not described above, that failure gets its own entry here with the actual assert
 
 Golden cases are never deleted or weakened to make the suite pass (SPEC.md § Boundaries): a
 "never" case failing means the case did its job.
+
+## `baselines/main.json` is a 0-case placeholder
+
+Same blocker: `tripwire gate` (Task 17) needs a committed baseline to compare against, but there
+is no real recorded suite run yet to baseline from. `baselines/main.json` is a genuine
+`RunSummary` (built through `build_summary`, not hand-typed) with zero cases — every accuracy,
+cost, and latency check in `report/gate.py` skips itself when its baseline side has nothing to
+compare against, so this placeholder makes `tripwire gate` check only the current run's own
+required-assertion failures until it's replaced. It gets overwritten with a real baseline (`uv
+run tripwire gate --update`) the first time a full suite run completes.

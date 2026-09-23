@@ -1,0 +1,16 @@
+{
+  "suite_run_id": "baseline-placeholder",
+  "model": "gemini-3.8-flash",
+  "llm_mode": "replay",
+  "prompt_hash": "",
+  "started_at": "2026-09-23T00:00:00Z",
+  "cases": [],
+  "per_intent": [],
+  "total_cases": 0,
+  "total_passed": 0,
+  "total_micro_dollars": 0,
+  "total_tokens": 0,
+  "p95_step_latency_ms": 0,
+  "judge_dimensions": [],
+  "any_blocks_gate": false
+}

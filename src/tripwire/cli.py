@@ -550,11 +550,78 @@ def calibrate(
 
 @app.command()
 def gate(
-    run_id: str = typer.Option("latest", "--run"),
+    run_id: str = typer.Option("latest", "--run", help="Suite run id to gate, or 'latest'."),
     baseline: str = typer.Option("baselines/main.json", "--baseline"),
+    update: bool = typer.Option(
+        False,
+        "--update",
+        help="Overwrite the baseline with this run's summary instead of comparing against it.",
+    ),
 ) -> None:
     """Compare a run's summary against the committed baseline; exit non-zero on regression."""
-    _not_implemented("gate", "Task 17")
+    import sys
+
+    # `tripwire.report` transitively imports `tripwire.assertions.runner`, which imports
+    # `agents.inbox_triage.loop` (CaseResult's own type) — the same sys.path gap `run` and
+    # `report` already work around (see `run`'s comment above for why this is needed at all).
+    repo_root_str = str(_repo_root())
+    if repo_root_str not in sys.path:
+        sys.path.insert(0, repo_root_str)
+
+    from tripwire.report.gate import evaluate_gate, format_gate_result, update_baseline
+    from tripwire.report.summary import RunSummary
+
+    repo_root = _repo_root()
+    runs_dir = repo_root / "runs"
+
+    resolved_id = run_id
+    if run_id == "latest":
+        candidates = (
+            sorted(
+                (p for p in runs_dir.glob("suite_*") if (p / "summary.json").exists()),
+                key=lambda p: p.stat().st_mtime,
+                reverse=True,
+            )
+            if runs_dir.exists()
+            else []
+        )
+        if not candidates:
+            typer.secho(f"no suite summaries found under {runs_dir}", fg=typer.colors.RED, err=True)
+            raise typer.Exit(code=2)
+        resolved_id = candidates[0].name
+
+    summary_path = runs_dir / resolved_id / "summary.json"
+    if not summary_path.exists():
+        typer.secho(
+            f"no summary at {summary_path} (run `tripwire run` first)",
+            fg=typer.colors.RED,
+            err=True,
+        )
+        raise typer.Exit(code=2)
+    current = RunSummary.model_validate_json(summary_path.read_text(encoding="utf-8"))
+
+    baseline_path = Path(baseline)
+    if not baseline_path.is_absolute():
+        baseline_path = repo_root / baseline_path
+
+    if update:
+        update_baseline(current, baseline_path)
+        typer.echo(f"baseline updated: {baseline_path} <- {summary_path}")
+        raise typer.Exit(code=0)
+
+    if not baseline_path.exists():
+        typer.secho(
+            f"no baseline at {baseline_path} (run with --update to create one)",
+            fg=typer.colors.RED,
+            err=True,
+        )
+        raise typer.Exit(code=2)
+    baseline_summary = RunSummary.model_validate_json(baseline_path.read_text(encoding="utf-8"))
+
+    result = evaluate_gate(current, baseline_summary)
+    typer.echo(format_gate_result(result))
+    if not result.passed:
+        raise typer.Exit(code=1)
 
 
 @app.command(name="gen-corpus")

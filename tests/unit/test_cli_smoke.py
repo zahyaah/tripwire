@@ -19,7 +19,7 @@ _REPO_ROOT = Path(__file__).resolve().parents[2]
 runner = CliRunner()
 
 PLANNED_COMMANDS = ["run", "report", "label", "calibrate", "gate", "gen-corpus"]
-STILL_STUB_COMMANDS = ["gate"]
+STILL_STUB_COMMANDS: list[str] = []
 
 
 def test_help_lists_every_planned_subcommand() -> None:
@@ -78,12 +78,37 @@ def test_run_actually_works_as_the_real_installed_console_script(tmp_path: Path)
     assert "subprocess-smoke-01" in result.stdout
 
 
+def test_gate_actually_works_as_the_real_installed_console_script(tmp_path: Path) -> None:
+    # Regression: `tripwire.report` (imported by the `gate` command) transitively imports
+    # `tripwire.assertions.runner`, which imports `agents.inbox_triage.loop` — the same
+    # ModuleNotFoundError class `run`'s own subprocess test above guards against, caught here for
+    # `gate` specifically because `gate`'s sys.path fix was originally missing entirely (found by
+    # actually running `uv run tripwire gate` by hand, not by this in-process test suite, which
+    # inherits pytest's own pythonpath and would never have seen the failure).
+    result = subprocess.run(
+        ["uv", "run", "--project", str(_REPO_ROOT), "tripwire", "gate", "--run", "does-not-exist"],
+        cwd=tmp_path,
+        capture_output=True,
+        text=True,
+        timeout=60,
+    )
+    assert "ModuleNotFoundError" not in result.stderr, result.stderr
+    assert result.returncode == 2
+    assert "no summary" in result.stdout or "no summary" in result.stderr
+
+
 def test_label_missing_run_fails_clearly(tmp_path: Path) -> None:
     result = runner.invoke(
         app, ["label", "--run", "run_does_not_exist", "--labeler", "tester@example.com"]
     )
     assert result.exit_code == 2
     assert "run_does_not_exist" in result.output
+
+
+def test_gate_on_a_run_id_with_no_summary_fails_clearly() -> None:
+    result = runner.invoke(app, ["gate", "--run", "suite_does_not_exist"])
+    assert result.exit_code == 2
+    assert "no summary" in result.output
 
 
 def test_report_on_a_run_id_with_no_trace_fails_clearly() -> None:
