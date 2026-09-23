@@ -118,6 +118,27 @@ class ModelGateway:
         self._cassettes = cassettes or CassetteStore()
         self._price_table = price_table if price_table is not None else PRICE_TABLE
 
+    @property
+    def mode(self) -> Literal["live", "record", "replay"]:
+        """The mode this gateway was constructed with.
+
+        Exposed so a caller building a `RunRecord` (`agents/inbox_triage/loop.py`) records the
+        mode that actually ran, rather than hardcoding a guess that can silently disagree with
+        what the gateway did.
+        """
+        return self._mode
+
+    @property
+    def price_table(self) -> Mapping[str, PriceEntry]:
+        """The price table this gateway prices calls against.
+
+        Exposed so a caller that needs to price something itself (the agent loop's running cost
+        budget, say — see agents/inbox_triage/loop.py) uses the *same* table the gateway used for
+        the spans it already wrote, rather than risking a second, differently-configured table
+        that would silently disagree with the trace.
+        """
+        return self._price_table
+
     def create(
         self,
         request: ModelRequest,
@@ -154,7 +175,7 @@ class ModelGateway:
                 request, key, span_id, step_index, parent_span_id, kind, rubric_version
             )
 
-        usage = _usage_from_completion(completion)
+        usage = usage_from_completion(completion)
         finish_reason = completion.choices[0].finish_reason if completion.choices else None
 
         # price_call can raise UnknownModelError — a real, expected failure (a model missing from
@@ -341,7 +362,7 @@ class ModelGateway:
             self._writer.append(ModelCallSpan(**common))
 
 
-def _usage_from_completion(completion: ChatCompletion) -> TokenUsage:
+def usage_from_completion(completion: ChatCompletion) -> TokenUsage:
     if completion.usage is None:
         return TokenUsage(prompt_tokens=0, completion_tokens=0)
     return TokenUsage(

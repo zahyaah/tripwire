@@ -13,6 +13,7 @@ from tripwire.llm.gateway import (
     CassetteMissError,
     ModelGateway,
     ModelRequest,
+    usage_from_completion,
 )
 
 __all__ = [
@@ -24,4 +25,5 @@ __all__ = [
     "ModelGateway",
     "ModelRequest",
     "compute_cassette_key",
+    "usage_from_completion",
 ]

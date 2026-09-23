@@ -17,6 +17,7 @@ from tripwire.core.records import (
     TokenUsage,
     ToolCallSpan,
 )
+from tripwire.core.runner import finish_run, prompt_hash, start_run
 from tripwire.core.store import (
     TraceCorruptError,
     TraceReader,
@@ -39,6 +40,9 @@ __all__ = [
     "TraceWriter",
     "UnsupportedSchemaVersionError",
     "default_trace_path",
+    "finish_run",
     "new_run_id",
     "new_span_id",
+    "prompt_hash",
+    "start_run",
 ]
