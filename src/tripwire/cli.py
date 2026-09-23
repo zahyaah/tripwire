@@ -41,6 +41,26 @@ def _repo_root() -> Path:
     raise RuntimeError("could not find repo root (no pyproject.toml in any parent directory)")
 
 
+def _git_user_email() -> str | None:
+    """Best-effort labeler identity from `git config user.email`. Returns `None` (never raises)
+    if git isn't available or nothing is configured — the caller decides what to do about a
+    missing identity, this helper just doesn't invent one."""
+    import subprocess
+
+    try:
+        result = subprocess.run(
+            ["git", "config", "user.email"],
+            capture_output=True,
+            text=True,
+            timeout=5,
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    email = result.stdout.strip()
+    return email or None
+
+
 def _not_implemented(command: str, task: str) -> NoReturn:
     """Fail loudly and name the task that implements this command.
 
@@ -135,6 +155,8 @@ def run(
     # gateway.create(), including both of those, and records it as loop_outcome="error" with
     # loop_error set. That's what's checked below, not a try/except around run_case itself.
     any_blocks_gate = False
+    intent_totals: dict[str, int] = {}
+    intent_passed: dict[str, int] = {}
     for case in cases:
         result = run_case(
             case,
@@ -145,6 +167,9 @@ def run(
             runs_dir=repo_root / "runs",
             client=client,
         )
+        intent_totals[case.intent] = intent_totals.get(case.intent, 0) + 1
+        if result.passed:
+            intent_passed[case.intent] = intent_passed.get(case.intent, 0) + 1
         table.add_row(
             result.case_id,
             result.loop_outcome,
@@ -172,6 +197,28 @@ def run(
                     console.print(f"  {assertion.detail}", style="red", markup=False)
 
     console.print(table)
+
+    # Routing accuracy: "passed" (every assertion satisfied, required or advisory) is the honest
+    # content verdict — distinct from `blocks_gate`, which only reflects required assertions.
+    # Reported overall and per intent (tasks/todo.md Task 11 verification).
+    total_passed = sum(intent_passed.values())
+    total_cases = sum(intent_totals.values())
+    accuracy_table = Table(title="routing accuracy")
+    accuracy_table.add_column("intent")
+    accuracy_table.add_column("passed / total", justify="right")
+    accuracy_table.add_column("accuracy", justify="right")
+    for intent in sorted(intent_totals):
+        passed_n = intent_passed.get(intent, 0)
+        total_n = intent_totals[intent]
+        accuracy_table.add_row(intent, f"{passed_n}/{total_n}", f"{passed_n / total_n:.0%}")
+    accuracy_table.add_row(
+        "overall",
+        f"{total_passed}/{total_cases}",
+        f"{total_passed / total_cases:.0%}" if total_cases else "n/a",
+        style="bold",
+    )
+    console.print(accuracy_table)
+
     if any_blocks_gate:
         raise typer.Exit(code=1)
 
@@ -188,17 +235,185 @@ def report(
 @app.command()
 def label(
     run_id: str = typer.Option(..., "--run", help="Run id to label."),
+    labeler: str = typer.Option(
+        None, "--labeler", help="Defaults to $TRIPWIRE_LABELER, else your git user.email."
+    ),
 ) -> None:
     """Interactively label a run's transcript against the judge rubric."""
-    _not_implemented("label", "Task 13")
+    from tripwire.labeling import label_one_run
+
+    resolved_labeler = labeler or os.environ.get("TRIPWIRE_LABELER") or _git_user_email()
+    if not resolved_labeler:
+        typer.secho(
+            "no labeler identity found — pass --labeler or set TRIPWIRE_LABELER",
+            fg=typer.colors.RED,
+            err=True,
+        )
+        raise typer.Exit(code=2)
+
+    repo_root = _repo_root()
+    try:
+        result = label_one_run(
+            run_id=run_id,
+            runs_dir=repo_root / "runs",
+            corpus_dir=repo_root / "data" / "corpus",
+            labels_path=repo_root / "data" / "labels" / "human.jsonl",
+            split_path=repo_root / "data" / "labels" / "split.json",
+            labeler=resolved_labeler,
+            prompt_int=lambda msg: typer.prompt(msg, type=int),
+            prompt_text=typer.prompt,
+            confirm=typer.confirm,
+            echo=typer.echo,
+        )
+    except FileNotFoundError as exc:
+        typer.secho(str(exc), fg=typer.colors.RED, err=True)
+        raise typer.Exit(code=2) from exc
+    if result is None:
+        raise typer.Exit(code=0)
 
 
 @app.command()
 def calibrate(
     labels_path: str = typer.Option("data/labels/human.jsonl", "--labels"),
+    mode: str | None = typer.Option(
+        None,
+        "--mode",
+        help="One of: live, record, replay. Defaults to $TRIPWIRE_LLM_MODE, else 'replay'.",
+    ),
+    model: str = typer.Option(DEFAULT_MODEL, "--model"),
 ) -> None:
-    """Compute judge-vs-human agreement statistics on the holdout label split."""
-    _not_implemented("calibrate", "Task 14")
+    """Score every labeled run with the judge and report agreement against the human labels."""
+    import sys
+
+    from openai import OpenAI
+
+    repo_root_str = str(_repo_root())
+    if repo_root_str not in sys.path:
+        sys.path.insert(0, repo_root_str)
+
+    from tripwire.core.store import TraceReader, TraceWriter, default_trace_path
+    from tripwire.data import load_corpus
+    from tripwire.judge import JudgeOutputError, judge_run
+    from tripwire.judge.calibration import compute_calibration, format_report_text
+    from tripwire.judge.labels import DEFAULT_SPLIT_SEED, LabelStore, SplitStore
+    from tripwire.labeling.cli import thread_id_from_spans
+    from tripwire.llm.cassettes import CassetteStore
+    from tripwire.llm.gateway import ModelGateway
+
+    repo_root = _repo_root()
+    resolved_labels_path = Path(labels_path)
+    if not resolved_labels_path.is_absolute():
+        resolved_labels_path = repo_root / resolved_labels_path
+
+    labels = LabelStore(resolved_labels_path).load_all()
+    if not labels:
+        typer.secho(
+            f"no labels at {resolved_labels_path} — nothing to calibrate (see `tripwire label`)",
+            fg=typer.colors.RED,
+            err=True,
+        )
+        raise typer.Exit(code=1)
+
+    resolved_mode = mode or os.environ.get("TRIPWIRE_LLM_MODE", "replay")
+    if resolved_mode not in ("live", "record", "replay"):
+        typer.secho(
+            f"--mode must be one of live, record, replay (got {resolved_mode!r})",
+            fg=typer.colors.RED,
+            err=True,
+        )
+        raise typer.Exit(code=2)
+
+    client = None
+    if resolved_mode in ("live", "record"):
+        api_key = os.environ.get("GEMINI_API_KEY")
+        if not api_key:
+            typer.secho(
+                f"--mode {resolved_mode} calls the API and needs GEMINI_API_KEY set",
+                fg=typer.colors.RED,
+                err=True,
+            )
+            raise typer.Exit(code=2)
+        client = OpenAI(api_key=api_key, base_url=GEMINI_BASE_URL)
+
+    corpus = load_corpus(repo_root / "data" / "corpus")
+    split_store = SplitStore(
+        repo_root / "data" / "labels" / "split.json", seed=DEFAULT_SPLIT_SEED
+    )
+    cassettes = CassetteStore(base_dir=repo_root / "fixtures" / "cassettes")
+    runs_dir = repo_root / "runs"
+
+    pairs: list[tuple[object, object, str]] = []
+    skipped: list[str] = []
+    for label in labels:
+        trace_path = default_trace_path(label.run_id, runs_dir)
+        if not trace_path.exists():
+            skipped.append(f"{label.run_id} (no trace)")
+            continue
+        _run, spans = TraceReader.load(trace_path)
+        thread_id = thread_id_from_spans(spans)
+        if thread_id is None:
+            skipped.append(f"{label.run_id} (no thread_id in trace)")
+            continue
+
+        writer = TraceWriter(trace_path)
+        try:
+            gateway = ModelGateway(
+                run_id=label.run_id,
+                writer=writer,
+                mode=resolved_mode,  # type: ignore[arg-type]
+                client=client,
+                cassettes=cassettes,
+            )
+            try:
+                score = judge_run(
+                    gateway=gateway,
+                    model=model,
+                    thread_id=thread_id,
+                    spans=spans,
+                    corpus=corpus,
+                    step_index=len(spans),
+                    parent_span_id=None,
+                )
+            except JudgeOutputError as exc:
+                skipped.append(f"{label.run_id} (judge output error: {exc})")
+                continue
+        finally:
+            writer.close()
+
+        split = split_store.get_or_assign(label.run_id)
+        pairs.append((label, score, split))
+
+    if skipped:
+        typer.secho(f"skipped {len(skipped)} labeled run(s):", fg=typer.colors.YELLOW, err=True)
+        for reason in skipped:
+            typer.secho(f"  {reason}", fg=typer.colors.YELLOW, err=True)
+
+    if not pairs:
+        typer.secho(
+            "no labeled run could be scored by the judge — nothing to report",
+            fg=typer.colors.RED,
+            err=True,
+        )
+        raise typer.Exit(code=1)
+
+    report = compute_calibration(pairs)  # type: ignore[arg-type]
+    console = Console()
+    console.print(format_report_text(report), markup=False)
+
+    out_path = runs_dir / "calibration.json"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(report.model_dump_json(indent=2) + "\n", encoding="utf-8")
+    typer.echo(f"wrote {out_path}")
+
+    holdout_low_confidence = [
+        d.dimension for d in report.for_split("holdout") if d.confidence == "low_confidence"
+    ]
+    if holdout_low_confidence:
+        typer.secho(
+            f"low-confidence on holdout (kappa < 0.6): {', '.join(holdout_low_confidence)}",
+            fg=typer.colors.YELLOW,
+            err=True,
+        )
 
 
 @app.command()
