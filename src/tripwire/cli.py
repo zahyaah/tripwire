@@ -293,9 +293,10 @@ def calibrate(
 
     from tripwire.core.store import TraceReader, TraceWriter, default_trace_path
     from tripwire.data import load_corpus
-    from tripwire.judge import JudgeOutputError, judge_run
+    from tripwire.judge import JudgeOutputError, JudgeScore, JudgeScoreStore, judge_run
     from tripwire.judge.calibration import compute_calibration, format_report_text
     from tripwire.judge.labels import DEFAULT_SPLIT_SEED, LabelStore, SplitStore
+    from tripwire.judge.rubric import RUBRIC_VERSION
     from tripwire.labeling.cli import thread_id_from_spans
     from tripwire.llm.cassettes import CassetteStore
     from tripwire.llm.gateway import ModelGateway
@@ -380,6 +381,9 @@ def calibrate(
         finally:
             writer.close()
 
+        JudgeScoreStore(repo_root / "data" / "labels" / "judge_scores.jsonl").append(
+            JudgeScore(run_id=label.run_id, rubric_version=RUBRIC_VERSION, score=score)
+        )
         split = split_store.get_or_assign(label.run_id)
         pairs.append((label, score, split))
 

@@ -11,12 +11,15 @@ from tripwire.judge.judge import (
     render_transcript,
 )
 from tripwire.judge.rubric import RUBRIC_VERSION, RubricScore, rubric_response_format
+from tripwire.judge.scores import JudgeScore, JudgeScoreStore
 
 __all__ = [
     "RUBRIC_VERSION",
     "CalibrationReport",
     "DimensionReport",
     "JudgeOutputError",
+    "JudgeScore",
+    "JudgeScoreStore",
     "RubricScore",
     "compute_calibration",
     "judge_run",
