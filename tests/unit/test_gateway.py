@@ -20,6 +20,7 @@ from tripwire.llm.gateway import (
     CassetteMissError,
     ModelGateway,
     ModelRequest,
+    usage_from_completion,
 )
 
 _PRICED_TABLE = {
@@ -33,7 +34,11 @@ _PRICED_TABLE = {
 
 
 def _completion(
-    *, prompt_tokens: int = 10, completion_tokens: int = 5, finish_reason: str = "stop"
+    *,
+    prompt_tokens: int = 10,
+    completion_tokens: int = 5,
+    finish_reason: str = "stop",
+    total_tokens: int | None = None,
 ) -> ChatCompletion:
     return ChatCompletion.model_validate(
         {
@@ -52,7 +57,9 @@ def _completion(
             "usage": {
                 "prompt_tokens": prompt_tokens,
                 "completion_tokens": completion_tokens,
-                "total_tokens": prompt_tokens + completion_tokens,
+                "total_tokens": (
+                    total_tokens if total_tokens is not None else prompt_tokens + completion_tokens
+                ),
             },
         }
     )
@@ -397,3 +404,41 @@ def test_unpriced_model_still_emits_a_span_with_real_usage_before_raising(tmp_pa
     assert span.is_error is True
     assert span.usage.prompt_tokens == 42  # real usage, not zeroed — the call did succeed
     assert span.micro_dollars == 0
+
+
+def test_usage_from_completion_derives_reasoning_tokens_from_the_gap() -> None:
+    # Regression for the Gemini 3 finding (gateway.py's usage_from_completion docstring): when
+    # the API's own total_tokens exceeds prompt + completion, the gap is hidden reasoning tokens,
+    # not zero.
+    completion = _completion(prompt_tokens=55, completion_tokens=16, total_tokens=119)
+    usage = usage_from_completion(completion)
+    assert usage.prompt_tokens == 55
+    assert usage.completion_tokens == 16
+    assert usage.reasoning_tokens == 48  # 119 - 55 - 16
+    assert usage.total_tokens == 119
+
+
+def test_usage_from_completion_reasoning_tokens_is_zero_when_totals_already_add_up() -> None:
+    completion = _completion(prompt_tokens=10, completion_tokens=5)  # total_tokens=15 exactly
+    usage = usage_from_completion(completion)
+    assert usage.reasoning_tokens == 0
+
+
+def test_gateway_span_carries_reasoning_tokens_through_to_the_trace(tmp_path: Path) -> None:
+    fake = _FakeCompletionsResource(
+        response=_completion(prompt_tokens=55, completion_tokens=16, total_tokens=119)
+    )
+    client = _FakeClient(fake)
+    trace_path = tmp_path / "trace.jsonl"
+    with TraceWriter(trace_path) as writer:
+        gateway = ModelGateway(
+            run_id="run_1", writer=writer, mode="live", client=client, price_table=_PRICED_TABLE  # type: ignore[arg-type]
+        )
+        _write_run(writer)
+        gateway.create(_request(), step_index=0, parent_span_id=None)
+    _run, spans = TraceReader.load(trace_path)
+    span = spans[0]
+    assert isinstance(span, ModelCallSpan)
+    assert span.usage.reasoning_tokens == 48
+    # prompt: 55*1 = 55 ; completion+reasoning: (16+48)*2 = 128 ; total 183
+    assert span.micro_dollars == 55 + 128

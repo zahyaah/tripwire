@@ -26,16 +26,29 @@ SCHEMA_VERSION = 1
 
 
 class TokenUsage(BaseModel):
-    """Usage reported by the model API for one call. See SPEC.md: `response.usage` only."""
+    """Usage reported by the model API for one call. See SPEC.md: `response.usage` only.
+
+    `reasoning_tokens` exists because Gemini 3's usage doesn't add up otherwise: live testing
+    (2026-09-23, `gemini-3.8-flash` via its OpenAI-compat endpoint) showed
+    `usage.total_tokens > prompt_tokens + completion_tokens` by 40-90%, with
+    `prompt_tokens_details`/`completion_tokens_details` both null — hidden "thinking" tokens
+    billed but not itemized through the compat layer. Defaults to 0 (additive; every existing
+    call site that builds a `TokenUsage` without it is unaffected) and is populated by
+    `usage_from_completion` (gateway.py) as `max(0, api_total - prompt - completion)` whenever
+    the API's own total exceeds the visible sum. Without this field, `price_call` would silently
+    undercount every Gemini 3 call by exactly that gap — the failure this project exists to catch
+    in *other* systems, caught here in its own plumbing.
+    """
 
     model_config = ConfigDict(frozen=True)
 
     prompt_tokens: int = Field(ge=0)
     completion_tokens: int = Field(ge=0)
+    reasoning_tokens: int = Field(default=0, ge=0)
 
     @property
     def total_tokens(self) -> int:
-        return self.prompt_tokens + self.completion_tokens
+        return self.prompt_tokens + self.completion_tokens + self.reasoning_tokens
 
 
 class RunRecord(BaseModel):

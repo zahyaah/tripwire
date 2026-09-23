@@ -36,7 +36,7 @@ class PriceEntry(BaseModel):
 
     Known limitation: `as_of` records when a rate was published but is not consulted by
     `price_call` — `PRICE_TABLE` is keyed by model name only, so there is exactly one live rate
-    per model at a time. If NVIDIA revises a rate, updating the entry in place reprices any
+    per model at a time. If the provider revises a rate, updating the entry in place reprices any
     *future* `price_call` correctly, but re-deriving cost for *already-recorded* spans (whose
     `micro_dollars` was computed at call time and stored on the span, per SPEC-trace-core.md
     § Contracts) would silently use the new rate rather than the one billed. `rollup` never hits
@@ -63,18 +63,21 @@ class PriceEntry(BaseModel):
             )
 
 
-# NVIDIA API catalog pricing, as published at the date below. SPEC.md Open Question 7: whether
-# this endpoint is metered or free-tier/preview is unconfirmed — billable=False here is the
-# documented current assumption, not a discovered fact. Revisit before any run's cost figure is
-# quoted outside this repo.
 # A MappingProxyType, not a plain dict: PriceEntry is frozen, but a bare module-level dict would
 # still let any importer mutate the table itself (`PRICE_TABLE["x"] = ...`) and leak state across
 # unrelated callers. The proxy makes that a TypeError instead of a silent global mutation.
+#
+# Provider swap #2 (2026-09-23): Anthropic -> NVIDIA -> Gemini, per user direction. Model
+# confirmed live via client.models.list() against the real API (not docs — the docs-listed
+# "gemini-3-flash" 404'd; the real stable id is "gemini-3.8-flash"). `billable=False` here is
+# the user's own statement that their Google AI Studio key is on the free tier, not a fetched
+# pricing page — same documented-assumption status the NVIDIA entry had, and just as much in
+# need of reconfirming if the key's tier ever changes.
 PRICE_TABLE: Mapping[str, PriceEntry] = MappingProxyType(
     {
-        "nvidia/nemotron-3.5-lightning": PriceEntry(
-            model="nvidia/nemotron-3.5-lightning",
-            as_of=date(2026, 9, 22),
+        "gemini-3.8-flash": PriceEntry(
+            model="gemini-3.8-flash",
+            as_of=date(2026, 9, 23),
             prompt_micro_dollars_per_million=0,
             completion_micro_dollars_per_million=0,
             billable=False,
@@ -113,8 +116,13 @@ def price_call(
             f"no price table entry for model {model!r} — add one to PRICE_TABLE "
             "before pricing calls to it (see SPEC-trace-core.md § Cost)"
         )
+    # reasoning_tokens (TokenUsage's hidden-thinking-token gap, see records.py) is priced at the
+    # completion rate: it is generation-side compute the same way visible completion tokens are,
+    # just not itemized separately by the API. Zero for a provider that reports a total that
+    # already equals prompt + completion, so this is a no-op everywhere except Gemini 3.
+    billable_completion_tokens = usage.completion_tokens + usage.reasoning_tokens
     numerator = (
         usage.prompt_tokens * entry.prompt_micro_dollars_per_million
-        + usage.completion_tokens * entry.completion_micro_dollars_per_million
+        + billable_completion_tokens * entry.completion_micro_dollars_per_million
     )
     return _round_half_up(numerator, 1_000_000)

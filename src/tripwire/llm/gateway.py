@@ -1,22 +1,27 @@
 """The instrumented model gateway: every call emits a span, and calls can be recorded to /
 replayed from a cassette (SPEC-trace-core.md § Model gateway, § Cassettes).
 
-Source-verified against the installed `openai` SDK (3.17.0) and NVIDIA's own model page for
-`nemotron-3.5-lightning-30b-a3b` (https://build.nvidia.com/nvidia/nemotron-3.5-lightning-30b-a3b,
-fetched 2026-09-22; see `source-driven-development` notes for the full citation trail):
+Provider swap #2 (2026-09-23): NVIDIA -> Gemini, per user direction. Facts below are
+live-verified against the real Gemini OpenAI-compat endpoint
+(https://generativelanguage.googleapis.com/v1beta/openai/, model `gemini-3.8-flash`) with actual
+API calls, not just a docs page — the docs' own listed model id ("gemini-3-flash") 404'd against
+the live API, which is exactly why this project doesn't trust a doc over a real call:
 
 - Client construction (`OpenAI(api_key=..., base_url=...)`) and the exception hierarchy
   (`APITimeoutError < APIConnectionError`; `RateLimitError`/`NotFoundError`/`AuthenticationError`/
   `BadRequestError` < `APIStatusError`; both < `APIError`) — openai-python README.md and the
-  installed package's own MRO.
-- `max_tokens`, not OpenAI-proper's newer `max_completion_tokens` — NVIDIA's sample code uses
-  `max_tokens`; `max_completion_tokens` is unconfirmed on this endpoint.
-- Native `tool_calls` support — NVIDIA's model page states function calling is "Supported".
-- `usage.{prompt_tokens,completion_tokens}` field names — installed package's `CompletionUsage`
-  model fields, matching `TokenUsage` already built in Task 2.
+  installed package's own MRO; provider-agnostic, unaffected by the swap.
+- `max_tokens` works (tested live); `max_completion_tokens` untested on this endpoint.
+- Native `tool_calls` confirmed live: a real call with a `strict: true` function tool returned
+  `finish_reason="tool_calls"` and a correctly-shaped `tool_calls[0].function`.
+- `usage.{prompt_tokens,completion_tokens}` are present, but `usage.total_tokens` on Gemini 3
+  exceeds their sum by 40-90% with no `*_tokens_details` populated to explain it — hidden
+  thinking tokens billed but not itemized. See `TokenUsage.reasoning_tokens` (Task 2) and
+  `usage_from_completion` below, which exists specifically to recover this gap.
 - Sync streaming via `client.chat.completions.stream(...)` + `.get_final_completion()` — the
   installed SDK's `helpers.md` (documents the async form; the sync method exists with the same
-  contract, confirmed via `inspect.signature`).
+  contract, confirmed via `inspect.signature`); not yet re-verified live against Gemini
+  specifically (SPEC.md tracks this as an open item).
 """
 
 from __future__ import annotations
@@ -90,8 +95,8 @@ class CassetteMissError(Exception):
 
 
 class ModelGateway:
-    """Wraps an `openai` client (pointed at the NVIDIA API catalog) so every call emits a span
-    and can be recorded to / replayed from a cassette.
+    """Wraps an `openai` client (pointed at an OpenAI-compatible endpoint) so every call emits
+    a span and can be recorded to / replayed from a cassette.
 
     One gateway per run: `run_id` is fixed at construction and stamped on every span it emits,
     matching the correlation-id convention from Task 2.
@@ -363,11 +368,25 @@ class ModelGateway:
 
 
 def usage_from_completion(completion: ChatCompletion) -> TokenUsage:
+    """Build a `TokenUsage` from the API's reported usage.
+
+    `reasoning_tokens` is derived, not read from a dedicated field: live testing against Gemini
+    3 (`gemini-3.8-flash`, 2026-09-23) found `usage.total_tokens` exceeding
+    `prompt_tokens + completion_tokens` by 40-90%, with no `completion_tokens_details` populated
+    to explain the gap — hidden thinking tokens billed but not itemized through the OpenAI-compat
+    endpoint. Taking `max(0, api_total - prompt - completion)` recovers that gap without
+    depending on a details field this provider doesn't fill in; it is exactly 0 for a provider
+    whose reported total already equals prompt + completion.
+    """
     if completion.usage is None:
         return TokenUsage(prompt_tokens=0, completion_tokens=0)
+    prompt_tokens = completion.usage.prompt_tokens
+    completion_tokens = completion.usage.completion_tokens
+    reasoning_tokens = max(0, completion.usage.total_tokens - prompt_tokens - completion_tokens)
     return TokenUsage(
-        prompt_tokens=completion.usage.prompt_tokens,
-        completion_tokens=completion.usage.completion_tokens,
+        prompt_tokens=prompt_tokens,
+        completion_tokens=completion_tokens,
+        reasoning_tokens=reasoning_tokens,
     )
 
 

@@ -32,6 +32,20 @@ def test_token_usage_total() -> None:
     assert usage.total_tokens == 140
 
 
+def test_token_usage_total_includes_reasoning_tokens() -> None:
+    # Gemini 3's hidden thinking-token gap (see records.py's TokenUsage docstring) — reasoning
+    # tokens must count toward the total or cost derived from it silently undercounts.
+    usage = TokenUsage(prompt_tokens=100, completion_tokens=40, reasoning_tokens=48)
+    assert usage.total_tokens == 188
+
+
+def test_token_usage_reasoning_tokens_defaults_to_zero() -> None:
+    # Additive field: every existing TokenUsage(...) call site built before this field existed
+    # must keep working unchanged.
+    usage = TokenUsage(prompt_tokens=100, completion_tokens=40)
+    assert usage.reasoning_tokens == 0
+
+
 def test_span_union_discriminates_on_kind() -> None:
     tool_span = ToolCallSpan(
         span_id="sp_1",
@@ -60,7 +74,7 @@ def test_model_call_span_requires_usage() -> None:
                 "step_index": 0,
                 "started_at": datetime.now(UTC).isoformat(),
                 "latency_ms": 10,
-                "model": "nvidia/nemotron-3.5-lightning",
+                "model": "gemini-3.8-flash",
                 "stop_reason": "stop",
                 "micro_dollars": 0,
                 "cassette_key": "abc",

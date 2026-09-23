@@ -16,9 +16,12 @@ from tripwire.assertions.matchers import (
     match_tool_called,
 )
 from tripwire.assertions.results import StepAssertionResult, make_result
+from tripwire.assertions.runner import CaseResult, evaluate_case, run_case
 
 __all__ = [
+    "CaseResult",
     "StepAssertionResult",
+    "evaluate_case",
     "make_result",
     "match_cost_budget",
     "match_final_outcome",
@@ -28,4 +31,5 @@ __all__ = [
     "match_step_budget",
     "match_tool_args",
     "match_tool_called",
+    "run_case",
 ]

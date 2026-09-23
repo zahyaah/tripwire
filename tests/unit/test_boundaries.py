@@ -59,17 +59,27 @@ def test_no_file_under_agents_imports_assertions_or_judge() -> None:
     assert not violations, f"agents/ imports scoring modules: {violations}"
 
 
-def test_no_file_under_assertions_imports_agents() -> None:
-    # The reverse direction: CAPABILITY-MAP.md is explicit that `assertions` evaluates recorded
-    # spans, never a live agent object — it must not import `agents` at all, symmetric to the
-    # check above.
+def test_matchers_and_results_never_import_agents() -> None:
+    # The reverse direction, scoped to the actual scoring primitives (`matchers.py`,
+    # `results.py`): those must stay pure over `list[Span]` — never a live agent object — so
+    # they work unmodified against a second agent's trace later (CAPABILITY-MAP.md's stated
+    # reason `assertions` depends only on `trace-core` and `synthetic-data`).
+    #
+    # `runner.py` is deliberately excluded from this check: Task 10's assertion *runner* is the
+    # orchestrator that executes the agent (via `agents.inbox_triage.loop.run_agent`) and then
+    # hands the resulting trace to the pure matchers above — something has to call the thing
+    # being measured, and this is that something. It is inbox_triage-specific today (no second
+    # agent exists yet to make it pluggable); pure/spans-only is `matchers.py`'s guarantee, not
+    # every file that happens to live under `assertions/`.
+    scored_files = [_ASSERTIONS_DIR / "matchers.py", _ASSERTIONS_DIR / "results.py"]
     violations: dict[str, list[str]] = {}
-    for path in _ASSERTIONS_DIR.rglob("*.py"):
+    for path in scored_files:
+        assert path.exists(), f"expected {path} to exist"
         imported = _imported_module_names(path.read_text(encoding="utf-8"))
         hits = [name for name in imported if name == "agents" or name.startswith("agents.")]
         if hits:
             violations[str(path.relative_to(_REPO_ROOT))] = hits
-    assert not violations, f"assertions/ imports agents/: {violations}"
+    assert not violations, f"matchers/results import agents/: {violations}"
 
 
 def test_the_boundary_check_itself_actually_catches_a_violation() -> None:

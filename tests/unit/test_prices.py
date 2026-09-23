@@ -63,7 +63,7 @@ def test_explicit_empty_table_raises_rather_than_falling_back_to_production_tabl
     # falsy, so a naive `table or PRICE_TABLE` would silently substitute the production table.
     usage = TokenUsage(prompt_tokens=1, completion_tokens=1)
     with pytest.raises(UnknownModelError):
-        price_call("nvidia/nemotron-3.5-lightning", usage, table={})
+        price_call("gemini-3.8-flash", usage, table={})
 
 
 def test_unknown_model_raises() -> None:
@@ -74,7 +74,19 @@ def test_unknown_model_raises() -> None:
 
 def test_known_zero_price_model_prices_at_zero_without_raising() -> None:
     usage = TokenUsage(prompt_tokens=1_000_000, completion_tokens=1_000_000)
-    assert price_call("nvidia/nemotron-3.5-lightning", usage, table=PRICE_TABLE) == 0
+    assert price_call("gemini-3.8-flash", usage, table=PRICE_TABLE) == 0
+
+
+def test_reasoning_tokens_priced_at_the_completion_rate() -> None:
+    # Gemini 3's hidden thinking tokens (TokenUsage.reasoning_tokens) are generation-side compute
+    # the same way visible completion tokens are — priced the same, not left at zero.
+    table = _table(prompt_rate=0, completion_rate=1_000_000)
+    usage_without_reasoning = TokenUsage(prompt_tokens=0, completion_tokens=10)
+    usage_with_reasoning = TokenUsage(prompt_tokens=0, completion_tokens=10, reasoning_tokens=5)
+    priced_without = price_call("test/priced-model", usage_without_reasoning, table=table)
+    priced_with = price_call("test/priced-model", usage_with_reasoning, table=table)
+    assert priced_with > priced_without
+    assert priced_with - priced_without == 5  # 5 reasoning tokens * $1/M rate, same as completion
 
 
 def test_billable_false_with_nonzero_rate_is_rejected() -> None:

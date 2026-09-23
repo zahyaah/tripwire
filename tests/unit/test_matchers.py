@@ -69,7 +69,7 @@ def _model_call(step_index: int, micro_dollars: int, span_id: str = "sp_model") 
         step_index=step_index,
         started_at=_NOW,
         latency_ms=1,
-        model="nvidia/nemotron-3.5-lightning",
+        model="gemini-3.8-flash",
         stop_reason="tool_calls",
         usage=TokenUsage(prompt_tokens=1, completion_tokens=1),
         micro_dollars=micro_dollars,
@@ -286,7 +286,7 @@ def test_step_budget_missing_agent_run_span_fails_with_clear_message() -> None:
 
 
 def test_cost_budget_pass_and_fail() -> None:
-    model = "nvidia/nemotron-3.5-lightning"  # billable=False in PRICE_TABLE -> always 0 cost
+    model = "gemini-3.8-flash"  # billable=False in PRICE_TABLE -> always 0 cost
     assert model in PRICE_TABLE
     spans = [_root(), _model_call(0, micro_dollars=0)]
     assert match_cost_budget(spans, _CASE_ID, 100).passed is True

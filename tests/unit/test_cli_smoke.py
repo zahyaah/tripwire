@@ -1,21 +1,24 @@
 """Task 1 acceptance: CLI exists, lists every planned subcommand, and every stub fails loudly.
 
-`gen-corpus` graduated from stub to real implementation in Task 5 — it stays in
-PLANNED_COMMANDS (the help-listing check) but moves out of STILL_STUB_COMMANDS.
+`gen-corpus` (Task 5) and `run` (Task 10) graduated from stub to real implementation — they
+stay in PLANNED_COMMANDS (the help-listing check) but move out of STILL_STUB_COMMANDS.
 """
 
 from __future__ import annotations
 
+import subprocess
 from pathlib import Path
 
 from typer.testing import CliRunner
 
 from tripwire.cli import app
 
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+
 runner = CliRunner()
 
 PLANNED_COMMANDS = ["run", "report", "label", "calibrate", "gate", "gen-corpus"]
-STILL_STUB_COMMANDS = ["run", "report", "label", "calibrate", "gate"]
+STILL_STUB_COMMANDS = ["report", "label", "calibrate", "gate"]
 
 
 def test_help_lists_every_planned_subcommand() -> None:
@@ -25,12 +28,6 @@ def test_help_lists_every_planned_subcommand() -> None:
         assert command in result.output, f"{command!r} missing from `tripwire --help` output"
 
 
-def test_bare_run_exits_nonzero_with_stub_message() -> None:
-    result = runner.invoke(app, ["run"])
-    assert result.exit_code == 1
-    assert "not implemented" in result.output
-
-
 def test_every_remaining_stub_exits_nonzero() -> None:
     for command in STILL_STUB_COMMANDS:
         # `label` requires --run; give it a placeholder so the stub message is what's tested.
@@ -38,6 +35,77 @@ def test_every_remaining_stub_exits_nonzero() -> None:
         result = runner.invoke(app, args)
         assert result.exit_code == 1, f"`tripwire {command}` did not exit non-zero"
         assert "not implemented" in result.output
+
+
+def test_run_actually_works_as_the_real_installed_console_script(tmp_path: Path) -> None:
+    # Regression: CliRunner.invoke() runs in-process and inherits this test session's own
+    # sys.path — which pytest already populated with the repo root via pyproject.toml's
+    # `pythonpath = ["."]`. That made every other `run` test in this file pass even when the
+    # real installed console script (`uv run tripwire ...`) raised
+    # `ModuleNotFoundError: No module named 'agents'`. Invoked from a directory that is NOT the
+    # repo root, so a cwd-based sys.path fluke can't accidentally make this pass either — the
+    # fix under test must be the explicit sys.path insertion keyed off `_repo_root()`.
+    suite_dir = tmp_path / "golden"
+    suite_dir.mkdir()
+    (suite_dir / "one.yaml").write_text(
+        "case_id: subprocess-smoke-01\n"
+        "intent: faq\n"
+        "input:\n"
+        "  thread_id: thr_00001\n"
+        "expected_tool_calls:\n"
+        "  - tool: get_thread\n",
+        encoding="utf-8",
+    )
+    result = subprocess.run(
+        [
+            "uv",
+            "run",
+            "--project",
+            str(_REPO_ROOT),
+            "tripwire",
+            "run",
+            "--suite",
+            str(suite_dir),
+            "--mode",
+            "replay",
+        ],
+        cwd=tmp_path,  # NOT the repo root — --project is what points uv at the right env
+        capture_output=True,
+        text=True,
+        timeout=60,
+    )
+    assert "ModuleNotFoundError" not in result.stderr, result.stderr
+    assert result.returncode == 1  # no cassette recorded for this made-up case -> expected fail
+    assert "subprocess-smoke-01" in result.stdout
+
+
+def test_run_rejects_an_invalid_mode() -> None:
+    result = runner.invoke(app, ["run", "--mode", "not-a-real-mode"])
+    assert result.exit_code == 2
+    assert "must be one of live, record, replay" in result.output
+
+
+def test_run_in_replay_mode_with_no_cassette_fails_clearly_not_silently(
+    tmp_path: Path,
+) -> None:
+    # No API key needed for this: replay mode never touches the network. The point of this test
+    # is that a missing cassette surfaces as a named, readable failure — not a crash, and not a
+    # silently-passing case with nothing actually checked.
+    suite_dir = tmp_path / "golden"
+    suite_dir.mkdir()
+    (suite_dir / "one.yaml").write_text(
+        "case_id: cli-smoke-no-cassette-01\n"
+        "intent: faq\n"
+        "input:\n"
+        "  thread_id: thr_00001\n"
+        "expected_tool_calls:\n"
+        "  - tool: get_thread\n",
+        encoding="utf-8",
+    )
+    result = runner.invoke(app, ["run", "--suite", str(suite_dir), "--mode", "replay"])
+    assert result.exit_code == 1
+    assert "cli-smoke-no-cassette-01" in result.output
+    assert "run did not complete" in result.output or "cassette" in result.output.lower()
 
 
 def test_gen_corpus_writes_to_an_explicit_out_dir_not_the_real_repo_data_dir(

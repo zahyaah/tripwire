@@ -6,10 +6,18 @@ in each stub's error message. See tasks/todo.md for the full task list.
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 from typing import NoReturn
 
 import typer
+from rich.console import Console
+from rich.table import Table
+
+# Provider swap #2 (2026-09-23): NVIDIA -> Gemini. Confirmed live via client.models.list()
+# against the real API — the docs' own listed "gemini-3-flash" 404'd; this is the real id.
+DEFAULT_MODEL = "gemini-3.8-flash"
+GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
 app = typer.Typer(
     name="tripwire",
@@ -50,10 +58,122 @@ def _not_implemented(command: str, task: str) -> NoReturn:
 @app.command()
 def run(
     suite: str = typer.Option("data/golden", help="Path to the golden set directory."),
-    mode: str = typer.Option("replay", help="One of: live, record, replay."),
+    mode: str | None = typer.Option(
+        None,
+        "--mode",
+        help="One of: live, record, replay. Defaults to $TRIPWIRE_LLM_MODE, else 'replay'.",
+    ),
+    model: str = typer.Option(DEFAULT_MODEL, "--model"),
 ) -> None:
     """Execute the golden set against the agent under test."""
-    _not_implemented("run", "Task 10")
+    import sys
+
+    from openai import OpenAI
+
+    # `agents/` is a top-level directory alongside `src/`, deliberately not part of the
+    # installed `tripwire` wheel (SPEC.md Project Structure: the agent under test isn't shipped
+    # as part of the harness). Tests get it on sys.path via pyproject.toml's
+    # `[tool.pytest.ini_options] pythonpath = ["."]`; the installed console script (this
+    # function, run as `uv run tripwire ...`) gets no such treatment from Python itself, so it's
+    # done here, once, before the first import that needs it.
+    repo_root_str = str(_repo_root())
+    if repo_root_str not in sys.path:
+        sys.path.insert(0, repo_root_str)
+
+    from tripwire.assertions import run_case
+    from tripwire.core.golden import GoldenCaseError, load_golden_set
+    from tripwire.data import load_corpus
+
+    resolved_mode = mode or os.environ.get("TRIPWIRE_LLM_MODE", "replay")
+    if resolved_mode not in ("live", "record", "replay"):
+        typer.secho(
+            f"--mode must be one of live, record, replay (got {resolved_mode!r})",
+            fg=typer.colors.RED,
+            err=True,
+        )
+        raise typer.Exit(code=2)
+
+    repo_root = _repo_root()
+    suite_dir = Path(suite)
+    if not suite_dir.is_absolute():
+        suite_dir = repo_root / suite_dir
+
+    try:
+        cases = load_golden_set(suite_dir)
+    except GoldenCaseError as exc:
+        typer.secho(str(exc), fg=typer.colors.RED, err=True)
+        raise typer.Exit(code=2) from exc
+
+    try:
+        corpus = load_corpus(repo_root / "data" / "corpus")
+    except FileNotFoundError as exc:
+        typer.secho(str(exc), fg=typer.colors.RED, err=True)
+        raise typer.Exit(code=2) from exc
+
+    client = None
+    if resolved_mode in ("live", "record"):
+        api_key = os.environ.get("GEMINI_API_KEY")
+        if not api_key:
+            typer.secho(
+                f"--mode {resolved_mode} calls the API and needs GEMINI_API_KEY set",
+                fg=typer.colors.RED,
+                err=True,
+            )
+            raise typer.Exit(code=2)
+        client = OpenAI(api_key=api_key, base_url=GEMINI_BASE_URL)
+
+    console = Console()
+    table = Table(title=f"tripwire run — {len(cases)} case(s), mode={resolved_mode}")
+    table.add_column("case_id")
+    table.add_column("outcome")
+    table.add_column("passed")
+    table.add_column("cost (µ$)", justify="right")
+    table.add_column("run_id")
+
+    # Note: run_case never actually raises CassetteMissError/CorruptCassetteError out to this
+    # caller — the loop (agents/inbox_triage/loop.py) already catches every exception from
+    # gateway.create(), including both of those, and records it as loop_outcome="error" with
+    # loop_error set. That's what's checked below, not a try/except around run_case itself.
+    any_blocks_gate = False
+    for case in cases:
+        result = run_case(
+            case,
+            corpus=corpus,
+            mode=resolved_mode,  # type: ignore[arg-type]
+            model=model,
+            cassettes_dir=repo_root / "fixtures" / "cassettes",
+            runs_dir=repo_root / "runs",
+            client=client,
+        )
+        table.add_row(
+            result.case_id,
+            result.loop_outcome,
+            "true" if result.passed else "false",
+            str(result.total_micro_dollars),
+            result.run_id,
+            style="red" if result.blocks_gate else None,
+        )
+        if result.blocks_gate:
+            any_blocks_gate = True
+            if result.loop_outcome != "completed":
+                # Surface the loop's own failure (a missing cassette, a budget, a raw error)
+                # ahead of the assertion mismatches it causes — those are downstream noise once
+                # the run itself didn't finish. markup=False: case ids and error text can
+                # contain "[...]" (e.g. a cassette key error message), which Rich would
+                # otherwise silently parse as a style tag and swallow instead of printing.
+                console.print(
+                    f"  [{result.case_id}] run did not complete: "
+                    f"outcome={result.loop_outcome!r} error={result.loop_error!r}",
+                    style="red",
+                    markup=False,
+                )
+            for assertion in result.assertion_results:
+                if assertion.blocks_build:
+                    console.print(f"  {assertion.detail}", style="red", markup=False)
+
+    console.print(table)
+    if any_blocks_gate:
+        raise typer.Exit(code=1)
 
 
 @app.command()
