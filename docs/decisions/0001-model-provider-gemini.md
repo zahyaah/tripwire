@@ -1,4 +1,4 @@
-# ADR-0001: Model provider — Gemini 3.8-flash via its OpenAI-compatible endpoint
+# ADR-0001: Model provider — Gemini 3 (preview id `gemini-3-flash-preview`) via its OpenAI-compatible endpoint
 
 ## Status
 Accepted (supersedes two earlier choices, both abandoned before implementation completed for
@@ -21,18 +21,20 @@ The provider changed twice over the course of building this harness:
 2. **NVIDIA API catalog**, `nvidia/nemotron-3.5-lightning` — the plan documented in this repo's
    `SPEC.md` through Task 3. Dropped per explicit user direction before any code was written
    against it.
-3. **Google Gemini**, `gemini-3.8-flash`, via `https://generativelanguage.googleapis.com/v1beta/openai/`
+3. **Google Gemini**, `gemini-3-flash-preview`, via `https://generativelanguage.googleapis.com/v1beta/openai/`
    — the provider actually implemented, tested, and used for every task from Task 4 onward.
 
 ## Decision
-Use Gemini's OpenAI-compatible endpoint, model id `gemini-3.8-flash`, for both the agent and the
+Use Gemini's OpenAI-compatible endpoint, model id `gemini-3-flash-preview`, for both the agent and the
 judge.
 
 Every fact about this endpoint used in the code is source-verified against the live API, not
 assumed from documentation:
 
 - The model id itself: the docs' own listed `gemini-3-flash` returned 404 against a real call;
-  `gemini-3.8-flash` was confirmed via `client.models.list()`.
+  `gemini-3.8-flash` (the id `client.models.list()` listed as available) 503'd on every call;
+  `gemini-3-flash-preview` returned real completions. The id in this ADR's title and body is
+  `gemini-3-flash-preview`, re-confirmed by direct curl on 2026-09-23.
 - Native `tool_calls` with `strict: true` function tools: confirmed live, returned
   `finish_reason="tool_calls"` with a correctly-shaped `tool_calls[0].function`.
 - `max_tokens` works; `max_completion_tokens` is untested on this endpoint, so the gateway uses
@@ -63,7 +65,7 @@ assumed from documentation:
   No cost or behavior was ever measured against this provider.
 
 ## Consequences
-- `PRICE_TABLE` (`src/tripwire/cost/prices.py`) has one real entry, `gemini-3.8-flash`, with
+- `PRICE_TABLE` (`src/tripwire/cost/prices.py`) has one real entry, `gemini-3-flash-preview`, with
   `billable=False` — costs are tracked as zero-priced tokens, not a fabricated dollar figure
   (SPEC.md § Success criteria).
 - `TokenUsage.reasoning_tokens` (`src/tripwire/core/records.py`) exists specifically to recover
