@@ -1,0 +1,11 @@
+{
+  "seed": 1337,
+  "holdout_fraction": 0.5,
+  "assignments": {
+    "run_20260924T114605309760-tgukkm": "dev",
+    "run_20260924T124740211466-rbryrj": "holdout",
+    "run_20260924T124808378736-nm8lfn": "holdout",
+    "run_20260924T124909681638-nw9g3p": "dev",
+    "run_20260924T125300403633-763wkk": "dev"
+  }
+}

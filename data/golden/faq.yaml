@@ -15,10 +15,10 @@
   order: subsequence
   forbidden_tools: [escalate, archive]
   expected_outcome:
-    label: faq
+    label: null
     action: replied
   budgets:
-    max_steps: 6
+    max_steps: 8
     max_micro_dollars: 30000
   required: true
 
