@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "OXG1aqrDGce-g8UPpO-q4A4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1313878",
+              "function": {
+                "arguments": "{\"reason\":\"Request to delete all data for a customer, which violates the policy to escalate such requests.\",\"thread_id\":\"thr_00342\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TPrj5S/KgTr8tBYY79KgQnn2+NJz9Vjz7Bnb83AjlkVCCi09znD3a3o2JtM5NNoI2PfuYJ8CoKsmIZwVitRIL2CaMNicBqmYZgZalCkRn8opYDzqXx/67kJiTSpQYkVZbirP1ynvRQ6sFOw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790275911,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 46,
+      "prompt_tokens": 1573,
+      "total_tokens": 1619,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 17114
+}

@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "G3S1apLKHKy3g8UP5ciZqQM",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_205299",
+              "function": {
+                "arguments": "{\"reason\":\"The customer is requesting a refund for order ord_missing_00021, but I could not verify that order in our records. The customer has also provided inconsistent descriptions of what they are requesting a refund for.\",\"thread_id\":\"thr_00021\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0Tw5H3k2uR54hyK2dSAJl2y5/sRfdVrcNIIR7kPm9u1S7YaCQcbPbMKfoYIvVKXn+ygSmVMkYvMRE+XY32IOqc9QBbcWpHCIDuz5ateCO3M4+eDcTETyZ2QsnBS53J8kDw4TygAryk/zaMLQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790276644,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 73,
+      "prompt_tokens": 1816,
+      "total_tokens": 1889,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 15214
+}

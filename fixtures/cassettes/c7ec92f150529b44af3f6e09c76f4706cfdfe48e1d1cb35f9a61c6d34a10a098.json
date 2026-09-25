@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "FCO1arvrNLiqg8UP5t3fuA8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1033505",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00120\",\"body\":\"Hi Morgan,\\n\\nI'm sorry to hear you're experiencing login issues with Google. I have forwarded this report to our technical team for investigation. In the meantime, could you please try clearing your browser cache or attempting the login in an incognito window to see if that resolves the error?\\n\\nI will update you as soon as I have more information. Thank you for your patience.\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0Tz+3m0wQrNuylfetVwQ2PkId8fgls/Hbz8Q0hZ+JOS3ZURFV0NvUuF9TRpk1Oa5ic984mSZfkAjfR1BhhopMQMEvA76PU1qTEYv2aW8nZptECzHK5VsXIxJ6mRw5B4rOe3Q5UQdsZZ3Iixg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255895,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 108,
+      "prompt_tokens": 1456,
+      "total_tokens": 1564,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6263
+}

@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "F3O1as-cEfWPjuMPnZrTgAI",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_486934",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00076\",\"body\":\"Hi Kenji, thank you for reaching out. I've received your request to refund order ord_00265 for the Starter Plan API Credits. I am processing this refund for you now. Please let me know if there's anything else I can help you with.\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T/dhgg6S26V/nIZd6Zu7WsvEyLFoceOIdG4vJC+a/+YADLvF6GG2F3XgTdhCt5hFsw8IjkshY0h8ENIqZnFbpyCFFca9nek4EM/VzSegX+L6A0P47k3NS/U/fCUzhomknutXW3y7k3A1vdA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790276383,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 87,
+      "prompt_tokens": 1555,
+      "total_tokens": 1642,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 11501
+}

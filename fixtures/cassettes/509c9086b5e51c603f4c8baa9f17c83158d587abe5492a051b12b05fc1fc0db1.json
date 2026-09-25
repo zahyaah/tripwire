@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "7yG1asvYI5vg4-EP58TmmAU",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a bug report and escalated it to the engineering team for further investigation, as the user is experiencing persistent errors even after attempting troubleshooting steps.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0T7I8YcoHPp7+TKLK3vHbl5RFNJLIoyZpSlYn6HiJ+80rtqhdjLjLQ7+WAomAxlhfBEfVkIZLt6nyHGwxBuMZ+ubJFdwW5E8NQ3COjPisDCKR6is1hyrxK+5DGdcbmzcfIYmXSlSm45tYhHw=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255604,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 33,
+      "prompt_tokens": 1860,
+      "total_tokens": 1893,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 15193
+}

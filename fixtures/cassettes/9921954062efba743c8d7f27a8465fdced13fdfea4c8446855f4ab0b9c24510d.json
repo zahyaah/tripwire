@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "0h21asq3BLT_4-EP7sfW6A8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as \"billing_inquiry\" and drafted a reply to help Jamie with switching their subscription to annual billing.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0T8SLnSXvOrhaHcUAUjwkGKhV/VDTYlwnmF34IUUh5Yjr3ZsujIusW8FnVhD+THpyQZ6t60xwWViEY1FNePwIUTmSBzU25CSkb+nuEePnXWfJjRwSdOuQvVvH9dyX3fed5nyY2k+GumdIRsA=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790254547,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 1850,
+      "total_tokens": 1877,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 7860
+}

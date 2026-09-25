@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "mCG1apLBJra5g8UPiezcOA",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_654095",
+              "function": {
+                "arguments": "{\"reason\":\"Customer is reporting multiple unknown charges for an order ID ('ord_missing_00334') that does not exist in our system.\",\"thread_id\":\"thr_00334\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TF2mlovLUjU2rtiXTpf+yFCuA49YvoU+5bQVZR829s5EHrY78f5w0ENqkB97YBlEc6Xx9hRuSt34NY9g2iKQdaDnoK6Q+pNByW+AU3ed4KsK6bI7ERrPvj1D8eSeAeio4gmd7bX83QuSFRQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255520,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 57,
+      "prompt_tokens": 1863,
+      "total_tokens": 1920,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 13082
+}

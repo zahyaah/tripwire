@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "rQ21asC3A6a3g8UPrqGbiA8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled this thread as a refund request, verified that the order does not match the items the customer mentioned, and drafted a reply explaining that I cannot process a refund for the order found.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TYi9MePckpqBmzK67eG2Cj/flVM/kC4M0uujYJlUwlD3m1peEFcaX/Tr3J3PTxT7d3mMq8iHas19Dh0bXnGlji31hj0dxqK9/Ow+LYTpNfsJKaUtW1vUeBQANyhlCxf78rZow2rfemYW0qA=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790250420,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 39,
+      "prompt_tokens": 2021,
+      "total_tokens": 2060,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 8403
+}

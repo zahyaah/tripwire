@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "oyG1asb3MtWyg8UP-ZfB4A4",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a billing dispute and escalated it to a human because the order ID provided by the customer could not be found in our records.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TvNVbXLKyDf+OoDHahZrmkkOGkxE5Ftd+kEdYtf1uAr2ANTEI6qlLLeee/7wWp/ujbDaWIpN+IbsTrR+TUd8cOEr7eGx5wPRi6ZxhUqKFpg3DpS/hD1rUREw1CICFHFbgbJgqasgDcKwq5Q=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255532,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 1986,
+      "total_tokens": 2017,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 11779
+}

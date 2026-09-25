@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "s3K1aqjuDaa3g8UPrqGbiA8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have verified the customer and order details, labeled the thread as a refund request, and drafted a reply to process the refund for order ord_00124.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TtPy3T/O/ZAbtEkyNTxOeR3afYunJ3XS8eh6db3gA5hFS9oED8+4D8arGsHHj6EGahDiYoMB2GizZYRI39L8m90xMOt/VF59e7xhVVciJsrGJOldYY4xiZP+2DY1Q2N6oYxmtbT6m5sM15Q=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790276284,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 35,
+      "prompt_tokens": 1874,
+      "total_tokens": 1909,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 12719
+}

@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "KjK1as-bK4jVqfkPmvfhwAs",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have added the \"feature_request\" label to the thread and drafted a reply thanking the customer for their feature suggestions regarding bulk export, role-based permissions, and SSO.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "ErsBCrgBAWkUfRNNG0tBnqkAmDBtCFszLoWyX24//tuGXENnJf4CvSoTLnX7eMVZVNXHH1pH2kLZ8iUGVLQWzMfOW6UmsbwtSWKw23fg927qnfN66RKvLy/v5oahCmIilSjXPjEkLqwC92C7wNEKUZrhQbfdO6h5YAETgCgdb2dqRZgisLRaFtfqiuM56IU1A32icYAaofdvcMx2XDOePqm0UcVdqwcgaugctN5qB6C5pDHL5bnfH0oVZPdd2w=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790259810,
+    "model": "gemini-3.6-flash",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 36,
+      "prompt_tokens": 2457,
+      "total_tokens": 2512,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 56431
+}

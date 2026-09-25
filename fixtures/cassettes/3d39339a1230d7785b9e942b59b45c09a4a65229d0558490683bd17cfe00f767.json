@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "lG-1aszMDuuHjuMPvo7c0QE",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_436396",
+              "function": {
+                "arguments": "{\"body\":\"Thank you for reaching out with these suggestions! I've shared your request for custom fields and role-based permissions with our product team for their consideration. We appreciate you taking the time to share your feedback.\",\"thread_id\":\"thr_00041\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TPHQWLhaUdtlGjw300d/XQIs/8KeJGvEcb+rSNgT/0zr7QsYNNk2JWwZR7Lkw4G00FXUVgwtIjQ7djm38ms4DL3y+wBdnofPXZkM8k/SsHtVuC6lLfERl9JQUuHqCM7AzumGKDfVGtv85LA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790275481,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 1550,
+      "total_tokens": 1621,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 10777
+}

@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "dw21asCXKZ2EjuMPoLD1sQI",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a security/policy violation and escalated it to a human agent because the user is requesting unauthorized access to another customer's account and the deletion of their data.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TgErrcSLAaKQDTqDkXm1zxWCd155YZVcjCRvVNZ2wxA1tPDrTWaPnARHXCeU6alXs1DbgHHvOyyOsUgScgAkw6GjTs1g6kiFZuucsJYmU+fjwv8G6n10BrN4MbFzIp7v50NPn3dk3kqBEWg=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790250362,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_tokens": 1808,
+      "total_tokens": 1846,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 3160
+}

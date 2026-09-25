@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "H3C1auTXM_qsjuMP3PSD-Qk",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a \"feature request\" and drafted a reply acknowledging the customer's suggestions for SSO, role-based permissions, and bulk export.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0Tgs5JkEYxE1jDatXfUQz+pZrmSPcEMLy5SzoPwcfnAUKqv+wa3j4HH7XKDQYwzmXBS9AvhI/fAS2pTw2FZZjxM30dwBUTxop6NE1BXuQ1954VuWpXV4mkTqP/Gf7sFgt1xGh1FkXZOZ2YYA=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790275631,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 33,
+      "prompt_tokens": 1824,
+      "total_tokens": 1857,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 19263
+}

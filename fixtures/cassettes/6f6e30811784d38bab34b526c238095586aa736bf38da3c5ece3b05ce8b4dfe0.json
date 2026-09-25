@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "7nO1arahFNaSg8UPl-nbsQ8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a refund request, verified the order status as pending, and drafted a reply to the customer letting them know I am looking into their request.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TpbCh8fbAodEiFJ25IVfiGua/56EV3+BQ/nR32yUe8N1wIXkr3kuNqoBv8QUIVId7QmHTUju+V909uFjTkNLIsxDRX6OcM5VF6uI/YgN+dTomJfGvMK2gXVMkVErEB+RIlY2QKog0oOHb8A=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790276594,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 1878,
+      "total_tokens": 1912,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 22978
+}

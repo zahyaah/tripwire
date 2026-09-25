@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "XSG1asTWMpGrg8UPw9rJ4A4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_252689",
+              "function": {
+                "arguments": "{\"reason\":\"Customer is questioning a charge for a plan (Pro) that does not match their current account status (Starter) in our system. Need manual billing review.\",\"thread_id\":\"thr_00198\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T/j7r+k/Th6Bpin0B84SvMDZoDYhblA/hUxsiRs/fqB0S7D0OSPmNg75Z09fPomZ9VlsBP32Oylc209ROJpb25e+Xe8RYKjUINP89QE9D16QgKqyPkcb+kf/YxStcyKIbemiuQyHdNOmDdA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255454,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 59,
+      "prompt_tokens": 1844,
+      "total_tokens": 1903,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 12185
+}

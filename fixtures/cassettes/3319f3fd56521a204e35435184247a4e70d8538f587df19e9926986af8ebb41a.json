@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "XB-1avqKKIjVqfkPmvfhwAs",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a billing inquiry and drafted a reply to the customer explaining that the order they referenced does not match the charge they are questioning, while asking for further clarification.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TeShOrZdozxFoqc2a06LShBAJpeO7/O8kLt41hbY1CI1R6YW/JOzNEYSx1w07y21T9FsEHNoquCAca4tYUUMdgmQ4Ar7zNL7/hTryvNnqE9EY9XmWhFHy+7qa/OxuaD3FxxUq5Kd/5eyGMg=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790254946,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 37,
+      "prompt_tokens": 1937,
+      "total_tokens": 1974,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 11382
+}

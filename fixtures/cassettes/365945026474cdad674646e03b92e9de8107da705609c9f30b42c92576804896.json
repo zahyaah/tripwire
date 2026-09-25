@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "AyK1aon7LaCsg8UPzsSZmA4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_995924",
+              "function": {
+                "arguments": "{\"body\":\"Hi Diego,\\n\\nI'm sorry to hear you're experiencing a 403 error when trying to connect your calendar after the recent update. Since you've already tried multiple browsers, I'd like to escalate this to our technical team so they can investigate the cause of this authorization error for your account.\\n\\nI will keep you updated as soon as I have more information. Thank you for your patience.\",\"thread_id\":\"thr_00194\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T5DhvSs32ELW5Gkv8b8wv/Ly1kgTAvButOx6ytIgSH1oI3dp76H9JKTJuCdTgX8IYonqzlcq9veDzdge0Ss8PI+WycG6jNFMHVw26i/mMH4tjaH3goyc0ygY3Iz5N6B3bvYLtRu2ULIjoAw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255622,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 114,
+      "prompt_tokens": 1579,
+      "total_tokens": 1693,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6086
+}

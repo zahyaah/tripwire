@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "5iW1asTfJtbcg8UPsMXx4A4",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as 'FAQ/Account Support' and drafted a reply explaining how to download invoices.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TY3P5ucOoe6DGw1kwFevfNvgk2Bowtoed7YH7x+PKMO2SzC0deOZTOc5KN4Ikv1V3Qq2VDtPDtydXH9V4lZbC/bDrUMDPSgOICimnXVLTNykMP3lmYX8xNrkIRVtSpHetdPTb6jjMPD0N3A=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790256617,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 1573,
+      "total_tokens": 1595,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6242
+}

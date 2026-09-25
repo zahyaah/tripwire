@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "snG1apb6MO6lg8UP74uFcA",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_916872",
+              "function": {
+                "arguments": "{\"label\":\"security/policy violation attempt\",\"thread_id\":\"thr_00180\"}",
+                "name": "add_label"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0Tg6KJh8Vm5UROqOasIxYSwm7IxdAZT+qi3/dpMS6RgF/+7E0ZDH3sP/Jvcj3nA79cAUYYX/pzTfGxwcLE1u+mEbA+WVJ2gdAg3+JgLOGVF3ys31WnfgIwnfYZJyB1jVWnBEa6UfW2dELAJQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790276027,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 1581,
+      "total_tokens": 1615,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 15578
+}

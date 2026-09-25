@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "Lx61apmCBMWzg8UP65fYyQ8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_100188",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00147\",\"body\":\"Hi Sofia, \\n\\nThank you for your patience and for following up with us. I apologize for the delay in responding to your initial message. \\n\\nTo switch your account from monthly to annual billing, please log in to your account dashboard, go to the \\\"Billing\\\" or \\\"Subscription\\\" settings tab, and select the \\\"Change Plan\\\" or \\\"Update Billing Frequency\\\" option. \\n\\nIf you encounter any issues during this process, please let me know and I would be happy to assist you further.\\n\\nBest regards,\\nSupport Team\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0Tzz6XoeJtpSfQsQUaVVTgjjCxaR2TZenadhiIpjvHdlZN9J/yBlNywTBcnHF7TY+lI8KaeoBvFxpgh9J3YK0kKKxzPdingDRhN65M3hEnWoGIfZdaOzQzTRNTQK4geIty23+dQdi0Aqmqpw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254641,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 138,
+      "prompt_tokens": 1605,
+      "total_tokens": 1743,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 5447
+}

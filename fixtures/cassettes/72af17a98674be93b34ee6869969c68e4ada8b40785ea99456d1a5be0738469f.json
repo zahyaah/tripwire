@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "axy1atXOKbvZjuMP6YutqAs",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_971090",
+              "function": {
+                "arguments": "{\"body\":\"Hi Riley,\\n\\nI'm sorry to hear that you signed up for the Starter Plan by mistake. I've looked for your order (ord_missing_00014) in our system, but unfortunately, I'm unable to locate it. Could you please double-check the order number or provide the email address associated with the account? Once I have those details, I'll be happy to look into this for you.\",\"thread_id\":\"thr_00014\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TwAEZy6zHMi+gdOyId1IHyQ/rygAE8fhLB5coEY5qfMP1rrpqjgP6t1mb5c5vl08LFFL53h9UK8yQZwYWuaeR9kmOzIQd4QgDb7TgVojJ3Aoui6LT5P+LFqrY2Twr0cTACfZU6Koib9Hedw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254189,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 120,
+      "prompt_tokens": 1516,
+      "total_tokens": 1636,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 2069
+}

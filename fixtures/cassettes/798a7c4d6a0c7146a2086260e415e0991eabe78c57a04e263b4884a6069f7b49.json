@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "Dh61avD8EYrFg8UP2b_pgQ8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_984956",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00152\",\"label\":\"customer complaint/account issue\"}",
+                "name": "add_label"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TPIzLp4BqlvWf3JSB+uiJ4dT5Lo/RcScXJaUO7mqPYag7wlTaYLG1gUsG4UVUDdAZJOUtG5CHGLmYaYw8QiqDxY6pIpb+ccCFPqrfRmhnFETwfR7OusoWHxufU82//SHFU99VohtobPx9iA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254608,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 1615,
+      "total_tokens": 1649,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 5975
+}

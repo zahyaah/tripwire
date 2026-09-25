@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "CR61aqzeEPDEg8UPmt2igQw",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1050706",
+              "function": {
+                "arguments": "{\"email\":\"sofia.rossi39@example.org\"}",
+                "name": "lookup_customer"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TxElttbBz4pgYMY30CEROtjlxigVEtIboeDvI0g79p9sWMUIWe526BjVw3a+J8b+UssQvnfwy9r288qd+Yk+gmXB3oWzQ5jvNPDszwIjUBO0sEdpWp0UlIuqp0973ZtL76yu8YiNsI6H8MQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254602,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 26,
+      "prompt_tokens": 1527,
+      "total_tokens": 1553,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 5231
+}

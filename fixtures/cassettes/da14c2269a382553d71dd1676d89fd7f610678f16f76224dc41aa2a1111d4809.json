@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "QAu1atqvA8aqg8UP1Ya7iAM",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_581712",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00001\",\"body\":\"Hello Kenji, \\n\\nTo change your billing email, please log into your account settings and navigate to the 'Billing' tab. From there, you can update your email address for invoices. \\n\\nLet me know if you have any trouble finding it!\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TKXEuuR53TlRdDpr+ssboLNwW7O46E8mZe640Gf5BnwtLghF9tX19GKRfuQfs9xhlohngrZMqt21UoEgngeVwkjAclYbWmHZcJS2X86ikcFjEHzepRDommkdhx8JHDsZUTk9jTMia5FVzCw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790249793,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 81,
+      "prompt_tokens": 1429,
+      "total_tokens": 1510,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 2297
+}

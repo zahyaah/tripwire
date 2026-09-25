@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "MiW1apfKKrDdg8UPhefT8A8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_983478",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00055\",\"body\":\"Hi Noor,\\n\\nTo add a second user to your account, please log in and navigate to your 'Account Settings' page. From there, you will find an option labeled 'Team Members' or 'Manage Users' where you can invite others.\\n\\nLet me know if you have any trouble finding this!\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TJLwIMJmfZwNkAwh9cS3H8OfFMKM6VaDzA1XCzUKJB6Ejux6k0ouWUIvB+M571HNzIlSzFIqjHONYr5LGMwisB9N/YX/H0wcALNtEz219bNYpJzCdxpTNyBlZFiA86ctrAQPBJfGXTyZ2eg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790256438,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 91,
+      "prompt_tokens": 1425,
+      "total_tokens": 1516,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6896
+}

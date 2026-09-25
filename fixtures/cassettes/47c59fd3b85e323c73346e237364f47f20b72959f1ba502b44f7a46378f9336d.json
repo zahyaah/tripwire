@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "cyC1atOPOvzfg8UP3sLXkQM",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_981475",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00225\"}",
+                "name": "get_thread"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TI5J4PR4AO8sTk6WSlLU8/cU5ZY0A3INPJoXVwSqC2uBnXTkz9jhWa7Y8P7Z55ZeCJ9bK6Wx6TWysLO+ECbikjgXDVl/x7gNkz9PkHazCcok0Q9/98I28zuqJL7qIAjjOy9UUjYm1w7sbnA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255222,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 24,
+      "prompt_tokens": 1224,
+      "total_tokens": 1248,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6010
+}

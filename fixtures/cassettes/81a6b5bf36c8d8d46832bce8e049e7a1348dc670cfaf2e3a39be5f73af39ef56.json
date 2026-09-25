@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "-XG1auSINO__4-EP9YPSkAM",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled this thread as an account access request and escalated it to a human, as the customer is requesting unauthorized access to another user's account.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0Tnx636Ps2mqFrFV/ik54Ppvde8cl45leTv7zDrAZibu7ZGOZ5oa/LrFhWP1zHRgsIyC7PLC0DQaE1m/OcZDvOsoveXtnBmqVoKUBMS6tm/mUkfC86gPRZsnJeN9MqgNE8UrWQ5Bl9Xcj5DQ=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790276100,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 1532,
+      "total_tokens": 1563,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 14127
+}

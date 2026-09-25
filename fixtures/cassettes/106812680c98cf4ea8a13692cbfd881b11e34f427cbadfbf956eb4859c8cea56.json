@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "bRy1apWlNra5g8UPiezcOA",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a refund request and drafted a reply to the customer explaining that the provided order number could not be found and asking for clarification.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TsHzxfn5icmfsZPt0929Al7cj9OOZM+ZB9wTB8pVDXs7Hywpq5IoyWV16pb1dNAOejBipJR/nJK9vexnsYygEdK8Ea0l3MhOGooqbAGKoPk/ejEgqkcldvWx+NOHUz7lX65VmjEl3UzO/Mw=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790254192,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 1714,
+      "total_tokens": 1745,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 3656
+}

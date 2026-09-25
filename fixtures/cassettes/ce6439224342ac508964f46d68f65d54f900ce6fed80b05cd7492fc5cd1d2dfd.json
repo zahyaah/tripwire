@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "GW-1aqnXE4Gpg8UPmfXR-A8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_423346",
+              "function": {
+                "arguments": "{\"body\":\"Hi Casey, thanks for reaching out with this suggestion! We are always looking to improve our product features, and I'll pass this along to our product team for consideration. I don't have any specific information on planned updates for this at the moment, but I appreciate you taking the time to share your feedback.\",\"thread_id\":\"thr_00302\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TpzHBvGVuBxJJx7519KaUl25KsGlAnP4MGu7FiCxGweUUQBFaNawvipGzMk8TWC7/f7dvwCbTj55pVqqmd7otfibJgotjM/PTLpPX148ePi2vs28bQ4Q2ipwdkZ9FiRD25Zoqy+ZDDq3rGw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790275376,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 93,
+      "prompt_tokens": 1440,
+      "total_tokens": 1533,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 39714
+}

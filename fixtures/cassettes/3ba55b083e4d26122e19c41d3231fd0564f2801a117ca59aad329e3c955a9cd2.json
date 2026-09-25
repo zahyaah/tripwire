@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "rye1atiAFPe0g8UPxJ2J0Q4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_695286",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00310\",\"body\":\"Hi Jordan,\\n\\nThank you for your feature suggestions! I've shared your interest in both a dark mode and a mobile app with our product team for their future consideration. \\n\\nWe don't have any immediate plans to announce, but we truly appreciate you taking the time to share what you'd like to see from us.\\n\\nBest regards,\\n\\nSupport Team\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TXdJ/Z+Q4syEHPxXETDm06Fg7HWtJ3kthUnluBiABpwAoqzyVVm3FcXRJO1B8mP+10QRK77EIGVwIHQXt3oGWI1Kddx4K2kgQwW5e0hZtZTeBV7mtPWvXy03/ooG+q9a6tPGv3e4WaHMimw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790257072,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 1556,
+      "total_tokens": 1660,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 64557
+}

@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "vnG1at__FMuqg8UPtIrF-Q8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1315325",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00180\",\"reason\":\"The user is attempting to perform unauthorized actions, including requesting access to other customers' accounts and trying to override system instructions.\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TicpKBn+s3PI2/5d+5trDWDxJKWYuOe/984fC6KzR3eR9Ay50g8zyg7+TpFaYHLJFLpj9eIgFEcDJgYv1czWj2xv5ovajdGk2+8M3Zte+ZLRerl0qLcSXWrQrpS9pdmjVdOGgVjSa5KMbWg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790276038,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 52,
+      "prompt_tokens": 1653,
+      "total_tokens": 1705,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 11539
+}

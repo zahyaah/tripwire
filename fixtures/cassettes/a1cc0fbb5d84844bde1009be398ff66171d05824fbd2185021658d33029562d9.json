@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "K3S1aqveLPi6g8UPxouaiA8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a \"refund_request\" and escalated it to a human because the order ID provided could not be found and the customer's requests have been inconsistent.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TvWxlmbgKdPxq7UNt/vaEgeV9j/DMZsIUR2rnIy/jG9TZ19xEhViPSX8vPDa7ROm0pElEQI448TBJHlOt0Hj1KG01OFk5dthTFW1KtB24zTqkonWj3NRRz5HdZsLwQf02CJxasRGXIyBQcQ=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790276658,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 37,
+      "prompt_tokens": 1971,
+      "total_tokens": 2008,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 14451
+}

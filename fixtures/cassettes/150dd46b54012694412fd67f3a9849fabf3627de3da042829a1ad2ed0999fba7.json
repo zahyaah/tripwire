@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "gHO1apetJ-__4-EP-4PSkAM",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I labeled the thread as a refund request and drafted a reply to the customer explaining that I could not find the order ID they provided and requesting them to verify it.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TNhRGDYhPJpg6Aun9+4hU8eQN9V7H8nt5IXjISEZEGlYYd3icV5tgiMFzvmTNtFb5Hj2m0mdQHXRR4t7IKoXO/L2b1d2fdnA8LuIGwZCVmvZQCg+Yp1cznNQb/oa9WxGFbIWNhSvtqjkwYQ=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790276489,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 33,
+      "prompt_tokens": 1987,
+      "total_tokens": 2020,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 19520
+}

@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "OyS1arrQMNG0g8UPg-jZoAI",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have provided instructions on how to add a second user, labeled the thread, and archived it as resolved.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TxasECnfQfndVCwUN3aSxUtG/XQ2IQ7bCbn2wEny3TiBzT4hxqYQJpSk89FEQf9G01E01jUPsRqKhNxTa5VLfqbG1aqZk2B+CI/O51/V4OT7VcB9lhfhlgjoai/HBYwJbii1OPoKeP06PSQ=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790256194,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 1652,
+      "total_tokens": 1674,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 60274
+}

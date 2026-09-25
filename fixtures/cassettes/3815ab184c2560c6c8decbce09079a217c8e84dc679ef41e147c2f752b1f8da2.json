@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "H-20apDuJf3Dg8UP0o2a0Q4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_366607",
+              "function": {
+                "arguments": "{\"query\":\"billing\"}",
+                "name": "search_threads"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EpIGCo8GAWkUfROFnNi+g2e4ApcrqjPiVBGrDIeZJoZQuhi/0EJgTpLSzS2H/Ta+iS5EKmCpfFhDQ7bOy38E6wSHxltcvITKttlqTg0Dqire7VA3QNMkWGBGGn1CyXMt2NilwRhsiXWLo1z8xoZvKZcqQd0eyvLa9c2i8bc+ZUXCGVd1BT2uM014m5HLkmeSWbWdfPbkKveTIxasclNTPCnQ4zKV7MvyFgydgMcQDLP2rdwNTfJpVs10glYG78C3jH71zknWtca2dnrkHCKsRdn1UDH7U9UUJ6fIK2x91S1wWP2VfkplYFSgluNR3uRDVFIxoknPFRSHKS/7BUwEdvzDK9gDn43ryZbTHzg7W3NFJY7azH4YHw0MtZIGmvVwId8Vz3BwmzoBkZGMLqHKZQDes5whPCwkxkG442h2G4w6BlxTMG4SwOTPpk4PwA3Wz2RT34/E5aKUw63Qf3a3q+ZtR6AEYybUUlWUt5SlOpbx9woZr6YCSPFCyIH7biZqrc8YwNax7RAO5iBGSc9NfQqbg2YnfH1nqka9FZljlaZfn4thappxjNvsyAkyyMW8nc50ugS6SliDF5NLLQaoGY5HkPMTqxGqAxKCJoxeP23agSkdjohLzjmNRjoE1+orDIZ56UTdPZNmqyYJi+csq+DAMKbWSejVpDXbnGH5m0pnEozJjyzWorfeJGE2qb16nSKmmStAqGqMf49E7X9Jg9fYGV4g+OOWMvBihO5eOmtR/Z1eLBpGzvjoLELng6a1Q0QnOcvnuH41V5msFO8V5LO0rT+PV9YMzW8RZj8NwuS6EDC5FEkUk4bqXq7Em7Zm0w/q20ahBeu3+z2ieprBUYNVke2ZQU7ySe4zZt5xKwo5+yKswSn9+UHvPKXv72bp+Fk0ii+htV57U5PLUAzoCskioVD3k9COXHOlSsO2l4nKObqymwdTwsV/9BHxy91YgyS4Df8KvcdqGPI4sx0eNq7nmPbd22bD/I3yqns3j/RtDW8Cq8i8wmsDY+rznDHPs21HpBVnIR6M2TPXrX/vlP0M/r8x"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790242081,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 16,
+      "prompt_tokens": 3584,
+      "total_tokens": 3766,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 16301
+}

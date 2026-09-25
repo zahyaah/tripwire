@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "Ne20avfIJqqtg8UP7a7L2Q8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_416767",
+              "function": {
+                "arguments": "{\"query\":\"is:archived annual\"}",
+                "name": "search_threads"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EqsFCqgFAWkUfRMkAJGkWkP+TLKqjrrKX2sukLGJBdHn6sGPVJaVm9qc8ouGEaAONuILe6mld9HTd7sGR7DMA6M6R08OIAtfLRXTIYms6GqMMnREvWrbiMMc2mWs7/RuDZwIoA1PK1BLhAk4RObHkQDPczHg3SRP7aO7+35JlT+yhKJwdVBqcVAMAaIeQnqtfql0CmRqmMIQgXJtXAJ6LGE+K+0bZwsOkbskduv8eOtsx8xyLoCcibmqy1pT3+rtU1Z9YIV4baffCvaDfdMR5yACPd1IN1FPDgKgNMoXT8X8ZcKm+oWfLulSE/Lv1ZEU8r9dkb2wHVPtZxQjVsVjZBNkpNJ2ACvR1QW2qd9j0LYPMdpLL+1d4DVyraEv0gAhETuVOISPCPKNoRcZ/F6izcLQ2uSZVoJdgqbR2Fb7OT1Lqn7wIMk6jqTgHRrxD4EBVPz6d1RM3/6fLxtlfL8XAQU7SrSqU62/ZopJ9iDP3bx2RdHRH1gXNcdxJ38FgNxSyoAdShLr9mzL+vm+mE8lrbdncuaSdEwcWmzWnEoGT/1J4+SxRWKw+UTtbpi8UmblpNlQyIvNG/6IxRVIRja+0vP00yyL5KhpUsWRfv54+Zb+zJv/mamuTN/c5TqpmpteRbUaDx/gr5sWbSe2UvpmCEwXWamEPr/pgmW0W76OEEdGxi8BMoM0s1s1e6oi0YdbiDsmh6G4KzPjYNNhMeFAXNkoVoZCidFRwvG6AkH0YUYuLmZeiHS+R1zITvnTlmK8gT1quTpXSS6IVSJKRJO5+3K6iTlknJ9pO8h6QNXKH+IvUodwN4QNmNdFy8H9i26WlQYyVQ9F0e/me/dkHmbBaS9IIRhjRHhUYUVwfoZBEjMDqkkGUZuar4xAnciScq8XmcK4cdlWCww8ivPkw+Q="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790242102,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 20,
+      "prompt_tokens": 5670,
+      "total_tokens": 5829,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 21911
+}

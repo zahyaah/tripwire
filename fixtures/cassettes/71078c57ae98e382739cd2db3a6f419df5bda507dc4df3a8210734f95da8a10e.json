@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "FB61auu4HsCyjuMPtPXnkQU",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_657140",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00152\",\"body\":\"Hello Sofia, \\n\\nI am very sorry for the frustration caused by the delay in our response. I see that you've been trying to get in touch with us regarding an issue with your account. \\n\\nCould you please provide more details about the specific problem you are experiencing? Once I have that information, I will look into it immediately and prioritize your request. \\n\\nThank you for your patience.\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0Tumg4k+wWvZiocj2ADbpKMdX6X8IANX44CkifFyhFy/H2aOHFTb5vXpUIJsWfOwGUevvtSM5IfNEnAFshG3MBt23lCacAXu6TOnS8XCRtq3ucKx7NeWXjb5KnvWXg3qLags6buuww7Jv6Ew=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254614,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 111,
+      "prompt_tokens": 1687,
+      "total_tokens": 1798,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 5740
+}

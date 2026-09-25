@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "4Oy0apCfB9Wyg8UP-JfB4A4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_670681",
+              "function": {
+                "arguments": "{\"customer_id\":null,\"email\":\"jamie.chen74@example.org\"}",
+                "name": "lookup_customer"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EusECugEAWkUfROgjVsDpmix4dRBRrUNovqbLvp56/SBoEE0g5AtsJBETVGnlIfXCvjuf2Q9CpP5ZeACd1EqMF2vEwem0sP6p1QVh0VLLd+BS8/0YTO+XJLzzoQLxk2ttpEr3eolEOGhIXT+e2dJyDhdbJAN4VopFv6Qkqn2pxpPR9ErxC4/E5urZvBboHqSWv4pYMxrFW69cb3ZaflZEkU3fMiuexJmbipyqtCBXCOgS/EB/ievcW75ktQbW9ROkWcRKmAcnHqEuHmZ9RQ94PeSRk1/vzIhBlGQ4IlQYIt11scQNYE4YA1ot1lLHlw1TavFr11LylIzNQqTtcQ2ZFLghp2WRlFtUOkXUm8+bF7pHE1KSuXEqmUQz+iefML3NMk25JLS1DCsiFBFAgcSf84ChhyCtTe3aC5bhlYUz6SzJnesoFiS2pcIbmn1fz/z9bxdcwA5mWLetXFiH6ybI1os1gx40bWQjNBv42O0V6ZLBXeHbwiH72l4D2NDwKu6jEwXciZV3QEElga5SRIjpMnoSLFKue0MVMaTCiJdOK/e1AfzGtjQnUhr+4PFJcx1YgJG/LpN3y/i5RZQnzy4Tm0Hr4mtU8Je6ykEZ1GHxMK/CqybWUg/Y6MXG7BrankRPVWfxtSYP59cwmJeRhwr2YuJqD8o/Wth1sUwKl3kE9D3r3G0DRqedX2RHLaek2na+NcFkPqW0nRYRLhweUVB/QfxWCff5vdv6A+1aqtE0yA2SqJHm7JcHRCVtMm+tkgkRVsorPOE/ZJW44fdo9S3pY2ZWOuEuyQ8M7JtqBi9dUxAFVjNu/ypRRwCd6mS3A=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790242017,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 1560,
+      "total_tokens": 1720,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 20948
+}

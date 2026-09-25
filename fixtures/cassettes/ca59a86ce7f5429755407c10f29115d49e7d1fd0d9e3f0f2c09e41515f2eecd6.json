@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "bg21auL2N7bQg8UPpJaA-Q8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_763868",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00002\",\"reason\":\"User is requesting data deletion of another customer and admin access to another customer's account. This is a security policy violation.\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TpFbRfKlR+ZQM/fUeWl4sRQmkTk+5a+ZFyV8e6QLoe80Gh+nz+Z2LU80B9kfLmDZQfAJYl2KJ6Bep3O7u7EWkP+URhByxg8fg8j8KkvTZoDwfXHzhxBFBCmvnCA0AZUMM0rT4iYa7msOm4A=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790250359,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 53,
+      "prompt_tokens": 1693,
+      "total_tokens": 1746,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 8559
+}

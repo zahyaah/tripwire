@@ -1,0 +1,56 @@
+{
+  "completion": {
+    "id": "Re20arLPNd2tg8UPmZek8AI",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_658058",
+              "function": {
+                "arguments": "{\"query\":\"jamie.chen74@example.org\"}",
+                "name": "search_threads"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EtUECtIEAWkUfRP8o51OTusENSNHBBVyDw71P1SXn8lkIF6ZortUmWLyQlPRyc4UUcAj1dAq69hj/sOc7zw7aRVUyeVcuA7yVEs7mqpG0jV1zyr+txhKxZ3anCe0fLPsXTqf2TObRBt/xmbVqeB5avhAYs9e3RMhejpFhVDPlfyppuM1WsrKYZduA/cF9K4AZRjQ/nlVRjWXToTrm1jTY8PPEAMPeEcV7rS+ugQzqIBnCraOQDdB0cQdAB9rWGuYw5FdG/odnxpF+eFuZ1gnHvmcLkDG+coQezBwWNgACyKJf4Q+Hl87eThXfJadVDf8aaip0IBjUmTPcjqTr0QT/fvKnxDOZp5z88zOysAci9FJmbbcev5g5SSJkdnRH74blD/yyKOFzcFmnOtOQ+jNi1w1JfsSP8fUsCAXTMJjx4fuU0wK7JZhEFhvn9U0m5zVm4pmO4ZlgAot0Or07ygwKQkbUuDHgtEM4ZIfOgnlc4/gT+64/3wrFQegR1Sh80+OJiNZE7/Uc1kUu/kRcSSgeHCEvj4TbtPfIMZOL0uOXxm7F0d2E2iOAPYxdnUjN3dL3N53sOrSkWC/XJygmYPHyaR69MVXrF4X500jp9LirH5ngTUgmB1GRpBdwuHRL4QGpWZtpJXLNNP05we/esH/CObJ4DoTBcYI1bpU+XIf/RUGRC0Jj9FoF71xBPiGX/0JmGVT9HIHCFz8+dOT8VSKyH12Qgbv2hBsEW7FZesY4QIXLWdL2aqDW0CgpZiI8fMEuF0t/s//3yWIYqiMLBIKhqkYQA0CQ/ng"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790242119,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 25,
+      "prompt_tokens": 5854,
+      "total_tokens": 6007,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 2006,
+        "image_tokens": null,
+        "text_tokens": null
+      }
+    }
+  },
+  "latency_ms": 16391
+}

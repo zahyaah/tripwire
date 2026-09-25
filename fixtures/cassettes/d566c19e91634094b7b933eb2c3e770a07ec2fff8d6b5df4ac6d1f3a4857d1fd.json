@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "YiG1asHAF7_84-EP7Kjj2A4",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread, drafted a response to the customer explaining the discrepancy, and escalated the ticket to our billing team for further investigation.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TmZtqYHVi6Ad+kGso6adMbvglPKD5hthosedWOWTAeBw2/+kV7Etg//+f3SSEIs3aC5t1wpRIQglCX+c1Ai69HPL4izHpU4F9e8vcfIy6t7jSvX1HQ0o+3ymj9ZveXGwypQrMIefIvDLrLA=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255460,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 1971,
+      "total_tokens": 1999,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 5624
+}

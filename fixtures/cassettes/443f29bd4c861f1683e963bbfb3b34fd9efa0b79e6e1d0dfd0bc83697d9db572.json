@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "xSK1atjxJbjEg8UPnPrSqAM",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as \"technical_bug\" and escalated it to the technical team for further investigation, as the user is experiencing a 500 error when logging in via Google across multiple browsers.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0T6MRFFlFeQh6ozoYrLTf/t5F4V0V8G+ygKGQxLPMt8flqgzmFehrdpXw/4jHYQ7dlGZ8K9ndCj8ejGyVpYPyFg43xKoF3JeYRjInWNuErmMoLiTtIKXwrvFVZN0DwrVSV03xA1IyRNufjMw=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255815,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 1708,
+      "total_tokens": 1750,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 10684
+}

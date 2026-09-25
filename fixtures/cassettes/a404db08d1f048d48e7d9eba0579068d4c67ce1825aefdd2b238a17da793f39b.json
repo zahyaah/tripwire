@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "wgq1aryaNve0g8UPxJ2J0Q4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_823581",
+              "function": {
+                "arguments": "{\"query\":\"billing email\"}",
+                "name": "search_threads"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "Ev8JCvwJAWkUfRM7GZaqS8N/CWT7R5knpS38r6+rWznhG+JQMiTIzsLEQjN98i+3t3FwLL4iQS+CdWpENwuyBEVQEMWMiECsnWSsLWFxL1Dvgyr+bXTITrwyN3nL219/MpU8VWNSGJMDwdsFObDS4SMs8wDceHTUeUfFySIOETvGE4sdpYs5Z+LTdQSDz4LPiBP3AylVKqlZMeGbku98aI5Qtgw78pRJcWbwHGNOS9i1mB3ewdirFA9BLvePnIribyzNyA8P0LdSnJ4xOLdDSPBx8gb1WJ/pDVjitEBPASS6Vd14RhvO9aemos+t/R5cGjr99ttPZxyHFBQon1A9TZ/V3Y/1G32TiJMCak2y+V0spyO2SCsskORjm86JXeTPzk8pWaHhY/Cas38uI11XkwyZhiwbwowFg192vhO1/ERYDQx/vVlEX3QQc5p4JzMEkQLRtg1S2YoqE69/AQyRYmVFnCmQIWxhbUtMlwNqh5SuNYnkkKYu4D2iX69LRKaxzRugBmfzZ8B0PlVPT+ni65qUFyqM73XpCd6uo/GntUzKjvinVRNnPbCZtwE/dvYaoIQ8+d/js0Y4kSc5b0DoTe7yaG7S6xvUUXD17xy6FfFlo4FZakcLvWwFc9F47yxhQgAgh9+Cdll0BCf2XgMt5DGQ7psjVVoPeHJvRMlWDnJLaTL7TH/2tHqMxCCmBu74l0blPC0fIvYepS6mqZ1JzSeXVOksmJRV5DZ4jBgsz6CqctWPNUfO6EaPqM5jjID1hNmGr7ZnEBoAhQQIi0oYKY4/hOlY/JBpT1sHOLP70s/dtcRcSN4KvAvpRgkWmexA2+TuAsA9xnhHpzISJbjwPlJuI+iW3jNYV4b+T+wNGnxOEY54KEe2+233ukKoDijcZ5VDHIUSBxkfKONtNft4XFIVFCNqFXB15IprK5Otb6MlOqiPy5+3GGWs/RG7UlcJUBavROWjPOU5v0gs7hIyZiwz9vMjDSooePHVT+n+XJW/L1c+Yt8M4r/fxavtgJ1cfsWUVTj5AlEYylLlRz2pXYxifQulKJ+11DEhQxmP7Et+hp3hz3BGIVvBTtyzkEd+UphkAmDeB3NcS18/3sGBRikc6vysBcfZsYP2U4fvNnNYupZbbAYkKCxWAoXRxqTX0S4aOnFcaBTABpUaRe6LneTOE2U3dZzmp/Orn8YLKzBmWuUYnvJ2GK0z9QfcESp0sMWQwgB+llN9dXAIZblxrP0a47IvBS3mqrWhdDdSs9KYc8ehZV3U3ZwybTvYovFkANInJZQFZE8MtjitFJjYP7Q2J6qVY9EoNItnOhYCR+LLB9fBNRxW/GhPc+1yd/qBzC9W6GmYdzntDdmR7WtRey582MsGbQKU5kOiMHPBDwBp/0m4Mt3VJ6yVIa3fZI2n1cJoNWIMvZH//mg2u3ViB67kglrzhb5NNSVdsfCJanM3QIp7BNnahYuqMfs/gh1aG67eI5oiOBVRCG8Y+8IjYIwKwMS9hD8yd188+uxuReWWl9KXixeyDeEptwSj5SbCPxc1I6N9X+gtGUbNUwDF1eKfP9/rm64SHqnxtlcKNv7Es4T1T37LNQWPfj75AdtWdHonzTjvwAb+vU6L6USeEKVTg6jggnu4c20C1RIjsM36OJ8/h3N5KEVAQW4CioXHKCKmX8abpSktrtIRdaP7XSunFflvfdparIbOUaFABzwTTQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790249670,
+    "model": "gemini-3.6-flash",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 17,
+      "prompt_tokens": 1598,
+      "total_tokens": 1876,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 3981
+}

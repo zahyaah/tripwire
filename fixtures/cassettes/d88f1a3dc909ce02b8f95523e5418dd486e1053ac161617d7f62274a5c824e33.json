@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "ee20asjWLqiEjuMPsJ-I2Q4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_707971",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00010\"}",
+                "name": "get_thread"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EtkDCtYDAWkUfRNj8Y8e20nuUIa2sXoYxg2gF8XLQR+hED/JeaeFfcLQzFTDRjotGnp5yqhMNqAgkZlAfemMCmVFD5LsYUQQCZ8R54Uzb8bOBCuGzmuYBm3B1j71D6EgIUlAnClfg38g5WPdfEwZ41sDpjoCcp0nSXPv5T6zUb0XJ8Z69SPjThE2kGO5jzIceabmo2V8Qi+UN/NKLAp1tt0G4eNEh+zejNz0/P5m3x+f4eCtAIrZGTewLYdFqad3bjGd7nkz0ZTwNSNs1sUUmWQNa0RN1///+I4160kgqm2kfX8ok6vw9OPBOJ+UGBwIIhZ7iTPYQhQPNoSSgRmQaFabjPx8Ejbn2UuvofJoNPcqCqfxxZanzCaD/tGnqn4/4aiJsU0j/2Q6kf7ZLa0XKh1dIJPtbl3KGWwwVfBbStcaRMhrMBgPh82msIoI6FLv5PYOJCb1XvVGIxFiEB1Rq3QnDPeSX4fiFppCY5vI6CQbN19eF7fVuY1axYmINzkbRXtwMvD74zObmlAiUe25UrEJATzz97cq1T0qFUqHky7eI9kkdXMxuWV6BrvIwcJj4SDOTYuSaqmVavxzdzzGC7uyIYf771nzP3W0IuoMmWV+5kuVrc9VFVWjDfo="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790242171,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 24,
+      "prompt_tokens": 1224,
+      "total_tokens": 1365,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 21655
+}

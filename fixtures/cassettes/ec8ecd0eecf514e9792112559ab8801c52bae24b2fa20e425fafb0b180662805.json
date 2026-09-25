@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "gCO1asaPMLrDg8UP_rip2A4",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled this thread as a \"bug_report\" and escalated it to a human, as the issue with inviting teammates persists despite the customer's troubleshooting steps and appears to be a technical error.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0T0O8cs6PkkhGu5GZvMSrIrOyx1WODnND+G66zPnGQge403vZCUSys77aOJH++r0NnSeIebwtMS/PaKjMVetZSUB1pP/XJ0FexZAm6QVP/OufmmtKOnXq23LOUI3Q06CAFMAjxymV1HxW86g=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790256002,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_tokens": 1862,
+      "total_tokens": 1903,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 7697
+}

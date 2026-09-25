@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "_ey0atn3DJbRg8UPyZmjsA8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_760329",
+              "function": {
+                "arguments": "{\"query\":\"annual billing\"}",
+                "name": "search_threads"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EpAFCo0FAWkUfRNtSnVm19LSljxFa6HeFsoFB4/F+tB9ayE37PuklPZGJt6rWC2vhiBodPV4vsuXUuV84TMAGjVLNQ1SBDeXrWvlMY4jBVtu2bpcwUFauCOgNfEjLq7zGdyRurlq83YhCxkUOgiIxLvXSOjNETCVkaQrfIoW9DG1e+hX9h0rcZsAwzgEew1SYbRNjSmUfSelEPa0KvYgM/8yk8skr9ec4JuJSJbhhLBnd1F9O60CB46Wfmbp9T2GXBImszisquWiA89Re+90cZ2QUZ+V0hX+UKdkfd1+CiJod+FOOjSMlFdY445t3ks2HFGVa4dZCgQU42viThgVHAIR8u4LWNmDEWeFgiO2It3Kj2v5NGNvYAC1ZZ0kVLRevRu/C8ji2jnxpIott0lJUJAQ0lphn2LP5umBnCDX5jgKXpEsJ7ca+9PRsr8pJqeJdXdcG5Ym1ltJJNpcI67QjqLfhn7YcrF3YqgtoFc8yD+ymAkgxnuDc0zHFjh142pj4UwwsnKNImoIWfSXGMuDGy1WjKky0wSF/tPuRkLj27UyU0P6xI0SKPJQugOXQzO4QY3dJ3rWZiJAphtHGSnXDfPRmUiyMo0gxGnoKcY+UTbmJzQ+pVGk7D4IBG02E9UsdLWB9uOy9zTzPKW2Unxedbb4/tnPJPwlb0A9BYzaagMil5c1NMZnUJtm0BK2eZfxFb4jBbZLs1fRyzkEun+oIX7ag+twYH9FaXATQ0HS9aQDGPy/H4mmZw3jeigk023ocOo5XmW6psWQGD0LaWKhXgyaIjKws5Dn9pl/xPFDN405SPSdK3G0742ogLm77Q3Jc+72qvhdjyEdFSWImqua1uQwugUDt0xmfvy4iOxivFtq70I="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790242047,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 17,
+      "prompt_tokens": 1781,
+      "total_tokens": 1928,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 29268
+}

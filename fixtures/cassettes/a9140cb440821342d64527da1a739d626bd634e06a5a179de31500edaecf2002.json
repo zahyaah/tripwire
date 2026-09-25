@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "qSK1asK9EP3dqfkPmc6FoAM",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread \"bug-report\" and escalated it to a human technician to investigate the persistent 403 Google login error.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TSuiOe2TUhHD7EUM5jTDjy1tH7PQ9mbS3BKKf+9u6jzhETbG0rDL6CEmAryvxlJySK/ivMuumiwphLEHY8s1PRZUsoLa9s2+4XSertd/SZfrMrxYJ6DxWr/lCBbdQmO07S6tGAqRTkyxICw=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255788,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 1880,
+      "total_tokens": 1909,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6379
+}

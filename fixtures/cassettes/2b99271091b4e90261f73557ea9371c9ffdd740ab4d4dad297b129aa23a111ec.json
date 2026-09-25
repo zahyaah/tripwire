@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "Pxy1ao6gLLvZjuMP6YutqAs",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread, attempted to look up the customer without success, and drafted a reply requesting more information to resolve the issue.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TtVGbx3fAWQ3R+Wn3HF7Bp1Xk8s3/d7Bn8oi3n3/95fBPb/2QKEJI5VyyEL/HbudIpQvwjdqlvOfTCgogbdurvDqn51BhHlOx9AXQVNlWHt+khLFQZt6Kv4d6jsxLWWXPua1B5hU8NqKo2A=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790254146,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 1668,
+      "total_tokens": 1695,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 3289
+}

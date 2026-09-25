@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "wB61apuYMO__4-EP9YPSkAM",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a billing inquiry and drafted a reply providing the customer with instructions on how to change her billing email.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TovjJMfVGoodzlVeR72AhZJKij5ptqdZ41KHMviMTMjbrTGn6SeQ30mPR8QP+5jEZsg5bOXrvdwbnC4DxdMfqX+djbMO9xDRfR5A699EkTRboYJExmkORDqg4V0j1Gm4d+oe9HpdKFfleLw=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790254786,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 26,
+      "prompt_tokens": 1901,
+      "total_tokens": 1927,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 4852
+}

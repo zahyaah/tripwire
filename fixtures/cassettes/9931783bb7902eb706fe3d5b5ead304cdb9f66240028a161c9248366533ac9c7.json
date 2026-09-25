@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "CSC1aojnFqqtg8UP7a7L2Q8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_19294",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00083\",\"body\":\"Hi Diego,\\n\\nThank you for reaching out. I've looked into your account and the order you mentioned (ord_00332). \\n\\nIt appears there is a discrepancy, as our records show order ord_00332 is for a \\\"Priority Support Add-on\\\" for $91.05 and is currently marked as cancelled, while your account is currently on our free plan. \\n\\nTo help me investigate this $459.87 charge further, could you please provide any additional details, such as the date of the charge or a copy of the invoice you received?\\n\\nBest regards,\\nSupport Team\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TdrkVqvPGdxB781zUlgRkGsml3wW13meTtr3Sx2C2IFBvrsuY8UuWLJ+u+KFeFhoYGPXrZQKk/MIS7GudWCQ8md7b5STN2nxs0PcUzCVlmpRhwrPzlDIEtVUPCk97kWDnv7X5OBnaiGZkVA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255114,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 163,
+      "prompt_tokens": 1732,
+      "total_tokens": 1895,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 4566
+}

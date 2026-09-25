@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "5W-1aomjOrDdg8UPhefT8A8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1188321",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00125\",\"body\":\"Hi Wei, thanks for sharing these ideas! We're always looking for ways to improve our platform, and I've passed your requests for bulk export and a mobile app along to our product team for consideration. I don't have any updates to share on these right now, but we appreciate the feedback!\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TgOvtScWPbawMiUeFsnzk4XaTIKkfzWYl+ontOB8ztACklgNl4VzLbjmqm1VHlXz84joBJs18hndG8ZujH4p2HsY++g81K8rCnay+PD4J28RBKrr/7Ll1sLbekAre5DAFbtVNY3ybljuDCA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790275566,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 92,
+      "prompt_tokens": 1555,
+      "total_tokens": 1647,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 48357
+}

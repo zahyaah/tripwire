@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "yR21ao6kIPL_4-EPgODV8Q8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_652305",
+              "function": {
+                "arguments": "{\"body\":\"Hi Jamie, thank you for reaching out, and I apologize for the delay. I understand you'd like to switch your account from monthly to annual billing. I can certainly help you with that. To get this processed, could you please confirm your account ID or the email address associated with your billing settings? Once confirmed, I'll go ahead and update your plan.\",\"thread_id\":\"thr_00071\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0Tcn4tGvoqtS4g31E3iDH9X/sV5Nc/sX37aF9Y+2l1T8xrWvRTrzPbJDkAvtDWdvFiAuH6O4W5FE704o6od4MazsyrsimhRNjbUyS42nKOjQBkwXwfLwvZNbOLNKP2sw4ZtM2QkfQsAs1/jw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254539,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 1682,
+      "total_tokens": 1786,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 51389
+}

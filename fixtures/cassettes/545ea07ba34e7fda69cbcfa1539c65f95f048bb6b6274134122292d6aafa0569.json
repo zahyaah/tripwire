@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "qR61aqbDOfSiqfkPlNbF8A4",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a complaint and drafted a response to apologize for the delay and request details about the issue to resolve it.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0T7B0tL3S1PXNn32se0AcLsosj5LbVtAdqlI+ESPad9GrX4NEbMZwxERiL5PLO3Zq7inhChHczuFaZr/6bO43Mc6v0vKAvbEyLnXR6nc2RDu7IWjligOxSX7lIRteHFV1WHGkPslIDekl1oA=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790254763,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 1970,
+      "total_tokens": 1997,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 5009
+}

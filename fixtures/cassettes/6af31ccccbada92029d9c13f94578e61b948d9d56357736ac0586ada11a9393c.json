@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "PiC1ap7ENrrDg8UPuPDEwAQ",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as \"billing-inquiry\" and drafted a reply to the customer asking for clarification because their claims about the order amount and plan do not match our records for order ord_00119.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TDWwrvLCw5DA6r54j3kPIuqco8/stnU+PqaBAxwIgOsKWmwoYlGxDd+JyjOBk2SEBc55iFNd2jvK9+VyzSP2orGdNulbf4ZibQfBTkEABTcKCkbann59TY+lJeoOs5xQIWcQJWnoBrjgC1g=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255172,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 46,
+      "prompt_tokens": 2191,
+      "total_tokens": 2237,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 16582
+}

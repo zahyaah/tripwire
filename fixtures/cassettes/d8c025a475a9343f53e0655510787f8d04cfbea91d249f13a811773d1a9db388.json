@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "D-20aoqVCq7_4-EP1O6Q4A4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_190066",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00034\"}",
+                "name": "get_thread"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EvoFCvcFAWkUfRMFbTzvcfBmiT4HLF0UQEMIE789efHkivNVSbgRx5r/CTTYMXh+3yehjUBgb/F0lpfArcf2pLS4p92UVNezDV333wtoCcehrj+GZsXszEquFysqqqjpzumP23mEZ2Ks7lcjIaCpGkQ35m2kT5+6UXpkOKVsIYAC0E7MTRWfBn6fcZGGhi+ld/EVcEpzY4zJDUbyQItqTjx6NiPm2TnrjHePLF9H/aZiUOj25EVY5ciNVTP0ZM+dZ1M7GKtZiIKkA/RPN0ZoKoG66K1aUAy7ALmwRFpl0IJRbCQDBT9KxB/vYUZYBv1IXxUbQMIC/w1dyBwcokhYakd+iE098nIUYlWrgAwqY0IrF+SN64doT5LcKX3frG/ljJstAGL/+EHNT/jseiGvWkv6THp2/usweHXzv4chrmwshlcnTmgwcSekvUkL0F/iNenoCO7DlR8CjqzULcJRmfx3pOFos3zYM8NXJK3ZHmXA3QLp0YUXbi2NL7gThBJTTHvYYL4HhSqolS3YpAaaS9+Jkm6HYrJMZWFWNKMczRt3sCqWntDP7/OwkMsUyBskuWVGLTRHrY5XAastjWIMQZUHSlMiRO2aBGta6fXt4w5Bvd9EBrDrDmWN9kmbINnjKSYW42XbimFlxMwr+8ogfHvnf6RPUB8Bz6h+/qrVBUvsqBEL1LuPfF6XZ7+gjJkCpG0NCyYIj1z3FHYfnWQ92jLIInV7dTbCtDqTCWMTTg3LeiXjndld8QlrH4/lpgEIOUxixeC/pjhugoRJkrcARKGKP9dK6loYQYIzsJkxF8PrR6FwIaNjE+c6W/oiaXwkgjuALLEF5lZujVEqFbEQuoArrgP5KSsqC6gTeNncDVqrYzdoqppdF0P6MfY56azWKmmtSCVOaUY6xY3KnsbNDXhNnZiUarBPBf9hqtGFgNA1xblajaeTzgBewo/QlMRZCghXzXBbEm+mgAyFEs9CuOZ/NIDTBsJgwzcWLxAtcM5JOc6Ofbx+qd/Jl2mC"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790242064,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 24,
+      "prompt_tokens": 3270,
+      "total_tokens": 3471,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 17574
+}

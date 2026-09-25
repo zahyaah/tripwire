@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "7SS1aoH_B5Tkg8UP-szt2AY",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have drafted a reply to the customer explaining how to change their billing cycle and labeled the thread as a billing inquiry.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0THH+zQTtb4vcsT0OxAJMpOlA7nns5kx2qwov7ZspAgC1w+GnlZyJUXqhUkm/z+ecJyzYHw0DzgblE8cWHdlHaGbXf0zA2tFpGhf796GtfB+tA1Mt9bkn4z7KG9TFH+B1V1+E6uzHsuKzQuA=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790256387,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 24,
+      "prompt_tokens": 1668,
+      "total_tokens": 1692,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 89518
+}

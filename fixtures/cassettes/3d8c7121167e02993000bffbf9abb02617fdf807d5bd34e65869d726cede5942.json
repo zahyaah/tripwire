@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "vR-1asGlH9Wyg8UP-JfB4A4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_429921",
+              "function": {
+                "arguments": "{\"body\":\"Hello Fatima,\\n\\nThank you for reaching out. I've looked into the order number you provided (ord_missing_00253), but I'm unable to locate any order with that ID in our system. \\n\\nCould you please double-check the order number or provide the email address associated with the account? Once I have that information, I'd be happy to look into these charges for you.\\n\\nBest regards,\\nSupport Team\",\"thread_id\":\"thr_00253\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T9dR8ddAdw5zLpzZ9zvRqHUS9U1qFS4yT7JHFT4DlTXNBNS/WWtX6efnlPiNzxlGXfp/q7PNy56un/Rm0/3tZlR3ony8YGh+OdqfyYW49skipZ5C5zTD0hfr+skE3MAVpxO0BZ6VISF4auQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255039,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 123,
+      "prompt_tokens": 1704,
+      "total_tokens": 1827,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 19411
+}

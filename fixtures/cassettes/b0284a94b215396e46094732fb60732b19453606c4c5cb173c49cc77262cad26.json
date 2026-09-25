@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "yCG1auqlHtzeg8UPx_O4mQ4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1017629",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00056\",\"label\":\"Bug report: Teammate invitation issue\"}",
+                "name": "add_label"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TQ4rWQRpyqalG+VrhjGrDrzuIeyY6OgMEn4/GsVP5KeETTGWRQt5ubVPRNL79P+c1gn0NH0Z52cvHa3K0HCFZSagcuIzXWccTaOLYEKJu9dyi2tysDjmBrf/De9K2r9Pn1JJJ840s4YF9PA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255562,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 37,
+      "prompt_tokens": 1647,
+      "total_tokens": 1684,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6055
+}

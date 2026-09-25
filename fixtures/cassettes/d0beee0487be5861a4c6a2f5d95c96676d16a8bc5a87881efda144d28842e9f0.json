@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "SCK1ao6oFcXdg8UPltSc6QI",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1075759",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00077\",\"reason\":\"Customer is experiencing a technical issue with Google login (\\\"Invalid session token\\\") that persists after clearing cache. This requires investigation by technical support.\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T1NCNBVkezHpXfbfa0/2mrn108eZGoA+ssEFIn1QNNQ3gpPEWzPuodlGy8/UjgRN2P9n+LwIIqrHWLhtyYL+ht1LCT8sgbuDZFrvqsI9SO2h1DGurlxuKAjaI/oTOtBWNNLUs2LGmpqe3iw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255689,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 55,
+      "prompt_tokens": 1736,
+      "total_tokens": 1791,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 4292
+}

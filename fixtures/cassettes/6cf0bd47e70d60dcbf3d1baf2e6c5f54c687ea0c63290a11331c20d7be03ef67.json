@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "ZCC1apXDIv_Eg8UPtuylAQ",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_137473",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00298\",\"body\":\"Hi Amara, \\n\\nThank you for reaching out. I've looked into the order number you provided (ord_missing_00298), but I was unable to locate it in our system. \\n\\nCould you please double-check the order number or provide the email address associated with the account where the charge appeared? Once I have that information, I'll be happy to investigate this charge for you.\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TbyE9hvyst6S7Va8hZ/6vs6QRmGrdqVbQdmMGQxPXb+zJ67TYp6QG6xn6dwUDKJ5fehgLi34EiE+ccHnfEcJgb3VYzFz29AFPYu1ea4cx9fQjjr9Tad2iKNk/15fsmu/AWVOaP9RPGRPuKw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255205,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 116,
+      "prompt_tokens": 1526,
+      "total_tokens": 1642,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 16022
+}

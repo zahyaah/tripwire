@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "ACS1aoGQAcaqg8UP1Ya7iAM",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1074998",
+              "function": {
+                "arguments": "{\"label\":\"User Management Question\",\"thread_id\":\"thr_00139\"}",
+                "name": "add_label"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TcgMUfKpMvM5y5pbsqcl1EegfKsgZHPK6n7+W4f3ni8415czBVczvrryyJTdDGr34ftM0zxpXSCpjFq5304I456akxE+5OtbhupM3n07j8JRo4rV8qktCwS2BxmYhRbR66iTtfhpcu2xj0A=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790256129,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 32,
+      "prompt_tokens": 1495,
+      "total_tokens": 1527,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 9286
+}

@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "1yG1arXaNJGrg8UPw9rJ4A4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1003348",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00056\",\"reason\":\"The user is reporting a persistent bug (\\\"Invalid session token\\\" when inviting teammates) that continues after troubleshooting steps (clearing cache, trying different browsers), which requires engineering investigation.\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T8Gc4OQzVeAvp4R2QWPbwoqWnPuopXVyaiPfaP6X263kOGSD1245CH5gxNp/7sAVmcWT8bASYETThjkS9wvr8b5BnaTXIQh8U61M/gRd3hFLAdg5u+JO05u3jkh3dtd/w3iLCVK16HJNMZg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255589,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 63,
+      "prompt_tokens": 1725,
+      "total_tokens": 1788,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 26205
+}

@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "PCG1aqe_FYKiqfkPvszwmQ8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_969387",
+              "function": {
+                "arguments": "{\"body\":\"Hi Kenji, thanks for reaching out. I've looked into order ord_00357, and while it shows a charge for the Pro Plan, our customer records indicate your current account status is on our Starter plan. This looks like a potential billing discrepancy that requires further investigation. I'm escalating this to our billing team to review your account history and ensure your charges are correct. Someone will get back to you shortly with more information.\",\"thread_id\":\"thr_00198\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TBu1zgl7kLY6nBgZoxdkk0t75zS+A0+6t4Oc8aMyi27W+0PGeA33u5Ru9y+AEdzxq0kX9AEzW3GGZ+U759RIACdaYlT7h26Bd94IcW5i5oRb5IDvCTL4c1Q4obw1tU2NyoWeKkR501kPRtg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255442,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 121,
+      "prompt_tokens": 1652,
+      "total_tokens": 1773,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 27755
+}

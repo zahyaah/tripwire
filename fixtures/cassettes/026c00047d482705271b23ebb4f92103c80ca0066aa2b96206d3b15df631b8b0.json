@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "pCK1au_aJZ-vg8UPuoK56A8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1094540",
+              "function": {
+                "arguments": "{\"reason\":\"The user is reporting a recurring technical issue (403 error on Google login) that they are unable to resolve on their own, requiring technical support investigation.\",\"thread_id\":\"thr_00288\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0Tbb8ENRBBihvIbsVUwsqL+4a/kxjwf9Rjhu833BJPEJMMZCI9lxMubxN9y8DvyCUUDCJepyHtGbBqhnn3Ck82PC2SQbbBTvlsx0FsIwmgHtZ8n+C9k/iXP+wcZ60ewn7ZPe9zqpkSMoLpkQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255781,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 60,
+      "prompt_tokens": 1751,
+      "total_tokens": 1811,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 4428
+}

@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "5HK1av3ZItWyg8UP-ZfB4A4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_813780",
+              "function": {
+                "arguments": "{\"body\":\"Hi Jordan,\\\\n\\\\nI'm sorry to hear that you signed up for Team Seats by mistake. I tried to look up order ord_missing_00213 to process your request, but I couldn't find an order with that ID. Could you please double-check the order number and let me know if it might be different?\\\\n\\\\nBest regards,\\\\nSupport Team\",\"thread_id\":\"thr_00213\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TqJo0zi/N6H8hVNa4c+GE2ceGCKnBq5NytbOlBe1ZTqcRuEf8qwPWjVIV/mJ7DCaaySDf1efKz1qMTzb6VCE4R405y4f/eTaO+2pZmLveULPHbo3yxD4FDNGSrIfMc2TpwZ06ny9nmgR9rg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790276334,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 1520,
+      "total_tokens": 1632,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 13194
+}

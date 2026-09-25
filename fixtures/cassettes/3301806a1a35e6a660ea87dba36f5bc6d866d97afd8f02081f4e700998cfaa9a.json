@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "RHC1aperHP3Dg8UP0o2a0Q4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1325213",
+              "function": {
+                "arguments": "{\"body\":\"Hi Jamie, thank you for your suggestion! While we don't have a dark mode available at the moment, I've shared your request with our product team for consideration in future updates.\",\"thread_id\":\"thr_00059\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T6hHZ+QAWZgrd8n3BPQeEJYAi9UNxca6boFgiXpTbV1C31GgwLTyPL94qIOqeN3iuB+V5hgM1YtEstHTX5HtTu5/1oAgJKil9lfPxD3EyigteYeHYmDit1W0Jf6gF6RKmQNByeCZk/MTBKA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790275660,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 68,
+      "prompt_tokens": 1554,
+      "total_tokens": 1622,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 11126
+}

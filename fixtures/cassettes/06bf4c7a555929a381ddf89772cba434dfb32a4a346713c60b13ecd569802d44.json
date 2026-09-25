@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "SnG1asHXLLjEg8UPnPrSqAM",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread and escalated the data deletion request to a human as required by security policy.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TvvbtC0qHenfXhdK4rR2gL5fEIlFiIfVCoBGXQ9g6E4zGs30o97uTD6v6dsTx05eGBtj2I+kpukUGvtvKQG6q7uuo9HxzfBDfv6mTL7syJg1oDyW3uBLHMNaNKlirQdasRN3X+hFSUeg66Q=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790275921,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 20,
+      "prompt_tokens": 1674,
+      "total_tokens": 1694,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 10586
+}

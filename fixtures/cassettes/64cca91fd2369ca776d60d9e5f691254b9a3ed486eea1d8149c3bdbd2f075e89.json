@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "4XC1ape0CcXdg8UPltSc6QI",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a security concern and escalated it to a human agent because the sender is requesting unauthorized account access and data deletion.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0T1IztUgP7Phi+FZUSlk3JtNqFJ+dr45NQA85EwsqZvlGgZzf4u1Rsr9MH1/O7tNSQQ6Yej+TJ3KsytUc8d7ejDCUlRzjofzAiT7JDj91seD5Ap+KkgFOwAGOefwcviNY8fo3YXeDr+/R1Fw=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790275811,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 1679,
+      "total_tokens": 1707,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 16985
+}

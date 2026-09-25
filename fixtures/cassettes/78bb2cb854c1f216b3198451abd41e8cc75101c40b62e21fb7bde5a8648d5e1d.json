@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "EyC1aqaOJNygjuMPpfDy6AI",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a billing inquiry and drafted a reply to Diego Rossi requesting more information, as the order details he provided do not match the charge he is reporting.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TKLnrr84kzUtHAae2YzkhbO28wEl9iFEor6GG72004wt4zrZsMHcZ30IAV85GAWv8h2yWwXA9otvoJajTEaYasP7ZxFVjuS4YsoNVFmI4HLKRVsQorYfjcxpkUydgQM1U0RBbWglDIbH6XQ=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255124,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 35,
+      "prompt_tokens": 1971,
+      "total_tokens": 2006,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 10229
+}

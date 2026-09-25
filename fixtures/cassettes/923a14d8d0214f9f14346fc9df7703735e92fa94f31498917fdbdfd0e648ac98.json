@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "UCW1aseFFaKqg8UPtLS_4Q4",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as an Account Inquiry and drafted a reply explaining how the customer can add a second user to their account.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TxADbtyMs4owpMiweoUOjOMO5hy2FUrDF7gB1Rxw/ttwpPs4k+xUVhhY/pzAyj3YJxeXJUO2OdSC+RcWx1gdgYwvsu273obuwcWg8NH9Msayn5Wvxlmmwm8qgy3PNUr9U8T1ltDonucmvhA=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790256479,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 26,
+      "prompt_tokens": 1585,
+      "total_tokens": 1611,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 41064
+}

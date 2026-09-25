@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "m-20atSeD5jw4-EPo7-AMQ",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_643179",
+              "function": {
+                "arguments": "{\"query\":\"unknown24379@example.net\"}",
+                "name": "search_threads"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EosCCogCAWkUfROoq/xfptZdkCOljkmAK4HrEqlWeT8f64wGSS9J+s+JV64vVBI6tL9ovbI5+JxKlQGpEpIWFMo+zps+0/+cLe+NBYjscoF0Y1RCdGG4SFdyRn+yMVWMpQ6iU9otiPUOvF8vcmOBI73y7WEOe7ArSMrtzzCurCN6b518v/yj4uwbELynnfBzTGUsEIQwSZRFtQ3xl+1y/KlsS9qxc6IZUKI9kxWCJx/JBOKIbMMKo3hi7lUZGjujNeX8URZEIQWWySttENC4yFSWvwptzLGEZMQ934yjcF1LbNbDKQtd2MGyR9k4hAfyk3ga4nw+dZmu3v1t6L25TQEN4Z6vLt+ZSBlpCImY"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790242204,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 25,
+      "prompt_tokens": 1633,
+      "total_tokens": 1691,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 15953
+}

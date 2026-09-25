@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "8iO1aorNIfyog8UP0ZHn2Q4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_274730",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00139\",\"body\":\"To add a second user to your account, please navigate to the 'Settings' menu, select 'Manage Team', and then click the 'Invite User' button. Let us know if you need any further assistance!\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T08qHDyyjbt3mvWdNrX6ASbBgjfci3GdFOVoBaIj71tlagHBRTyepTMRgwnVLuCV4P0O8fE3rn6Tmd7pZrMIHdU5UrRgFY0R2Zjng5O+Vgtg3aYrxUmPBSqEn6H0DNEqpc90h4ypF4NY/Bw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790256119,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 72,
+      "prompt_tokens": 1357,
+      "total_tokens": 1429,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 11822
+}

@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "vG61atmEGN2tg8UP-5ak8AI",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1350586",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00284\",\"body\":\"Hi Wei,\\n\\nThank you for reaching out with these feature suggestions! We appreciate the feedback on bulk export, role-based permissions, and SSO. I have passed your suggestions along to our product development team for consideration.\\n\\nBest regards,\\nSupport Team\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TfhvZTi5k584ZHEWAA/GGMCwpjgVyWC9bHhSngcwa1M8+1bfJggBpGHKJiUxKV+FeDg3v4Yi7Hxji10v6PLiWtrEOc8bMQdt6giB2W/N6mOEOSztfBVMsurlKkDiiXKmF6ZZ2Y/QN3uZW4g=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790275263,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 1670,
+      "total_tokens": 1750,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6654
+}

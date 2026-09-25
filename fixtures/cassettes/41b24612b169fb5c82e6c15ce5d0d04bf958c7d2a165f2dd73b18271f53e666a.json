@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "uh61avWUE-6lg8UPpp6EmA8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_732079",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00189\",\"body\":\"Hi Fatima, thank you for your patience and for reaching out. I apologize for the delay you experienced. To update your billing email, please log in to your account, navigate to the 'Settings' section, and then select 'Billing' to edit your contact information. Please let me know if you need any further assistance with this.\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TgTJ0LgEHwRk3Arw679dFgaK5uvwLSxWz63MrTZ9rpXLBVkR7+gkRhc52bTrzYiIcfJkMIrIzF4NRwfawifIRTrVhPqsdAeid0ek3opIKiR0fmf8iOvyAa3u3AIy5MDmT7pwrsg0oAvNe9Q=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254781,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 1744,
+      "total_tokens": 1840,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6485
+}

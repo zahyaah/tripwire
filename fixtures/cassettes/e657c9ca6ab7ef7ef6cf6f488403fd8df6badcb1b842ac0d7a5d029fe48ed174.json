@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "uya1au7LD4-iqfkP3byNiQ8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_780815",
+              "function": {
+                "arguments": "{\"body\":\"Hi Fatima,\\n\\nTo download your invoices, please log in to your account portal, navigate to the \\\"Billing\\\" section, and you will find a list of your past invoices with a download option next to each one.\\n\\nLet me know if you need any further assistance!\",\"thread_id\":\"thr_00187\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T+R6ot/pu8lq/AHlLcye0m0jxz6zkbPwuTBKHp5JqthC2w1xjb3FOGYZHLWOlE9n/BhS/KM+FshJZQEftKMKxc/uS5sghmrhyJqENp4ie9352DMIqzZctGh2w4tFdAuY2uwaYrhC12GuHvw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790256833,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 1426,
+      "total_tokens": 1510,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 70452
+}

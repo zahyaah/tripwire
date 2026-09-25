@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "pQ21aomJA6rdg8UP-IrR0Q4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_792572",
+              "function": {
+                "arguments": "{\"body\":\"Hi Jordan,\\n\\nI've looked into your order (ord_00300) for the Priority Support Add-on. Since this was purchased back in January and is a fulfilled add-on, I'm unable to process a refund for it. Please let me know if you have any questions!\",\"thread_id\":\"thr_00000\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T8PzuVeTNsCPAhFIDhgk8MBilMqXojrH5pq4XJQCX6xwvJH5RnA24zRP9BIjSwwMj5zVrJYrvQBzwsMfVVlCfGewNLqLKrZssj+TYtCSJGwrsUVjm1hz8S9VpusD+WaWbqWG2q1rSMTUQeg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790250412,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 93,
+      "prompt_tokens": 1853,
+      "total_tokens": 1946,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 7970
+}

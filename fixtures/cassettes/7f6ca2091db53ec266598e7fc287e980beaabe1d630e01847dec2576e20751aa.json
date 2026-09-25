@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "HzK1avaoBMaqg8UP1Ya7iAM",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_964427",
+              "function": {
+                "arguments": "{\"body\":\"Hi Wei,\\n\\nThank you for reaching out and sharing these feature suggestions! Bulk export, role-based permissions, and SSO login are all great ideas.\\n\\nI have forwarded your feedback and requests directly to our product team for review and consideration in future updates. Please feel free to reach out if you have any other questions or ideas!\\n\\nBest regards,\\nCustomer Support\",\"thread_id\":\"thr_00284\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EogDCoUDAWkUfRMZeX207CMBm7A+0zp1MPZMYZ1Vf//X5I8BFDSa3pgUsUhSi+Xok+fjUfw+N45XGvOn70HfwKeO/RHA2DFn+8Z2tqh6UZ3BYvoeD5VdCWwmvL/8gISuQhlTmPfumvAFd4j+moJGV9tUOo36SkgHeaHJLCFTjeCo/n+urVMBwhGQ9/wrKTryzj1LvP/QPxs18vCI5FsQRlDmWTJqEqKWL5HFaadQdq9xcXn20nn8CG3kq9qQv1kBeUkk4F0fsH0AP3xENTUo+82PmGnnYQ60Fv2lmhCKuS30lHiPHauKNaguhGlxXOG4zQkMgzlqpXu0XtAZLKJCKR3MjgVsFHsgsYMGC3tn9Oni+IVQN9qG4tEeefuR/GVPprofl1lY1IqviJN1qFVzZplOCHMlFTpNnya+rP5K0eN7HIL00yiZbRuwAcIG5o+Axq+2c73/JP0YlpFfn+OuxhG5ODeK1bE4fgbUZ6Pzl3arwzw7WAMcDPgHVP3sSviqEdLljEPln2SOebU="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790259754,
+    "model": "gemini-3.6-flash",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 2231,
+      "total_tokens": 2393,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 63582
+}

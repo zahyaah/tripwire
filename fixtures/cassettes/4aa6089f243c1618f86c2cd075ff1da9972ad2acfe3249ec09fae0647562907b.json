@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "Yum0auTaHYSmg8UP7YfewQ8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_589256",
+              "function": {
+                "arguments": "{\"email\":\"kenji.chen220@example.org\",\"customer_id\":null}",
+                "name": "lookup_customer"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EpICCo8CAWkUfRNQcUp46Qx5Wgx+9APRglctExwi2INDjEPb/dr6BfXyLtz6W3cAwhQCYp/vZ1Ru2bt3KPzpK9iHEmtCR+7+pB+i0141ZaIxcGekQAksloGikfNqTKUcQ9u+Mfyh5OwkxDRb8X4LzkqU+KUHPLZUhLKTP0eC+UWF3aaEdLIWSuxzKPtV4ypt11T5r7C+8FGSYNmvp/MuMSLULJDpfR8qdRYra5a/fLmR7cylY62bHSrIeOkN6JcqOen7Reo+ldcAe5WVw7YY7CWskvCFTliedBH8Fkhh1znyTvxgoReJTNFmqudiiWuIB0WGQrK1tIzScEUAnkjN9vQOqJxtXPpynPvWoCY9jWWrB27n4A=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790241123,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 32,
+      "prompt_tokens": 1380,
+      "total_tokens": 1448,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 2130
+}

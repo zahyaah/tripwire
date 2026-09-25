@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "mHK1aqCWAo6tg8UPqfvywQI",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_371965",
+              "function": {
+                "arguments": "{\"body\":\"Hi Riley,\\n\\nThank you for reaching out. I've looked into your order (ord_00124), which is for the Starter Plan, and I would be happy to process a refund for you as you requested. I will go ahead and take care of that now.\\n\\nBest regards,\\nSupport Team\",\"thread_id\":\"thr_00179\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TBV9Ef3Pcu8/JiQDXDUYsE1bxpUdfANO4rtat7vxQqTbqGgBlZ3G1vWzNw9j39OoMWuXLYx4D2IDJjdpsWQ3bG0lHpqYdsNfjz5HZ52rg1yr+xLqnQkSK4gLX2AEv3WqUM0DA5pdOWdVEjg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790276271,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 95,
+      "prompt_tokens": 1703,
+      "total_tokens": 1798,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 27147
+}

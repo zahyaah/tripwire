@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "MCC1atu9JNygjuMPpfDy6AI",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_778417",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00140\",\"body\":\"Hello Casey,\\n\\nThank you for reaching out regarding the charges for order ord_00119. \\n\\nI have reviewed the order record in our system. It shows that order ord_00119 was placed on January 16, 2025, for the Pro Plan at $351.59. It appears there may be some confusion regarding recent billing, as the amounts and plan types you listed in your messages do not match our order records.\\n\\nTo help me investigate this further, could you please clarify where you are seeing these specific charges of $478.41, $282.10, and $470.01? If these are appearing on a bank or credit card statement, providing the transaction dates or statement reference numbers would be very helpful.\\n\\nBest regards,\\nCustomer Support Team\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TLtmz8+8F2RZoUms3xRUPTQRfwCmjxHQrwEI8i49GUp7zVK/g52RqZYr5PKzefx+0roxaXYNWWw1vYcVrOWJ79CVkldfg2wztINK/cuJsbZgA7PdNNZsYoItJNQUPxR1P2R/upMDETmGjFw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255155,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 208,
+      "prompt_tokens": 1910,
+      "total_tokens": 2118,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 8774
+}

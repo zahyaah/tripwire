@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "JiK1aoD3BM3Dg8UPosnjmQM",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a technical issue, drafted a response to the customer, and escalated the issue to our technical team for further investigation.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TQkG+bD6yC7FGHDB5sngRTser1860qilNyVsHJvMC6BzESQw0jFkUCHWKG6mE2mT7Xx4wWcKaRTNg5do0jFpaCuPf/BaU9KKptvpfcYo0YtK1My8sfidNQfKGSruMTZwzusmEi53zbfDKzA=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255656,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 1886,
+      "total_tokens": 1915,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 5812
+}

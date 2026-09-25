@@ -1,0 +1,58 @@
+{
+  "completion": {
+    "id": "EO-zap-pEPz-juMPleXdIA",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_504457",
+              "function": {
+                "arguments": "{\"label\":\"billing\",\"thread_id\":\"thr_00001\"}",
+                "name": "add_label"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "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"
+                }
+              }
+            },
+            {
+              "id": "call_504458",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00001\",\"body\":\"Hi Kenji,\\n\\nYou can change your billing email by logging into your account and navigating to the Settings \\u003e Billing section. From there, you should see an option to update your billing information.\\n\\nIf you have any trouble finding it, please let us know!\\n\\nBest regards,\\nSupport Team\"}",
+                "name": "draft_reply"
+              },
+              "type": "function"
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790177044,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 119,
+      "prompt_tokens": 1642,
+      "total_tokens": 2154,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 4217
+}

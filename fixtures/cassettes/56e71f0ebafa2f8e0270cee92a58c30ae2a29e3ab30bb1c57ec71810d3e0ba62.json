@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "TiK1atyxH-3ag8UP_qf1sAM",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled this thread as a \"technical issue\" and escalated it to a human for further investigation into the reported Google login error.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TIvWBUu1jXRid6qBJ/42GfocuPbrGnaEzRYW6/eyRMDGbRF9N5XX/e2gmP9e7l3qWE+NFa6HrQse4ALrfp6WQPJj7xxM63sVabw8JcSNdKR48EGm2LrMXQFlccrK01/ALrO5r52YtWOkp4Q=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255698,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 1855,
+      "total_tokens": 1882,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 9153
+}

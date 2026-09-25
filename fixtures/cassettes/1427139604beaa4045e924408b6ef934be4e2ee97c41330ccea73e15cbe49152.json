@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "bum0av2_LK3Rg8UP2cnEkQ8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_671642",
+              "function": {
+                "arguments": "{\"query\":\"from:kenji.chen220@example.org\"}",
+                "name": "search_threads"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EvECCu4CAWkUfRMi5EypN3gezzn3/g6ETHiN3tcW3hMg3t647Z3aK9eHRKZmlvtMcXW05MIOvOc29EVSG/Q4ZLBNKoxy3uXEgSOPm+f3vUO/rHxkBETVMZZ9Buce6K6sfQoCkSNbXkXr9WadwM4CnEeEvv4ZglI87X1strf1Vjc38vJG/PVrJ/7L2foLHZDZZ5gVo4Tcu0oQNzKQ1Wsvg97KBUTtHR43axkjqKwu4FWroZx9A2+ZE1Q4c9R9QacOFuXeZ3t5IAC1T7LYiU7BqhMmHhZiVEOb+lOpLGh4lj0z9izkylDhq03RPBniwIGHsbQX3P1vA1kMkT+FxziX+qwR148R/JRfFHNRBh/A0Ex8inK6ss5WHsSb3buOWCiCJsYkQl3YyBbRSZqcB+CCuiEhV5zhQ8I1FcIfFoXmVvTP26J+Ne7vf+0Ybwwq0FzOayxZAwFmdrTRA/i1XgYEGAxXxy8yP0wS/tkHiv4Gd1GqZ3tx"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790241136,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 4167,
+      "total_tokens": 4279,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 2194
+}

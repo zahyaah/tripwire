@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "BCS1atDYLbT_4-EP7sfW6A8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_225515",
+              "function": {
+                "arguments": "{\"reason\":\"Answered the user's question about adding a second user.\",\"thread_id\":\"thr_00139\"}",
+                "name": "archive"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TgJyfEyC61CaHCt+oOQp253zSh9m/kgmH0MvDHzkm/tehQ8MktmGT+IPDtOJK5rOvZJOFCD+yOe9zcDFCpRA/BXuQXp7rCGShsqGe9OhMzLLDGtULcAqd9mkyRFDbzmznnROxLGW9IlAF0Q=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790256134,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_tokens": 1563,
+      "total_tokens": 1603,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 5177
+}

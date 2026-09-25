@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "Ihy1ape7Cc3Dg8UPosnjmQM",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_675909",
+              "function": {
+                "arguments": "{\"body\":\"Hi Jamie,\\n\\nThank you for reaching out, and I apologize for the delay you experienced. I appreciate your patience and understanding.\\n\\nI can certainly help you switch your plan from monthly to annual billing. To get this set up, could you please confirm that you'd like to proceed with the annual billing cycle? Once you confirm, I will process the change for you and update your account details accordingly.\\n\\nBest regards,\\n[Your Name]\\nSupport Team\",\"thread_id\":\"thr_00071\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0Tj89rYN8EpKWxuMeyOLo6Z1+kHa9cHYSegh2kAveRDSnKbkW3aJfm1tyxTDCmeg845LIhJdD+vN7JgBUOWvfUKa2BNLts2XFsOMFoTUIiHJTVMP1UGvyTCj4EWE8fAtLL716DEc5yyiZrMQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254115,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 123,
+      "prompt_tokens": 1684,
+      "total_tokens": 1807,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 7466
+}

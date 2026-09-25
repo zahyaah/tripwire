@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "CSK1avX2NKa3g8UPrqGbiA8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_992170",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00194\",\"reason\":\"The customer is reporting a 403 authorization error when connecting their calendar, which appears to be a technical bug following the recent update.\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T10cDT4DUYOkylrKCcKlMRMzB6uc6w7fhfI4fvtJv9I+NC4dTKl0hJHBu5YNeiwVB8+WojFRY7gQX1IzrbtQE2d4mpo7XKIPlr7YfLGCuwcr3af1L9ZKp14bCvs67L74T4d43iyHHcN1e9w=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255650,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 56,
+      "prompt_tokens": 1765,
+      "total_tokens": 1821,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 28016
+}

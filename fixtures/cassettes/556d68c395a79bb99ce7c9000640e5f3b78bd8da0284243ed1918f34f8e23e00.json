@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "0iO1arycO7iqg8UP5t3fuA8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have drafted a reply with instructions on how to download invoices, labeled the thread as \"Billing Question,\" and archived it.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0Tdk+2yamDfj3raak4C5M6nF9tuWVpxSKKT5fn4DsvCrstG0xxBxsxQIMsI2VqR+KVUQ/tHOdAdNkk0LlWj0kFskJWVNyKd+r484wJrogETvTswmZAsKP+8rxvN2FIZdOggn/yqyR2WTfUZQ=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790256089,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 25,
+      "prompt_tokens": 1675,
+      "total_tokens": 1700,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 40338
+}

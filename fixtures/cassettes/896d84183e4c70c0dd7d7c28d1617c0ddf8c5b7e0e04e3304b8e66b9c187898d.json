@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "vO20atuKJO6lg8UPkrSE2A8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_747428",
+              "function": {
+                "arguments": "{\"reason\":\"Customer is very angry, claims a 5-day wait, and wants immediate resolution, but I cannot find a customer record for this email address to understand the issue.\",\"thread_id\":\"thr_00010\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EpcCCpQCAWkUfRPrto2+BCVs6P53qNpyrSFeFqE16tUYZXf7sYmlzXWq43ba2uF3ol4KlHfqi6HNsxgp9R0Ss9FnSRsG6Xhf2F+RcU4xluhcHrGUESg/41ixnED9LDX0ye6/OnHBeiykLRz9sf5TOHlqBQwV3cRMzzkMKuS6Et2jEE1Lm5T6+LCk8cf/MpkqzxBNznZf2nocQVYcDwOq2yV6zXoYAHCS8jCa+yWAP6iFXjPM1qhThZbVYFCgPcbAwKsj4UQQImbYT6nL9VjDXnaCZb7G+Iwv3LbZoL7d0ovGwdf5g29WZ0l9Vc66Wiwd3ud/ZPaEjdEOiDNnVoE3I+IcE2pHag/mu29DtP5gxUCrWDYiDdaK3bgI"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790242237,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 62,
+      "prompt_tokens": 2186,
+      "total_tokens": 2286,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 15570
+}

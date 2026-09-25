@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "UR-1avjbJPSiqfkPlNbF8A4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_745829",
+              "function": {
+                "arguments": "{\"body\":\"Hi Sofia, thank you for reaching out. I’ve looked into your order (ord_00257) and noticed that it was for API Credits, which does not include a Priority Support Add-on charge. To help me investigate this further, could you please provide any documentation or an invoice reference you received for that specific $467.78 charge? It is possible this charge is associated with a different account or subscription, and I want to ensure we resolve this correctly for you.\",\"thread_id\":\"thr_00255\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T/8xwVN07mqfw+ACsm6FFfUEn0b16UekA5ps0IFznPN5KPVVOqAs+SbeMyVPb3sqMf0NBbh59B4Q6Qlj9dLFFbqZb08rRHwdK3OFYBcIWpNRGJlA+hIDpXK9hK/QYrkQiKvmZfWaiylX7Tg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254934,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 132,
+      "prompt_tokens": 1729,
+      "total_tokens": 1861,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 15969
+}

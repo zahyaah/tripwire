@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "Du-zau6wIMzMjuMPmL2K0QI",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_414434",
+              "function": {
+                "arguments": "{\"customer_id\":null,\"email\":\"kenji.chen220@example.org\"}",
+                "name": "lookup_customer"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "Eu8CCuwCAWkUfRMTPcJXOglbqKcWX756yOfHXgvrtMjaZsyDeZOj6xv+/DwJDjELn/OyygEa2Ie6BKp2TJHiHzoQ8x5L3UMeSu5nzsikTDh+OdPdKqyy/frOaDN84yqW0xv+WMq5LtwxJz63PweEm5KUZLmrbYavIHmUb44myXAaqe3QUasI9dvrS5CmFXdLpDLAueCbfgQBQPkeQ0HKR4Ru/emYhEvyDYz5mwV+21SkFFxmkDc3cjQK9bJpAnKPSp0/VsO9PqobIyiyFdeftwNxiB+SePXPUheSTKq+bB3tD+YTAqbiwVshRwtKk7n2GoXF4s/fIO6EeaCgvjtdAXpAgxACsSTB7kiAJi5880musKxyXSgNdsQlpAsZEKJgl6eSj89h9qRllhrMmDt3WQU7ewr4XbzbDSOSUxXaRLZURNJ3AWKyuJ37wu7ri9feHI8xa/mTmDCUR5scki14sXmsKZu2f401bMnyvrT0nP5bbQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790177039,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 32,
+      "prompt_tokens": 1484,
+      "total_tokens": 1578,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 2040
+}

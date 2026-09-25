@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "wh-1at22HJvg4-EP58TmmAU",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a \"billing-inquiry\" and drafted a reply to the customer explaining that the order ID provided could not be found and asking for verification.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TRxjdrAeS3t/msDqWTcGen3Z48zRy3VyMGODVWsC5+V59Qz51p8Iw7JU6M3UBYL0e4KpbkZTjKH2hk8x6jWSE47AIux+75FB5DiLICmC6NbFOSg7nZsITB/7et2DKT0PYO7/RLOAgvwjPvg=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255047,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 35,
+      "prompt_tokens": 1901,
+      "total_tokens": 1936,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 8185
+}

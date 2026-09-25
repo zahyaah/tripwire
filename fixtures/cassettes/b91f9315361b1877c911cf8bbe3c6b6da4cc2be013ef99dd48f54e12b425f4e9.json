@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "1TG1apnvCfqsjuMP3PSD-Qk",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1161511",
+              "function": {
+                "arguments": "{\"email\":\"wei.patel252@example.net\",\"customer_id\":null}",
+                "name": "lookup_customer"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "ErcECrQEAWkUfRPL2QX1rQGkR2+DNi1beVztzjHJxq6zpLh972lD2J1a7yN2DTLRq71DnDCSqP2SgI4GjY4whcGprY3kt5lc2UL5RX+haxsG22+OrdxJZ9tuvVZEeti6YHV+GbUWYrNN03T+/YQ/rtAjXz9oubwb5pirJfOCS8F008jWGqzGsozJlMMHOII7UYuCVDk1pPe3WrCH4L9Ch8vVPf3L7jtbX4LL4Nc/p70nlm1tq7qQL33YUzqHq5OrM3MXRzXZLRqvR4b4o3DBuqi/HjC+mIrYUhjfxq5P/G1MZ1wmzWoRBefclbo0eAvmZgCvTJVmL46GD49EaWZC8GR7fjevgAVbs6gYZLE65ICG48UzUqaOW/1WeKKAKVP6hkpjdDI7GG4e7oVGfLMITuRpSIVl7PSkdwQM0QniIfQZ4nIUOOLypVmsIP4HO20kM5Nab0AR8ffYJKLpLYMQ1ufOrxJ0LUQkiKPvxCZyftpOwSvyH6/T2kUDUbQaZUOVK9I9f09viYSe8LDpvAS+Ao+CKPjVzBOLOcRe0HFpR/fuQWa9SLL97/4IkCYk+SS6GfhudjguyA4SZ2L7cvqSTfGVJfgDbn6oTYOQJOAXpaxuAaSEHyiUuTGj+Cf1mEpwTkrIdRQgLXD05KRpa3WwAzNBN6wD6HiqOIq8HWAWaeAIDOb9ufmXRM3LsB0F9lp1HwWNk/CNj4irxWx6vtlk4nnjs7AvL8AMu8zRDo30PCxKFaPYMOFPvwvA"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790259671,
+    "model": "gemini-3.6-flash",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 32,
+      "prompt_tokens": 1669,
+      "total_tokens": 1830,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 2804
+}

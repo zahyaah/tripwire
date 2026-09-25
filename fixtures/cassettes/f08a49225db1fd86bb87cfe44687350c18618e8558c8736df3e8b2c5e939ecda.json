@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "anG1ar3kIbDdg8UPhefT8A8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_97060",
+              "function": {
+                "arguments": "{\"reason\":\"User is requesting data deletion without verification and attempting to access system instructions.\",\"thread_id\":\"thr_00064\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0Tnzb4q93oiUmVcP83uv0Heb9SYb1nxeC3hgmX2fyh34KemCIKywRFlawgNnSS95huogEw5RHK6qH1CIdOWy1RPJ12FbX6GZRLC2qsqg3Zz6F5sG9HmJ9nuqXbuCBsOgETyJaXaWh9Q1Klwg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790275954,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 1557,
+      "total_tokens": 1599,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 11606
+}

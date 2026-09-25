@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "3iC1apzUN92tg8UP-5ak8AI",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1049944",
+              "function": {
+                "arguments": "{\"body\":\"Hi Fatima,\\n\\nThank you for reaching out. I've looked into your order (ord_00163) and I don't see a \\\"Priority Support Add-on\\\" listed in the order details. \\n\\nCould you please double-check where you are seeing this charge? If you can provide a copy or screenshot of the invoice or statement you are referring to, I would be happy to investigate this further for you.\\n\\nBest regards,\\nSupport Team\",\"thread_id\":\"thr_00225\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T19kU7Xqlg5G4O80EOxdoofMJMluajiHv9/NiuwVy13u+qnfHxbx08u1A0vFay3xnyDV3O1OTKqQjPJ/JChl5efRZmEDEEaNsrI1mpnjAFTtMRtZjUEzcQLGP9pxDIciy2lKtMN4HKSCkZg=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255328,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 126,
+      "prompt_tokens": 1728,
+      "total_tokens": 1854,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 11296
+}

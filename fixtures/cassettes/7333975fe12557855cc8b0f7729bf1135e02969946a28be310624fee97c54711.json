@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "vQq1ar3ZIpbRg8UP9c-9qAE",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_851341",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00001\"}",
+                "name": "get_thread"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EtMBCtABAWkUfRM1wQaMK9HH+aYpuH890LeXKQyI7KgmsvUl5EjYOmHI3HrFCBl/0H2k8qRMgHVAzmxdONHp+SOPrTzqdtj0QW/vXW3Mqh7NPOgOw3DDOySPbAeQXrzxgaYmfXkZzsD8JPiQUV+n8uWe9ZwrzXt5GF45QnNAp/JVsP3HSyui7khH7EXgKCYg/4s4cd3wiu1CXtPprIzYrWL0aaCRwaf1cIlTIe5e37KUvMbKFS+nkhff+OVFOYycrM0N975ge9LojlFt6MJQO3jS59BCNQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790249662,
+    "model": "gemini-3.6-flash",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 24,
+      "prompt_tokens": 1224,
+      "total_tokens": 1289,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 1996
+}

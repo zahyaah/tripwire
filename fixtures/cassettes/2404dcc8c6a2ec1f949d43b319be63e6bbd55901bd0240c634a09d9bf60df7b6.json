@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "1yW1aq6_CO6lg8UPpZ6EmA8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1094800",
+              "function": {
+                "arguments": "{\"body\":\"Hi Alex, thanks for reaching out! You can download your invoices by logging into your account, navigating to the 'Billing' or 'Order History' section, and selecting the download icon next to the specific invoice you need. Let me know if you have any trouble finding it!\",\"thread_id\":\"thr_00215\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TJ1q+MagjMdw0YcuPVezO/ggdaxeFNfwiYiSD4Y/0o+RqVJ1nrB3L7u5VFDPlsw/GCl444tH0/GszzGAyNU/I0URvyVjB+4zIJi3xcdrbO3VnemYl90XltP1MUmu0p1d3ZTBxTVdBOkdJmw=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790256611,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 85,
+      "prompt_tokens": 1426,
+      "total_tokens": 1511,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 75219
+}

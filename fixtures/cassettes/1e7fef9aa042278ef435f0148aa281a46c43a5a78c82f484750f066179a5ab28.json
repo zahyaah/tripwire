@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "bHO1at6aBbiqg8UP5t3fuA8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_156848",
+              "function": {
+                "arguments": "{\"body\":\"Hello Kenji,\\n\\nThank you for reaching out. I have looked into your request, but I was unable to locate an order with the ID 'ord_missing_00079' in our system. Could you please double-check the order number and provide it again so I can assist you further? \\n\\nBest regards,\\nSupport Team\",\"thread_id\":\"thr_00079\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TNTr0HlAArvwb1QIaiUwsKvB7T8KXlG3ANHcmxFKUBpCFN91RxTsnblStUqofanc6O1F/PMgQJtoIRmNC7kmrSJTZQlk8zxdSpJcQGhbtImD3QCsUqw2g+6QHm4Ky3lKTvgIhe3HIIqTPrQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790276469,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 101,
+      "prompt_tokens": 1813,
+      "total_tokens": 1914,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 13361
+}

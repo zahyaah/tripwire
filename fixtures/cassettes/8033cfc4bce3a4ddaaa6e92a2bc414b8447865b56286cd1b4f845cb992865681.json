@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "ox61aoXHI7T_4-EP7sfW6A8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_614128",
+              "function": {
+                "arguments": "{\"body\":\"Hi Avery, I am very sorry for the frustration caused by the delay in our response. I see that you have been waiting for assistance, and I would like to help resolve this for you. Could you please provide some details about the issue you are experiencing so I can look into it immediately?\",\"thread_id\":\"thr_00372\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T4iykvSpHmkjU9/aueHNfTWp5YKkDP/oDk9ZMvc9TXOmLNwMPTaCyitMqpWxtH+h1BE73ZQA9D+f39KElxZ8JAyyGyzVqqVd1HWmkv6Velyi6JLm27Zg7GU+IMuV6YyzsABYVq+l0zAuwTA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254758,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 88,
+      "prompt_tokens": 1818,
+      "total_tokens": 1906,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6546
+}

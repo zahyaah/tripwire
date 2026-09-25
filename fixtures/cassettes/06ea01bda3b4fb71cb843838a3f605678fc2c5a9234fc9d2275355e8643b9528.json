@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "HB61atKlK8Wzg8UP65fYyQ8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a customer complaint and drafted a reply to Sofia asking for more details regarding her issue so that I can assist her.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TLVE8NsC0x2CVIC/eTbVPrhhTEe/Vcq6MvoXzdABJsCuVJzWB5B8poaCz1xJswwshD3+aBLprs4QxZId51DfHo62FYn5v0tEVR6S9e1C/NXMUrIsGk7D0OcxUZKGcEHmJxzlvwo2lIb7amQ=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790254622,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 1867,
+      "total_tokens": 1896,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 7340
+}

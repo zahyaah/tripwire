@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "2h61atzsHLDdg8UPhefT8A8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1028641",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00357\",\"reason\":\"The customer is highly frustrated due to lack of response and threatening to cancel their enterprise account; this requires immediate human attention.\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0T27lccDFPTWHGrACliuEwUzdpbzx1bDfskvDHm+klevzRs2/K/CtWanDSA1lV4AlNUFtm9icJfGSki9WE2nARCrGT2taZtWi430s+T8n0AgOwbdZjyYXcdnHvL1dmQnD5LvkdiwU8r1ar9g=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254813,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 52,
+      "prompt_tokens": 1829,
+      "total_tokens": 1881,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 6247
+}

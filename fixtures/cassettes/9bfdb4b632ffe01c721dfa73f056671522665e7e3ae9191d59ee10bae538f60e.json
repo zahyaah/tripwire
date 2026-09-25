@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "1zG1atrJLKqtg8UP7a7L2Q8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_43766",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00284\",\"label\":\"feature_request\"}",
+                "name": "add_label"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EqcJCqQJAWkUfRPhYoAg3FmH1DynLCOyn7+HO93Ayn5ALvrGbre1R50HSIUYoVpLNen2IkLo97yID4w8HHCFBr1OA2afjTnzXgF+WLoP84+0iNvMPg1pcbS+qaErrqh94OAemmtnxiKl7TBPN8v5rFHuV5tdUeFkMhVhg71baKYzrt9x1zkO25dNKTZw3pdjsXseO5XRZLN7B7O5unKC3ap5tL+dgIuHzRmMMCI6vkl5CuCWl9PvUtDUl2e7ZLvcF/McFsBXb6jt4FcBuXHcsS1Dj9J0dhY49R0APx4mRabT53fU8nyTOKV8Cfw0TafkaDefZR6FGVQRaIqGv2pr2b4YbowvPatXZuE4upS5gg0qZs+HetyHYPxg0uRbu2BLa4rf+88S78l4Tony0kNyiCDrgvqaiXgkLudLYwJinivEaMWBqgmlB2JHpH4EQwII4cVV+LUBW2cQ593IC4/ZhDOm2uY14KmSbGINrJddkpmnv8CWdNaIlrpmzT93sIVhalOQnSfEtdGidtnNf8PVW3V5E39F6nDyuWK+voJrKmGbFiAEQzWz5uLm0xQZVrqfMUPQdXZUb7vyNxTlmu8TWO2VF3a8NHhVLgHjZxjSFQ+opcqUARpe06C35OIZLnAxwTqGQ9pBUeI2xwwMXskRVpq8pgMlzgc/HThEfrkci3NbiGrwOIEPXqkj4XJ8kN77SvKLUSCStEX/1dgJLPlXcnlY5VaP4rmChtCvJ8tbupfWNU9QL5ZAo0LUI6Ii4mj5Evi87V2kUqqwTNdI3ujzFROoecDjW5rb3zuEO3IoGIx+VKUzJz+s9x67lT59wNr9+qIEY+fIgBavFVXoNURp1xm//1bbjMIWGlJVDnRnZQ7q+a4A7MAEwOoMgSSQBI+ugcnGwqQQcrMAZBDbGUrCjYntUHtfGogaYxLMOHrKY9DuUHd5ZEWeprnIAj2mVPx8MXKJYV9BrwffL47Rr/+xK5rYtdUSotrKHZmRMAC0aL2JYYoUE7FN7AicykC7ve2fwZT5IEMQ1p1lgOqSHoIr8AmvwXCToUcFFisA65McEcX3tfRpvvlX0BVpWHkE6+BQCUR/71IXmUrIaso5p4Hzzh7aw96SCOJr6KKnKvi+rVmgWnJVtfEHPcBp+D6a2/t6sEzbgNty5BGsd/18U/piWKmhz4IXWOTNOR0XB3amXypSqn3sFzWpiAwcq8xdEl+Gn1MJetSduAVLVH3WHGJ2qJTl9nW7TQaW1lF6IsTL6dBBuE9NYdu5lb5owoTd/SXQTzQpUo8zvMOSWGNrrzMrKGCJP/VN5NlGPtaE73XxpaePsoNGX3WfgLmBDEScN1gRCfkGPPam3qtqOmmJpSpwSrgwrY0mQc9I/N+ZYuhuPoIVALplPwjrnwNF8If4GOTEENrfR7Xu2uu48zGL7s9kquPhoj+yWxyQDXF2VNaRq18cV/avUklUVmEBPTr7IZVJkStBVoUqyDgfEREpPCqXpwfZvzDoy551Dz72EkTygWvGEXXBhM3HhawvaWd6I10XdJp0Vs4lZxGH2O1NrCWQMJtextgky7/AaAPkJdZcDQWRf3UtGBPbNTWC"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790259690,
+    "model": "gemini-3.6-flash",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 32,
+      "prompt_tokens": 1892,
+      "total_tokens": 2195,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 19209
+}

@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "Qgu1as-_FYGpg8UPmfXR-A8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a billing inquiry and drafted a reply providing instructions on how to update the billing email in the account settings.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0Teql0482Jgg6TA6dwRAp+9DGkLOoRBir/idb3vpqbM8pvWjw5fBnRiqYinbXzhxgY8qPxwArRI0nWSBQJsyr2OAbLcQ8zDAE6yqCCTFPQ8BsyMLixynUKLsGkytq7UtWS/tQSP7/sHWTPOA=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790249797,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 1578,
+      "total_tokens": 1605,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 3615
+}

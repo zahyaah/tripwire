@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "Phy1avfWCcakqfkPrM-nqQE",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_625255",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00010\",\"body\":\"I am very sorry to hear you've been waiting for a response, and I apologize for the frustration this has caused. Since I couldn't locate an account associated with your email address, could you please provide your order number or any account details so I can look into this for you right away?\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0Tn+bGvCwbJtQYABYQtTyM6wzGVnmQrzRSN3hPQmvHyj2GuPf6heUYP0wq4IRluqx7xkC1iIeRTxX74Vz4nGWKHQqVExkOAenbN0+PeYSU4g+z3ynYcxPxYyUUskIW2gZMTH0ZGnrp2lepCA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790254143,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 1513,
+      "total_tokens": 1603,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 1559
+}

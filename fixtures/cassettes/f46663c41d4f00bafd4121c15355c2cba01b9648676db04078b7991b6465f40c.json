@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "oyS1asPjJumpg8UP7_SMsA8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_1096246",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00100\",\"body\":\"Hi Fatima, thanks for reaching out! To switch your subscription from monthly to annual billing, please log into your account settings, navigate to the 'Billing' section, and select 'Change Plan.' If you have any trouble finding that, let me know and I can assist further.\"}",
+                "name": "draft_reply"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TyBghhWp2ZsoerbE+tZiTo+LMpWE0lDOawpYcJhOJKu35su0yCG8FaMcBCyGd8/C71GsVlSSVyiHanv7gB+0bRbKmHYUuQrEMH7hgS8ARlDhaXE6CuwncBaELxTP5d0EpCMt7lqlZ6793bQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790256298,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 85,
+      "prompt_tokens": 1524,
+      "total_tokens": 1609,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 27749
+}

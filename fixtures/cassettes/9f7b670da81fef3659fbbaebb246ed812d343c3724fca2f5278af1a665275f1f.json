@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "4yC1aun7KpbRg8UP9c-9qAE",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a billing query and drafted a response to Fatima asking for more information, as the charge she mentioned does not appear in the order details for ord_00163.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0T3+5oss1rXWjYUa9aamtoIdYfgghKhfsiv2ZEU3Ah9ztub9xHxZCvBKbZvQ2rFvAK9XrIUHDXSZYSUXUXmMT3GbbSalGdzcNWZpjS54wrsUPgQAgmtK3R2wOquBFCrehu3pDCTsU05kc4Uw=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255332,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_tokens": 1933,
+      "total_tokens": 1974,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 4522
+}

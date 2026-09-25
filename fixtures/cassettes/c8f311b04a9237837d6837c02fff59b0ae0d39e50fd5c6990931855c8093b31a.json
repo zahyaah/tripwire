@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "zjG1atn4DL_84-EP7Kjj2A4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_81236",
+              "function": {
+                "arguments": "{\"thread_id\":\"thr_00284\"}",
+                "name": "get_thread"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EssCCsgCAWkUfRM4ltUmp/dCWXsK0Qf2tRTjgTKcpTNcfcVJv6zg8EvcVJ0TglF96MIA48R+i8ZQJYzJG7AzufdUB97dI8hrD0W7b1yBcv/DlNhT/Xwsx3U2T6SKHiD5t8GI+faLT1p9+Tpa5KO8WSbOfbHViYdEI5X4aA2pSDPuYvp2noPPRR1qT3zK34bZFqlJWEkThASIEsTIcR8s9nPVqZ62JN44SMvIGUL+yOh2OqigJLhUL6ICtUZcfuPYwupplnLySjHsMU5jw9/CANXqzNW3+shT1CFxrXIPdzqloJEB70I58IIDDFZt2/REnwjf19fJLGTP0t3sLQ6l2+KCozs7GJHDR8x9Ag+MtwHxejSVzL8iCuNFFMIWjSjWquK6KDvDFbQlG7rDqVrQIcP3VDzxsLCa1RN3FsrbtWuq5VAdZDzvfZliX3W7fA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790259668,
+    "model": "gemini-3.6-flash",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 24,
+      "prompt_tokens": 1224,
+      "total_tokens": 1313,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 7227
+}

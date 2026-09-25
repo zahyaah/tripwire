@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "LXO1aq2NDardg8UP-IrR0Q4",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread, drafted a reply confirming the refund for order ord_00265, and archived the thread.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TRXPnI2VropsE/CyerxAL9u2FxWhyBkCVM+XHGkQTbTHSG07DaTCFcZ24s4q8lIB2y2qkO85z8vGtfkkDaibfU85zdk6rzRry6mZALSQAfSiUtQ6YldRwJtD0TODE1h2f83iDRd6Qj1eNOw=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790276426,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 1788,
+      "total_tokens": 1815,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 32580
+}

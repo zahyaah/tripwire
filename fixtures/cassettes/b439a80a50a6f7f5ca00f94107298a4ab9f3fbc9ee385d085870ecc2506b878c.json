@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "RiO1aof_OOmpg8UP7_SMsA8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a bug report and drafted a reply to the customer acknowledging their login issue and offering initial troubleshooting steps while the technical team investigates.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TM09VYBw7GrpqfmsWR4e02FCBsCvxOUl3SHY136yEneAeOvY7i/CFLuATlVTOVwZ1W36sPk49GBST/M4Hqfpr8dRVK9XMZ+SGccjYXyeAVPL5fVsb9xLbd+zq9B6j4c0SBEzm9G2pKQ6lug=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790255944,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 1630,
+      "total_tokens": 1661,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 48488
+}

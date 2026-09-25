@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "iu20avOcKoSmg8UP7YfewQ8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_716890",
+              "function": {
+                "arguments": "{\"customer_id\":null,\"email\":\"unknown24379@example.net\"}",
+                "name": "lookup_customer"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EvICCu8CAWkUfROElxgp6djKn3N2gZEebtmA3evwr0CdV2oByEQZIX7QmoOXiZ+pCz5dsnDbLC0Y1INu1df2c3Z92gOZhk9rB4HOuE7CwBfzWSLtO6iniakcfHJzxSGFsNPfezUt5smm+RSRyrA5lCHGCIdU9HZhnX5xLfG9KghevK2+hOPLF6Tq25QL15qRiJEvhVF6VGuoRN/g+vO2aOJ+IY2PkizFFC6bCF92LjOvqD49GpnCPIxslgEUwQWszrkSQrDBXl7rLY+EimjUxioa/hIAbQlC92/riaa2IvuQqsHaWP9WbjGmYjiZVOUUtaMzJsDe71swyBOLL8ibSw/3oauoMXXhPzlp8v+Tfj8mJ9j0Uu5vsulzOP36NfOJQw0EB4mV04yKd/9AdRraf3/HDFfjxmyjaWf/hA1KKq+aPFHF3Fvqbby1Ujs6dRAqr0b3Y14cstvm/Eb6tRxpOfzmOp+YsJSd9UsBctIAB5rn8YPzZA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790242188,
+    "model": "gemini-3-flash-preview",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 1498,
+      "total_tokens": 1596,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 17048
+}

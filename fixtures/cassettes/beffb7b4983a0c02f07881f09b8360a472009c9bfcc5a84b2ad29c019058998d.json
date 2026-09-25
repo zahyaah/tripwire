@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "eSO1apfuFvbCg8UPsfv1mA8",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_247539",
+              "function": {
+                "arguments": "{\"reason\":\"The customer is consistently encountering an 'Invalid session token' error when trying to invite teammates, persisting across multiple browsers and cache clearing, which appears to be a technical bug requiring developer attention.\",\"thread_id\":\"thr_00218\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TVKJNVRLnfzTR1k/SbxhkJghc9QjS0pfJBZZJD1rjYYh8k4bc7uoiW2INvDPRIGrfM57jb9u73Te123gFGealberZuPlqhfDbeP701V8Rec9yWYe13Azyd7JaqUx3MZd4VLTqHIkKyqKdnA=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255994,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 65,
+      "prompt_tokens": 1723,
+      "total_tokens": 1788,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 22396
+}

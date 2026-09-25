@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "5B61av_TOfK3qfkP8tTGiAc",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled this thread as an \"urgent-complaint\" and escalated it to a human team member because the customer is highly frustrated, threatening cancellation of their enterprise account, and has not received a response.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0Tl5z8LOzR2UrGjTogqyKFS9RLAqJScByrILPVGHbpxPNZn+wUNHkIW3v3pkPCPotMLMJpoum7NcODkxJYXwCAA9O/Vs0hr9weT7NkhYs8orlTUR9OEAsTXV7+f8kHwp2WxSzJTo2FoWjNVg=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790254826,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 1942,
+      "total_tokens": 1984,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 12907
+}

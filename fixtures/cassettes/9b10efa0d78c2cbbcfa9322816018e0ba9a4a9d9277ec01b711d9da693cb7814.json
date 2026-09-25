@@ -1,0 +1,41 @@
+{
+  "completion": {
+    "id": "_Ru1ar7lD9zeg8UPx_O4mQ4",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "I have labeled the thread as a technical issue and escalated it to a human for investigation, as the user is experiencing a persistent 500 error during password resets.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "extra_content": {
+            "google": {
+              "thought_signature": "EnEKbwFpFH0TjNk9AptK+9xQ7KWfQ5hl468Z3oFal0wJDKpfqV1B1+ft7BPsRnzdH2JoYrv/iOh51098Qdo3hUgberbeg9QhK0zTONcnF40sZ6p/cd2jsRvDVntVa7mQE0+vNRm9qqlbs9Db45+zTw0dCg=="
+            }
+          }
+        }
+      }
+    ],
+    "created": 1790254085,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 1721,
+      "total_tokens": 1755,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 13886
+}

@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "uyK1aoObKeOjqfkP1uL2cQ",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_888648",
+              "function": {
+                "arguments": "{\"reason\":\"Technical issue involving Google login (500 Error) requires developer investigation as it persists across browsers.\",\"thread_id\":\"thr_00301\"}",
+                "name": "escalate"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TYANxzHY5Bj45vQIDzbYkWf90eKEQu1Zs7OfYEGZURb6JzFlykbCe5IpeBm1uLT20HXcwHWq+Ha05t4Izayi5qnphkJ40TTLe8ItPweuekTXV4Qj3QEAuba6u6FHAKgXibWWL/jzAtMo/mQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255804,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 48,
+      "prompt_tokens": 1603,
+      "total_tokens": 1651,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 4537
+}

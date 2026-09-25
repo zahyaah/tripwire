@@ -1,0 +1,50 @@
+{
+  "completion": {
+    "id": "_iG1aueMHtbcg8UPsMXx4A4",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_239735",
+              "function": {
+                "arguments": "{\"label\":\"technical issue\",\"thread_id\":\"thr_00194\"}",
+                "name": "add_label"
+              },
+              "type": "function",
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EnEKbwFpFH0TAL35Aruo4K7zZ+aI2/KvuMAfpjWG7Nrs3AAd5Vqb4BCj0Ow32rvhE4PLWXZhaNc8405zNIo/CaylJQydkpVsuxVWEyJzkFdQaze24Dhl5rJCk4F8qgHnsVVvADujWx5GyQUIv9RVc6X8AQ=="
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1790255616,
+    "model": "gemini-3.1-flash-lite",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 1513,
+      "total_tokens": 1544,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    }
+  },
+  "latency_ms": 5433
+}
