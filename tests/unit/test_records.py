@@ -74,7 +74,7 @@ def test_model_call_span_requires_usage() -> None:
                 "step_index": 0,
                 "started_at": datetime.now(UTC).isoformat(),
                 "latency_ms": 10,
-                "model": "gemini-3.8-flash",
+                "model": "gemini-3-flash-preview",
                 "stop_reason": "stop",
                 "micro_dollars": 0,
                 "cassette_key": "abc",

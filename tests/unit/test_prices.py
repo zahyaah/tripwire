@@ -63,7 +63,7 @@ def test_explicit_empty_table_raises_rather_than_falling_back_to_production_tabl
     # falsy, so a naive `table or PRICE_TABLE` would silently substitute the production table.
     usage = TokenUsage(prompt_tokens=1, completion_tokens=1)
     with pytest.raises(UnknownModelError):
-        price_call("gemini-3.8-flash", usage, table={})
+        price_call("gemini-3-flash-preview", usage, table={})
 
 
 def test_unknown_model_raises() -> None:
@@ -74,7 +74,7 @@ def test_unknown_model_raises() -> None:
 
 def test_known_zero_price_model_prices_at_zero_without_raising() -> None:
     usage = TokenUsage(prompt_tokens=1_000_000, completion_tokens=1_000_000)
-    assert price_call("gemini-3.8-flash", usage, table=PRICE_TABLE) == 0
+    assert price_call("gemini-3-flash-preview", usage, table=PRICE_TABLE) == 0
 
 
 def test_reasoning_tokens_priced_at_the_completion_rate() -> None:

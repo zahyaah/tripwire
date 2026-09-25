@@ -34,7 +34,7 @@ def test_golden_case(case: GoldenCase, tmp_path: Path) -> None:
         case,
         corpus=corpus,
         mode="replay",
-        model="gemini-3.8-flash",
+        model="gemini-3.1-flash-lite",
         cassettes_dir=_CASSETTES_DIR,
         runs_dir=tmp_path,  # regression runs don't need to keep their trace around
     )

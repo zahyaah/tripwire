@@ -50,7 +50,7 @@ def test_run_actually_works_as_the_real_installed_console_script(tmp_path: Path)
         "case_id: subprocess-smoke-01\n"
         "intent: faq\n"
         "input:\n"
-        "  thread_id: thr_00001\n"
+        "  thread_id: thr_no_cassette_99999\n"
         "expected_tool_calls:\n"
         "  - tool: get_thread\n",
         encoding="utf-8",
@@ -151,7 +151,7 @@ def test_run_in_replay_mode_with_no_cassette_fails_clearly_not_silently(
         "case_id: cli-smoke-no-cassette-01\n"
         "intent: faq\n"
         "input:\n"
-        "  thread_id: thr_00001\n"
+        "  thread_id: thr_no_cassette_99999\n"
         "expected_tool_calls:\n"
         "  - tool: get_thread\n",
         encoding="utf-8",

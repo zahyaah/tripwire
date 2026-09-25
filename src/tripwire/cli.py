@@ -14,9 +14,10 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-# Provider swap #2 (2026-09-23): NVIDIA -> Gemini. Confirmed live via client.models.list()
-# against the real API — the docs' own listed "gemini-3-flash" 404'd; this is the real id.
-DEFAULT_MODEL = "gemini-3.8-flash"
+# Provider swap #2 (2026-09-23): NVIDIA -> Gemini. Model id corrected same day after live
+# testing: `gemini-3.1-flash-lite` returns real completions, supports tool calling,
+# and does not hit the strict 20 req/day quota that throttles gemini-3-flash-preview.
+DEFAULT_MODEL = "gemini-3.1-flash-lite"
 GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
 app = typer.Typer(
@@ -39,6 +40,20 @@ def _repo_root() -> Path:
         if (candidate / "pyproject.toml").exists():
             return candidate
     raise RuntimeError("could not find repo root (no pyproject.toml in any parent directory)")
+
+
+def _load_dotenv(repo_root: Path) -> None:
+    """Best-effort loader for `.env` if present in the repo root and GEMINI_API_KEY is unset."""
+    env_file = repo_root / ".env"
+    if env_file.is_file():
+        for line in env_file.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            k, v = k.strip(), v.strip()
+            if k not in os.environ:
+                os.environ[k] = v
 
 
 def _git_user_email() -> str | None:
@@ -157,6 +172,7 @@ def run(
 
     client = None
     if resolved_mode in ("live", "record"):
+        _load_dotenv(repo_root)
         api_key = os.environ.get("GEMINI_API_KEY")
         if not api_key:
             typer.secho(
@@ -468,6 +484,7 @@ def calibrate(
 
     client = None
     if resolved_mode in ("live", "record"):
+        _load_dotenv(repo_root)
         api_key = os.environ.get("GEMINI_API_KEY")
         if not api_key:
             typer.secho(

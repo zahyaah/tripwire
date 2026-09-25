@@ -3,9 +3,11 @@ replayed from a cassette (SPEC-trace-core.md § Model gateway, § Cassettes).
 
 Provider swap #2 (2026-09-23): NVIDIA -> Gemini, per user direction. Facts below are
 live-verified against the real Gemini OpenAI-compat endpoint
-(https://generativelanguage.googleapis.com/v1beta/openai/, model `gemini-3.8-flash`) with actual
-API calls, not just a docs page — the docs' own listed model id ("gemini-3-flash") 404'd against
-the live API, which is exactly why this project doesn't trust a doc over a real call:
+(https://generativelanguage.googleapis.com/v1beta/openai/, model `gemini-3-flash-preview`) with
+actual API calls, not just a docs page — the same day's `gemini-3.8-flash` id (from
+client.models.list()) 503'd on every call and the docs-listed `gemini-3-flash` 404'd; the
+preview id is the one that actually returns completions, which is exactly why this project
+doesn't trust a doc over a real call:
 
 - Client construction (`OpenAI(api_key=..., base_url=...)`) and the exception hierarchy
   (`APITimeoutError < APIConnectionError`; `RateLimitError`/`NotFoundError`/`AuthenticationError`/

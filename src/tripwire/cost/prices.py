@@ -69,15 +69,29 @@ class PriceEntry(BaseModel):
 #
 # Provider swap #2 (2026-09-23): Anthropic -> NVIDIA -> Gemini, per user direction. Model
 # confirmed live via client.models.list() against the real API (not docs — the docs-listed
-# "gemini-3-flash" 404'd; the real stable id is "gemini-3.8-flash"). `billable=False` here is
+# "gemini-3-flash" 404'd; the real stable id is "gemini-3-flash-preview"). `billable=False` here is
 # the user's own statement that their Google AI Studio key is on the free tier, not a fetched
 # pricing page — same documented-assumption status the NVIDIA entry had, and just as much in
 # need of reconfirming if the key's tier ever changes.
 PRICE_TABLE: Mapping[str, PriceEntry] = MappingProxyType(
     {
-        "gemini-3.8-flash": PriceEntry(
-            model="gemini-3.8-flash",
+        "gemini-3-flash-preview": PriceEntry(
+            model="gemini-3-flash-preview",
             as_of=date(2026, 9, 23),
+            prompt_micro_dollars_per_million=0,
+            completion_micro_dollars_per_million=0,
+            billable=False,
+        ),
+        "gemini-3.6-flash": PriceEntry(
+            model="gemini-3.6-flash",
+            as_of=date(2026, 9, 24),
+            prompt_micro_dollars_per_million=0,
+            completion_micro_dollars_per_million=0,
+            billable=False,
+        ),
+        "gemini-3.1-flash-lite": PriceEntry(
+            model="gemini-3.1-flash-lite",
+            as_of=date(2026, 9, 24),
             prompt_micro_dollars_per_million=0,
             completion_micro_dollars_per_million=0,
             billable=False,

@@ -16,7 +16,7 @@ from tripwire.llm.cassettes import (
 
 def _key(**overrides: object) -> str:
     base: dict[str, object] = {
-        "model": "gemini-3.8-flash",
+        "model": "gemini-3-flash-preview",
         "messages": [{"role": "user", "content": "hi"}],
         "tools": None,
         "tool_choice": None,

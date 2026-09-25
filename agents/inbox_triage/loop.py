@@ -171,9 +171,15 @@ def run_agent(
             config.model, usage_from_completion(completion), table=gateway.price_table
         )
 
-        assistant_entry: dict[str, Any] = {"role": "assistant", "content": message.content}
-        if message.tool_calls:
-            assistant_entry["tool_calls"] = [_echo_tool_call(tc) for tc in message.tool_calls]
+        # Echo the SDK message back as raw a dict as the API will accept: Gemini 3 needs
+        # `extra_content.google.thought_signature` retained on re-sent tool-call parts (live
+        # 400: "Function call is missing a thought_signature", 2026-09-23) but rejects any
+        # explicit null field (live 400: "Value is not a struct: null"), so model_dump then
+        # drop nothing keys at the message level. This is why it's not the hand-built
+        # {"role","content","tool_calls"} subset the loop used to echo.
+        assistant_entry: dict[str, Any] = {
+            k: v for k, v in message.model_dump(mode="json").items() if v is not None
+        }
         messages.append(assistant_entry)
 
         if choice.finish_reason == "tool_calls" and message.tool_calls:
@@ -246,24 +252,6 @@ def run_agent(
         step_count=step_index,
         error=error,
     )
-
-
-def _echo_tool_call(tc: Any) -> dict[str, Any]:
-    """The `tool_calls` entry echoed back into the assistant message we replay to the model.
-
-    `tc` is `ChatCompletionMessageFunctionToolCall | ChatCompletionMessageCustomToolCall` — only
-    the function-call shape has `.function`; TOOL_SCHEMAS declares no custom tools, so a custom
-    call is unexpected. Echo whichever shape it actually is rather than assuming: the model
-    still needs to see its own call reflected back accurately, even for a call type this loop
-    can't execute (that call's `role: "tool"` response is where the "unsupported" error lives).
-    """
-    if tc.type == "function":
-        return {
-            "id": tc.id,
-            "type": "function",
-            "function": {"name": tc.function.name, "arguments": tc.function.arguments},
-        }
-    return {"id": tc.id, "type": tc.type, "custom": tc.custom.model_dump(mode="json")}
 
 
 def _dispatch_tool_call(

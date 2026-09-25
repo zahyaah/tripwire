@@ -29,7 +29,7 @@ class TokenUsage(BaseModel):
     """Usage reported by the model API for one call. See SPEC.md: `response.usage` only.
 
     `reasoning_tokens` exists because Gemini 3's usage doesn't add up otherwise: live testing
-    (2026-09-23, `gemini-3.8-flash` via its OpenAI-compat endpoint) showed
+    (2026-09-23, `gemini-3-flash-preview` via its OpenAI-compat endpoint) showed
     `usage.total_tokens > prompt_tokens + completion_tokens` by 40-90%, with
     `prompt_tokens_details`/`completion_tokens_details` both null — hidden "thinking" tokens
     billed but not itemized through the compat layer. Defaults to 0 (additive; every existing

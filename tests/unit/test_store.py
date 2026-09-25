@@ -29,7 +29,7 @@ def _run(run_id: str = "run_test") -> RunRecord:
     return RunRecord(
         run_id=run_id,
         agent_name="inbox_triage",
-        model="gemini-3.8-flash",
+        model="gemini-3-flash-preview",
         prompt_hash="deadbeef",
         harness_version="0.1.0",
         llm_mode="replay",
@@ -45,7 +45,7 @@ def _model_call(step_index: int, parent: str) -> ModelCallSpan:
         step_index=step_index,
         started_at=datetime(2026, 1, 1, tzinfo=UTC),
         latency_ms=250,
-        model="gemini-3.8-flash",
+        model="gemini-3-flash-preview",
         stop_reason="tool_calls",
         usage=TokenUsage(prompt_tokens=500, completion_tokens=80),
         micro_dollars=1200,
